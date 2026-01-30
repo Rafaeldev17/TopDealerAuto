@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopDealerAuto | Veículos de Qualidade</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Dev.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">TopDealerAuto</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#estoque">Estoque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Encontre seu próximo carro aqui</h1>
+            <p class="lead">A melhor curadoria de veículos com a confiança TopDealerAuto.</p>
+            <a href="#estoque" class="btn btn-primary btn-lg px-5 mt-3">Ver Estoque</a>
+        </div>
+    </header>
+
+    <section id="estoque" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <h2 class="fw-bold">Nosso Estoque</h2>
+                    <hr class="mx-auto custom-hr">
+                </div>
+            </div>
+
+            <div class="row">
+                <aside class="col-lg-3 mb-4">
+                    <div class="card shadow-sm border-0 p-4">
+                        <h5 class="mb-4 fw-bold text-dark border-bottom pb-2">Filtrar por:</h5>
+                        <form id="filtro-veiculos">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Marca</label>
+                                <select class="form-select border-0 bg-light">
+                                    <option selected>Todas</option>
+                                    <option>Volkswagen</option>
+                                    <option>Chevrolet</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Modelo</label>
+                                <input type="text" class="form-control border-0 bg-light" placeholder="Ex: Polo, Onix...">
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Ano Mínimo</label>
+                                <input type="number" class="form-control border-0 bg-light" value="2018">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-muted">KM Máxima: <span id="kmValue" class="text-primary">100.000</span></label>
+                                <input type="range" class="form-range" min="0" max="200000" step="10000" id="kmRange" value="100000">
+                            </div>
+                            <button type="submit" class="btn btn-dark w-100 fw-bold">Aplicar Filtros</button>
+                        </form>
+                    </div>
+                </aside>
+
+                <div class="col-lg-9">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                                <div class="img-container">
+                                    <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="VW Polo">
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-primary mb-2 align-self-start">Volkswagen</span>
+                                    <h5 class="card-title fw-bold">Polo Highline TSI</h5>
+                                    <p class="card-text text-muted mb-2 small">2024 | 5.200 km | Automático</p>
+                                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 114.900</p>
+                                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                                <div class="img-container">
+                                    <img src="96320fec4d1e4a5b9ef5995575266375_1743515096491 (1).jpg" class="card-img-top" alt="Chevrolet Onix">
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <span class="badge bg-warning text-dark mb-2 align-self-start">Chevrolet</span>
+                                    <h5 class="card-title fw-bold">Onix Premier</h5>
+                                    <p class="card-text text-muted mb-2 small">2023 | 22.000 km | Automático</p>
+                                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 98.500</p>
+                                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="py-5 bg-white text-center">
+    <div class="container">
+        <h2 class="fw-bold">Fale Conosco</h2>
+        <p>
+            <a href="mailto:Guilhermerusso@TopDealerAuto.com.br" class="text-primary text-decoration-none fw-bold">
+                Guilhermerusso@TopDealerAuto.com.br
+            </a>
+        </p>
+    </div>
+</section>
+
+    <script src="Dev.js"></script>
+</body>
+</html>

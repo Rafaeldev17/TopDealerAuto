@@ -169,6 +169,34 @@ aside .card {
     top: 90px;
 }
 #contato a:hover {
-    color: #0056b3 !important; /* Azul um pouco mais escuro ao passar o mouse */
+    color: #000000 !important; /* Azul um pouco mais escuro ao passar o mouse */
     text-decoration: underline !important;
+}
+/* Garante que o ícone pareça clicável e tenha uma cor suave */
+.toggle-password {
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.toggle-password:hover {
+    color: #000000 !important; /* Cor azul do Bootstrap no hover */
+}
+
+/* Ajuste fino da posição para alinhar com o fundo escuro que você definiu */
+.position-relative i.toggle-password {
+    padding: 10px;
+    font-size: 1.1rem;
+}
+.toggle-password {
+    cursor: pointer;
+    /* Aplica a grossura do traço (o padrão é em torno de 1) */
+    -webkit-text-stroke: 1px #6c757d; 
+    /* Para navegadores que suportam a propriedade padrão */
+    font-weight: bold !important; 
+    transition: color 0.2s, -webkit-text-stroke 0.2s;
+}
+
+.toggle-password:hover {
+    color: #0d6efd !important;
+    -webkit-text-stroke: 1px #0d6efd;
 }

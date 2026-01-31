@@ -25,7 +25,14 @@
         <div class="container">
             <h1 class="display-3 fw-bold">Encontre seu próximo carro aqui</h1>
             <p class="lead">A melhor curadoria de veículos com a confiança TopDealerAuto.</p>
-            <a href="#estoque" class="btn btn-primary btn-lg px-5 mt-3">Ver Estoque</a>
+           <div class="row justify-content-center mt-4">
+    <div class="col-md-8 col-lg-6">
+        <form class="d-flex shadow-lg p-1 bg-white rounded-pill">
+            <input class="form-control border-0 rounded-pill ps-4" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-primary rounded-pill px-4 fw-bold" type="submit">Buscar</button>
+        </form>
+    </div>
+</div>
         </div>
     </header>
 
@@ -47,22 +54,52 @@
                                 <label class="form-label small fw-bold text-muted">Marca</label>
                                 <select class="form-select border-0 bg-light">
                                     <option selected>Todas</option>
-                                    <option>Volkswagen</option>
                                     <option>Chevrolet</option>
+                                    <option>Fiat</option>
+                                    <option>Ford</option>
+                                    <option>Honda</option>
+                                    <option>Volkswagen</option>
                                 </select>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label small fw-bold text-muted">Modelo</label>
                                 <input type="text" class="form-control border-0 bg-light" placeholder="Ex: Polo, Onix...">
                             </div>
-                            <div class="mb-3">
-                                <label class="form-label small fw-bold text-muted">Ano Mínimo</label>
-                                <input type="number" class="form-control border-0 bg-light" value="2018">
-                            </div>
+                           <div class="mb-3">
+    <label class="form-label small fw-bold text-muted">Ano do Veículo</label>
+    <div class="row g-2">
+        <div class="col-6">
+            <input type="number" class="form-control border-0 bg-light filtro-compacto" placeholder="Mínimo">
+        </div>
+        <div class="col-6">
+            <input type="number" class="form-control border-0 bg-light filtro-compacto" placeholder="Máximo">
+        </div>
+    </div>
+</div>
                             <div class="mb-4">
-                                <label class="form-label small fw-bold text-muted">KM Máxima: <span id="kmValue" class="text-primary">100.000</span></label>
-                                <input type="range" class="form-range" min="0" max="200000" step="10000" id="kmRange" value="100000">
-                            </div>
+    <label class="form-label small fw-bold text-muted">Quilometragem</label>
+    <div class="row g-2"> <div class="col-6">
+            <input type="number" class="form-control border bg-light text-muted small-placeholder" placeholder="Km mínimo">
+        </div>
+        <div class="col-6">
+            <input type="number" class="form-control border bg-light text-muted small-placeholder" placeholder="Km máximo">
+        </div>
+    </div>
+</div>
+<div class="mb-3">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+        <label class="form-label small fw-bold text-dark mb-0">Preço</label>
+        <i class="bi bi-chevron-up small text-muted"></i> </div>
+    <p class="text-muted mb-3" style="font-size: 0.85rem;"></p>
+    <div class="row g-2">
+        <div class="col-6">
+            <input type="number" class="form-control border bg-light text-muted small-placeholder" placeholder="Mínimo">
+        </div>
+        <div class="col-6">
+            <input type="number" class="form-control border bg-light text-muted small-placeholder" placeholder="Máximo">
+        </div>
+    </div>
+</div>
                             <button type="submit" class="btn btn-dark w-100 fw-bold">Aplicar Filtros</button>
                         </form>
                     </div>
@@ -70,7 +107,7 @@
 
                 <div class="col-lg-9">
                     <div class="row g-4">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="card h-100 border-0 shadow-sm hover-shadow">
                                 <div class="img-container">
                                     <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="VW Polo">
@@ -85,7 +122,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="card h-100 border-0 shadow-sm hover-shadow">
                                 <div class="img-container">
                                     <img src="96320fec4d1e4a5b9ef5995575266375_1743515096491 (1).jpg" class="card-img-top" alt="Chevrolet Onix">

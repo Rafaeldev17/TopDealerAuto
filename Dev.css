@@ -200,3 +200,8 @@ aside .card {
     color: #0d6efd !important;
     -webkit-text-stroke: 1px #0d6efd;
 }
+#form-perfil .btn-dark {
+    background-color: #000 !important;
+    border-color: #000 !important;
+    color: #fff !important;
+}

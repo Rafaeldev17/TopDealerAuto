@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopDealerAuto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="Dev.css">
+    <link rel="icon" type="image/x-icon" href="Favicon.jpg">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="Favicon.jpg" alt="Logo TopDealerAuto" width="35" height="35" class="rounded-circle me-2">
+                TopDealerAuto
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center" id="user-menu-area">
+                    <li class="nav-item guest-item">
+                        <a class="btn btn-primary rounded-pill px-4 ms-lg-2" href="#" data-bs-toggle="modal" data-bs-target="#cadastroModal">Cadastrar-se</a>
+                    </li>
+                    <li class="nav-item guest-item">
+                        <a class="nav-link px-3" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Entrar</a>
+                    </li>
+
+                    <li class="nav-item dropdown ms-lg-3" id="perfil-logado" style="display: none;">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle fs-4 me-2"></i>
+                            <span id="nome-usuario-display">Minha Conta</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-lg border-0 p-3" aria-labelledby="navbarDropdown" style="min-width: 280px; border-radius: 15px;">
+                            <li>
+                                <div class="px-2 py-2">
+                                    <h6 class="fw-bold mb-2">Informações da Conta</h6>
+                                    <div class="mb-2">
+                                        <small class="text-muted d-block small-label">E-mail</small>
+                                        <span id="info-flutuante-email" class="fw-medium">---</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <small class="text-muted d-block small-label">Endereço</small>
+                                        <span id="info-flutuante-end" class="fw-medium small">---</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <small class="text-muted d-block small-label">CEP</small>
+                                        <span id="info-flutuante-cep" class="fw-medium">---</span>
+                                    </div>
+                                    <div class="mb-0">
+                                        <small class="text-muted d-block small-label">Senha</small>
+                                        <span class="fw-medium">********</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2" href="#" data-bs-toggle="modal" data-bs-target="#perfilModal">
+                                    <i class="bi bi-gear me-2"></i> Editar Perfil
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center py-2 text-danger" href="#" onclick="window.location.reload()">
+                                    <i class="bi bi-box-arrow-right me-2"></i> Sair
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center py-5">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Encontre seu próximo carro aqui</h1>
+            <p class="lead">A melhor curadoria de veículos com a confiança TopDealerAuto.</p>
+            <div class="row justify-content-center mt-4">
+                <div class="col-md-8 col-lg-6">
+                    <form class="d-flex shadow-lg p-1 bg-white rounded-pill">
+                        <input class="form-control border-0 rounded-pill ps-4" type="search" placeholder="Pesquisar por marca ou modelo..." aria-label="Pesquisar">
+                        <button class="btn btn-primary rounded-pill px-4 fw-bold" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="estoque" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5 text-center">
+                <div class="col-12">
+                    <h2 class="fw-bold">Nosso Estoque</h2>
+                    <hr class="mx-auto custom-hr">
+                </div>
+            </div>
+
+            <div class="row">
+                <aside class="col-lg-3 mb-4">
+                    <div class="card shadow-sm border-0 p-4">
+                        <h5 class="mb-4 fw-bold text-dark border-bottom pb-2">Filtrar por:</h5>
+                        <form id="filtro-veiculos">
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Marca</label>
+                                <select class="form-select border-0 bg-light">
+                                    <option selected>Todas</option>
+                                    <option>Chevrolet</option>
+                                    <option>Fiat</option>
+                                    <option>Ford</option>
+                                    <option>Honda</option>
+                                    <option>Toyota</option>
+                                    <option>Volkswagen</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Modelo</label>
+                                <input type="text" class="form-control border-0 bg-light" placeholder="Ex: Polo, Onix...">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Ano do Veículo</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="number" class="form-control border-0 bg-light filtro-compacto" placeholder="Mínimo">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="number" class="form-control border-0 bg-light filtro-compacto" placeholder="Máximo">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label small fw-bold text-muted">Quilometragem</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control border-0 bg-light filtro-compacto input-km" placeholder="Km Mín">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control border-0 bg-light filtro-compacto input-km" placeholder="Km Máx">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label small fw-bold text-dark">Preço</label>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <input type="text" class="form-control bg-light border-0 filtro-compacto input-money" placeholder="R$ Mín">
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control bg-light border-0 filtro-compacto input-money" placeholder="R$ Máx">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-dark w-100 fw-bold">Aplicar Filtros</button>
+                        </form>
+                    </div>
+                </aside>
+                
+<div class="col-lg-9">
+    <div class="row g-4" id="lista-veiculos">
+        <div class="col-md-4 card-veiculo" data-marca="Volkswagen" data-modelo="Polo" data-ano="2024" data-km="5200" data-preco="114900">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Polo.avif" class="card-img-top" alt="VW Polo">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Volkswagen</span>
+                    <h5 class="card-title fw-bold">Polo Highline TSI</h5>
+                    <p class="card-text text-muted mb-2 small">2024 | 5.200 km | Automático</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 114.900</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 card-veiculo" data-marca="Chevrolet" data-modelo="Onix" data-ano="2023" data-km="22000" data-preco="98500">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Onix.jpg" class="card-img-top" alt="Chevrolet Onix">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Chevrolet</span>
+                    <h5 class="card-title fw-bold">Onix Premier</h5>
+                    <p class="card-text text-muted mb-2 small">2023 | 22.000 km | Automático</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 98.500</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 card-veiculo" data-marca="Fiat" data-modelo="Uno" data-ano="2021" data-km="45000" data-preco="54900">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Uno.webp" class="card-img-top" alt="Fiat Uno">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Fiat</span>
+                    <h5 class="card-title fw-bold">Uno Sporting 1.3</h5>
+                    <p class="card-text text-muted mb-2 small">2021 | 45.000 km | Manual</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 54.900</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 card-veiculo" data-marca="Toyota" data-modelo="Corolla" data-ano="2023" data-km="15000" data-preco="148900">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Corolla.jpg" class="card-img-top" alt="Toyota Corolla">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Toyota</span>
+                    <h5 class="card-title fw-bold">Corolla XEi 2.0</h5>
+                    <p class="card-text text-muted mb-2 small">2023 | 15.000 km | Automático</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 148.900</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 card-veiculo" data-marca="Honda" data-modelo="Civic" data-ano="2024" data-km="15000" data-preco="170000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Civic.jpg" class="card-img-top" alt="Honda Civic">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Honda</span>
+                    <h5 class="card-title fw-bold">Honda Civic G10</h5>
+                    <p class="card-text text-muted mb-2 small">2024 | 15.000 km | Automático</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$170.000</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 card-veiculo" data-marca="Ford" data-modelo="Ka" data-ano="2024" data-km="5000" data-preco="65000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <img src="Fordka.jpg" class="card-img-top" alt="Ford Ka">
+                </div>
+                <div class="card-body d-flex flex-column">
+                    <span class="badge bg-dark mb-2 align-self-start">Ford</span>
+                    <h5 class="card-title fw-bold">Ford Ka</h5>
+                    <p class="card-text text text-muted mb-2 small">2024 | 5.000 km | Manual</p>
+                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$65.000</p>
+                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </section>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <h3 class="fw-bold text-center mb-1">Bem-vindo(a)!</h3>
+                    <p class="text-center text-muted small mb-4">Entre na sua conta TopDealerAuto</p>
+                    <form id="form-login">
+                        <div class="mb-3">
+                            <input type="email" id="login-email" class="form-control bg-light border-0 py-3" placeholder="Seu email" style="border-radius: 12px;" required>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <input type="password" id="login-senha" class="form-control bg-light border-0 py-3" placeholder="Sua senha" style="border-radius: 12px; padding-right: 45px;" required>
+                            <i class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" style="cursor: pointer; color: #6c757d;"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill mb-3">Entrar</button>
+                    </form>
+                    <div class="text-center small text-muted">
+                        Ainda não tem conta? <a href="#" class="text-primary text-decoration-none fw-bold" data-bs-toggle="modal" data-bs-target="#cadastroModal" data-bs-dismiss="modal">Cadastre-se</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cadastroModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <h3 class="fw-bold text-center mb-1">Criar Conta</h3>
+                    <p class="text-center text-muted small mb-4">Cadastre-se para salvar seus carros favoritos</p>
+                    <form id="form-cadastro">
+                        <div class="mb-3">
+                            <input type="text" id="nome" class="form-control bg-light border-0 py-3" placeholder="Nome completo" style="border-radius: 12px;" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" id="email" class="form-control bg-light border-0 py-3" placeholder="Email" style="border-radius: 12px;" required>
+                        </div>
+                        <div class="mb-3 position-relative">
+                            <input type="password" id="senha" class="form-control bg-light border-0 py-3" placeholder="Criar senha" style="border-radius: 12px; padding-right: 45px;" required>
+                            <i class="bi bi-eye-slash position-absolute top-50 end-0 translate-middle-y me-3 toggle-password" style="cursor: pointer; color: #6c757d;"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill">Criar minha conta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <div class="modal fade" id="perfilModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow" style="border-radius: 20px;">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="fw-bold px-3 pt-3">Meus Dados</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4 pb-4">
+                    <form id="form-perfil">
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">E-mail</label>
+                            <input type="email" id="perfil-email" class="form-control bg-light border-0 py-2" style="border-radius: 10px;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Senha</label>
+                            <input type="password" id="perfil-senha" class="form-control bg-light border-0 py-2" style="border-radius: 10px;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Telefone</label>
+                            <input type="text" id="perfil-tel" class="form-control bg-light border-0 py-2" placeholder="(00) 00000-0000" style="border-radius: 10px;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">CEP</label>
+                            <input type="text" id="perfil-cep" class="form-control bg-light border-0 py-2" placeholder="00000-000" style="border-radius: 10px;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small text-muted">Endereço Completo</label>
+                            <input type="text" id="perfil-end" class="form-control bg-light border-0 py-2" style="border-radius: 10px;">
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100 py-2 fw-bold rounded-pill">Salvar Informações</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contato" class="py-5 bg-white text-center border-top">
+        <div class="container">
+            <h2 class="fw-bold">Fale Conosco</h2>
+            <p><a href="mailto:Guilherme@TopDealerAuto.com.br" class="text-primary text-decoration-none fw-bold">Guilherme@TopDealerAuto.com.br</a></p>
+        </div>
+    </footer>
+
+    <div class="bg-dark text-white py-4 text-center">
+        <small>&copy; 2026 TopDealerAuto. Todos os direitos reservados.</small>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="Dev.js"></script>
+</body>
+</html>

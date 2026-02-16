@@ -67,7 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senha = document.getElementById('senha').value;
 
             try {
-                const resposta = await fetch('topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net', {
+                // ALTERAÇÃO: Adicionado https:// e /usuarios
+                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/usuarios', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nome, email, senha })
@@ -95,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senhaInput = document.getElementById('login-senha');
 
             try {
-                const resposta = await fetch('topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net', {
+                // ALTERAÇÃO: Adicionado https:// e /usuarios/login
+                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/usuarios/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email: emailInput.value, senha: senhaInput.value })

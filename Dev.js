@@ -1,39 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log("O site da TopDealerAuto carregou com sucesso!");
 
-    // --- 1. Verificação de Usuário Logado ---
     const usuarioSalvo = localStorage.getItem('usuarioLogado');
     if (usuarioSalvo) {
         atualizarNavbar(usuarioSalvo);
     }
 
-    // --- 2. Lógica do Filtro de Veículos (CORRIGIDA PARA MÁSCARAS) ---
+    // --- Lógica do Filtro de Veículos ---
     const filtroForm = document.getElementById('filtro-veiculos');
     if (filtroForm) {
         filtroForm.addEventListener('submit', function(e) {
             e.preventDefault();
-
-            // Função para converter "R$ 10.000" ou "15.000 km" em número puro (10000)
             const extrairNumero = (valor) => {
                 if (!valor) return null;
                 const num = parseInt(valor.replace(/\D/g, ""));
                 return isNaN(num) ? null : num;
             };
 
-            // Pegando os valores dos filtros
             const marca = filtroForm.querySelector('select').value;
             const modelo = filtroForm.querySelectorAll('input[type="text"]')[0].value.toLowerCase();
             const anoMin = parseInt(filtroForm.querySelectorAll('input[type="number"]')[0].value);
             const anoMax = parseInt(filtroForm.querySelectorAll('input[type="number"]')[1].value);
-            
-            // Usando a limpeza para KM e Preço
             const kmMin = extrairNumero(filtroForm.querySelectorAll('.input-km')[0].value);
             const kmMax = extrairNumero(filtroForm.querySelectorAll('.input-km')[1].value);
             const precoMin = extrairNumero(filtroForm.querySelectorAll('.input-money')[0].value);
             const precoMax = extrairNumero(filtroForm.querySelectorAll('.input-money')[1].value);
 
             const cards = document.querySelectorAll('.card-veiculo');
-
             cards.forEach(card => {
                 const cMarca = card.getAttribute('data-marca');
                 const cModelo = card.getAttribute('data-modelo').toLowerCase();
@@ -42,7 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const cPreco = parseInt(card.getAttribute('data-preco'));
 
                 let visivel = true;
-
                 if (marca !== 'Todas' && cMarca !== marca) visivel = false;
                 if (modelo && !cModelo.includes(modelo)) visivel = false;
                 if (anoMin && cAno < anoMin) visivel = false;
@@ -51,13 +43,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (kmMax !== null && cKm > kmMax) visivel = false;
                 if (precoMin !== null && cPreco < precoMin) visivel = false;
                 if (precoMax !== null && cPreco > precoMax) visivel = false;
-
                 card.style.display = visivel ? 'block' : 'none';
             });
         });
     }
 
-    // --- 3. Lógica de Cadastro ---
+    // --- Lógica de Cadastro ---
     const cadastroForm = document.getElementById('form-cadastro'); 
     if (cadastroForm) {
         cadastroForm.addEventListener('submit', async function(e) {
@@ -67,8 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senha = document.getElementById('senha').value;
 
             try {
-                // ALTERAÇÃO: Apontando para o seu Java Local que está ligado
-                const resposta = await fetch('http://localhost:8080/usuarios', {
+                // CORREÇÃO: URL do Azure + Caminho /api/usuarios/cadastrar
+                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api/usuarios/cadastrar', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nome, email, senha })
@@ -82,12 +73,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert("Erro ao cadastrar.");
                 }
             } catch (erro) {
-                alert("Erro ao conectar com o servidor local.");
+                alert("Erro ao conectar com o servidor.");
             }
         });
     }
 
-    // --- 4. Lógica de Login ---
+    // --- Lógica de Login ---
     const loginForm = document.getElementById('form-login'); 
     if (loginForm) {
         loginForm.addEventListener('submit', async function(e) {
@@ -96,8 +87,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senhaInput = document.getElementById('login-senha');
 
             try {
-                // ALTERAÇÃO: Apontando para o seu Java Local (localhost:8080)
-                const resposta = await fetch('http://localhost:8080/usuarios/login', {
+                // CORREÇÃO: URL do Azure + Caminho /api/usuarios/login
+                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api/usuarios/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email: emailInput.value, senha: senhaInput.value })
@@ -115,13 +106,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     alert("Dados incorretos!");
                 }
             } catch (erro) {
-                console.error(erro);
-                alert("Servidor local offline ou erro de CORS!");
+                alert("Servidor offline!");
             }
         });
     }
 
-    // --- 5. Preenchimento do Perfil e Outros ---
+    // --- Perfil e Máscaras ---
     const modalPerfilElement = document.getElementById('perfilModal');
     if (modalPerfilElement) {
         modalPerfilElement.addEventListener('show.bs.modal', function () {
@@ -135,7 +125,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
     configurarMascaras();
 });
 
@@ -169,27 +158,20 @@ function configurarMascaras() {
             e.target.value = f;
         });
     }
-
     document.querySelectorAll('.input-money').forEach(input => {
         input.addEventListener('input', (e) => {
             let v = e.target.value.replace(/\D/g, "");
             e.target.value = v ? `R$ ${new Intl.NumberFormat('pt-BR').format(parseInt(v))}` : "";
         });
     });
-
     document.querySelectorAll('.input-km').forEach(input => {
         input.addEventListener('input', (e) => {
             let v = e.target.value.replace(/\D/g, "");
             e.target.value = v ? new Intl.NumberFormat('pt-BR').format(parseInt(v)) : "";
         });
-        input.addEventListener('blur', function() {
-            if (this.value && !this.value.includes('km')) this.value += " km";
-        });
-        input.addEventListener('focus', function() {
-            this.value = this.value.replace(" km", "").replace(/\./g, "");
-        });
+        input.addEventListener('blur', function() { if (this.value && !this.value.includes('km')) this.value += " km"; });
+        input.addEventListener('focus', function() { this.value = this.value.replace(" km", "").replace(/\./g, ""); });
     });
-    
     document.querySelectorAll('.toggle-password').forEach(icon => {
         icon.addEventListener('click', function() {
             const input = this.parentElement.querySelector('input');

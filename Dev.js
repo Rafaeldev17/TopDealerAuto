@@ -1,3 +1,5 @@
+const API_BASE_URL = 'https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net';
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log("O site da TopDealerAuto carregou com sucesso!");
 
@@ -58,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senha = document.getElementById('senha').value;
 
             try {
-                // CORREÇÃO: URL do Azure + Caminho /api/usuarios/cadastrar
-                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api/usuarios/cadastrar', {
+                // USANDO API_BASE_URL COM CRASES
+                const resposta = await fetch(`${API_BASE_URL}/api/usuarios/cadastrar`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ nome, email, senha })
@@ -87,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const senhaInput = document.getElementById('login-senha');
 
             try {
-                // CORREÇÃO: URL do Azure + Caminho /api/usuarios/login
-                const resposta = await fetch('https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api/usuarios/login', {
+                // USANDO API_BASE_URL COM CRASES
+                const resposta = await fetch(`${API_BASE_URL}/api/usuarios/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email: emailInput.value, senha: senhaInput.value })
@@ -127,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     configurarMascaras();
 });
+
+// FUNÇÕES QUE PRECISAM ESTAR FORA DO DOMCONTENTLOADED PARA O HTML ACESSAR
 
 function atualizarNavbar(nome) {
     const menuArea = document.getElementById('user-menu-area');

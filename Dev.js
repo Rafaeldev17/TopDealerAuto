@@ -1,5 +1,4 @@
 const API_BASE_URL = 'https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net';
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log("O site da TopDealerAuto carregou com sucesso!");
 
@@ -185,3 +184,4 @@ function configurarMascaras() {
         });
     });
 }
+

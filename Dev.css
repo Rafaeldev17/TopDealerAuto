@@ -205,3 +205,23 @@ aside .card {
     border-color: #000 !important;
     color: #fff !important;
 }
+/* Customizando as cores da paginação */
+.pagination .page-link {
+    color: #000; /* Texto preto */
+    border-color: #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #000; /* Fundo preto para página ativa */
+    border-color: #000;
+    color: #fff; /* Texto branco para página ativa */
+}
+
+.pagination .page-link:hover {
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+}

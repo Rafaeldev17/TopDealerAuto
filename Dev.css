@@ -226,6 +226,8 @@ aside .card {
     box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
 }
 }
+}
+/* Força a cor preta nos preços dos cards */
 .card-body h5, 
 .card-body .text-primary,
 [id^="preco-"] { 

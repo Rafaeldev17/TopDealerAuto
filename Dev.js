@@ -215,6 +215,3 @@ window.mudarPagina = function(num) {
     paginaAtual = num;
     configurarPaginacao(); // Re-executa a lógica para esconder/mostrar
 };
-{
-}
-

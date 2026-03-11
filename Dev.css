@@ -227,7 +227,6 @@ aside .card {
 }
 }
 }
-/* Força a cor preta nos preços dos cards */
 .card-body h5, 
 .card-body .text-primary,
 [id^="preco-"] { 

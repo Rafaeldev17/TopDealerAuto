@@ -1,52 +1,12 @@
 const API_BASE_URL = 'https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net';
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log("O site da TopDealerAuto carregou com sucesso!");
 
+    // --- Verificação de Login ---
     const usuarioSalvo = localStorage.getItem('usuarioLogado');
     if (usuarioSalvo) {
         atualizarNavbar(usuarioSalvo);
-    }
-
-    // --- Lógica do Filtro de Veículos ---
-    const filtroForm = document.getElementById('filtro-veiculos');
-    if (filtroForm) {
-        filtroForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const extrairNumero = (valor) => {
-                if (!valor) return null;
-                const num = parseInt(valor.replace(/\D/g, ""));
-                return isNaN(num) ? null : num;
-            };
-
-            const marca = filtroForm.querySelector('select').value;
-            const modelo = filtroForm.querySelectorAll('input[type="text"]')[0].value.toLowerCase();
-            const anoMin = parseInt(filtroForm.querySelectorAll('input[type="number"]')[0].value);
-            const anoMax = parseInt(filtroForm.querySelectorAll('input[type="number"]')[1].value);
-            const kmMin = extrairNumero(filtroForm.querySelectorAll('.input-km')[0].value);
-            const kmMax = extrairNumero(filtroForm.querySelectorAll('.input-km')[1].value);
-            const precoMin = extrairNumero(filtroForm.querySelectorAll('.input-money')[0].value);
-            const precoMax = extrairNumero(filtroForm.querySelectorAll('.input-money')[1].value);
-
-            const cards = document.querySelectorAll('.card-veiculo');
-            cards.forEach(card => {
-                const cMarca = card.getAttribute('data-marca');
-                const cModelo = card.getAttribute('data-modelo').toLowerCase();
-                const cAno = parseInt(card.getAttribute('data-ano'));
-                const cKm = parseInt(card.getAttribute('data-km'));
-                const cPreco = parseInt(card.getAttribute('data-preco'));
-
-                let visivel = true;
-                if (marca !== 'Todas' && cMarca !== marca) visivel = false;
-                if (modelo && !cModelo.includes(modelo)) visivel = false;
-                if (anoMin && cAno < anoMin) visivel = false;
-                if (anoMax && cAno > anoMax) visivel = false;
-                if (kmMin !== null && cKm < kmMin) visivel = false;
-                if (kmMax !== null && cKm > kmMax) visivel = false;
-                if (precoMin !== null && cPreco < precoMin) visivel = false;
-                if (precoMax !== null && cPreco > precoMax) visivel = false;
-                card.style.display = visivel ? 'block' : 'none';
-            });
-        });
     }
 
     // --- Lógica de Cadastro ---
@@ -59,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const senha = document.getElementById('senha').value;
 
             try {
-                // USANDO API_BASE_URL COM CRASES
                 const resposta = await fetch(`${API_BASE_URL}/api/usuarios/cadastrar`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -88,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const senhaInput = document.getElementById('login-senha');
 
             try {
-                // USANDO API_BASE_URL COM CRASES
                 const resposta = await fetch(`${API_BASE_URL}/api/usuarios/login`, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
@@ -112,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Perfil e Máscaras ---
+    // --- Perfil e Modal ---
     const modalPerfilElement = document.getElementById('perfilModal');
     if (modalPerfilElement) {
         modalPerfilElement.addEventListener('show.bs.modal', function () {
@@ -126,10 +84,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Inicialização de Máscaras e Paginação
     configurarMascaras();
+    configurarPaginacao(); 
 });
 
-// FUNÇÕES QUE PRECISAM ESTAR FORA DO DOMCONTENTLOADED PARA O HTML ACESSAR
+// --- FUNÇÕES GLOBAIS ---
 
 function atualizarNavbar(nome) {
     const menuArea = document.getElementById('user-menu-area');
@@ -185,3 +146,72 @@ function configurarMascaras() {
     });
 }
 
+// --- CONFIGURAÇÃO DA PAGINAÇÃO ---
+const itensPorPagina = 8; // Define que queremos 2 fileiras de 4
+let paginaAtual = 1;
+
+function configurarPaginacao() {
+    // 1. Pega todos os cards que existem na tela
+    const todosVeiculos = document.querySelectorAll('.card-veiculo');
+    
+    if (todosVeiculos.length === 0) return;
+
+    // 2. Calcula o total de páginas necessário
+    const totalPaginas = Math.ceil(todosVeiculos.length / itensPorPagina);
+    const containerPaginacao = document.querySelector('.pagination');
+
+    if (!containerPaginacao) return;
+
+    // 3. FUNÇÃO PARA MOSTRAR OS CARROS CERTOS
+    function atualizarCards() {
+        const inicio = (paginaAtual - 1) * itensPorPagina;
+        const fim = paginaAtual * itensPorPagina;
+
+        todosVeiculos.forEach((veiculo, index) => {
+            // Se o carro estiver dentro do intervalo da página, mostra. Se não, esconde.
+            if (index >= inicio && index < fim) {
+                veiculo.style.display = 'block';
+            } else {
+                veiculo.style.display = 'none';
+            }
+        });
+        
+        atualizarBotoes(totalPaginas);
+    }
+
+    // 4. FUNÇÃO PARA DESENHAR OS BOTÕES (1, 2, 3...)
+    function atualizarBotoes(total) {
+        let html = `
+            <li class="page-item ${paginaAtual === 1 ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:void(0)" onclick="mudarPagina(${paginaAtual - 1})">Anterior</a>
+            </li>`;
+
+        for (let i = 1; i <= total; i++) {
+            html += `
+                <li class="page-item ${i === paginaAtual ? 'active' : ''}">
+                    <a class="page-link" href="javascript:void(0)" onclick="mudarPagina(${i})">${i}</a>
+                </li>`;
+        }
+
+        html += `
+            <li class="page-item ${paginaAtual === total ? 'disabled' : ''}">
+                <a class="page-link" href="javascript:void(0)" onclick="mudarPagina(${paginaAtual + 1})">Próxima</a>
+            </li>`;
+
+        containerPaginacao.innerHTML = html;
+    }
+
+    // Executa a lógica pela primeira vez
+    atualizarCards();
+}
+
+// 5. FUNÇÃO GLOBAL PARA O CLIQUE
+window.mudarPagina = function(num) {
+    const todosVeiculos = document.querySelectorAll('.card-veiculo');
+    const totalPaginas = Math.ceil(todosVeiculos.length / itensPorPagina);
+    
+    if (num < 1 || num > totalPaginas) return;
+    
+    paginaAtual = num;
+    configurarPaginacao(); // Re-executa a lógica para esconder/mostrar
+};

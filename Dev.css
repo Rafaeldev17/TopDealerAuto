@@ -224,4 +224,12 @@ aside .card {
 
 .pagination .page-link:focus {
     box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
+    
+}
+}
+.card-body h5, 
+.card-body .text-primary,
+[id^="preco-"] { 
+    color: #000000 !important; 
+    font-weight: bold;
 }

@@ -233,3 +233,30 @@ aside .card {
     color: #000000 !important; 
     font-weight: bold;
 }
+/* Garante que a imagem principal do modal tenha sempre a mesma altura */
+#viewMainImage {
+    width: 100%;
+    height: 400px; /* Altura fixa para manter a coerência */
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    object-position: center;
+    border-radius: 12px;
+}
+
+/* Padroniza o tamanho das miniaturas (thumbnails) */
+.thumb-img {
+    width: 100%;
+    height: 80px; /* Altura fixa para as fotos menores */
+    object-fit: cover; /* Corta as bordas excedentes em vez de esmagar a foto */
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+    border: 2px solid transparent;
+}
+
+.thumb-img.active {
+    border-color: #007bff; /* Cor azul quando selecionada */
+    transform: scale(1.05);
+}
+
+.thumb-img:hover {
+    opacity: 0.8;
+}

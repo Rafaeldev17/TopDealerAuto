@@ -215,3 +215,17 @@ window.mudarPagina = function(num) {
     paginaAtual = num;
     configurarPaginacao(); // Re-executa a lógica para esconder/mostrar
 };
+// Função global para trocar a imagem no modal (Seletor de Fotos)
+window.trocarImagem = function(elemento) {
+    // Muda o SRC da imagem principal
+    const mainImg = document.getElementById('viewMainImage');
+    mainImg.src = elemento.src;
+
+    // Remove a classe 'active' de todas as miniaturas
+    document.querySelectorAll('.thumb-img').forEach(img => {
+        img.classList.remove('active');
+    });
+
+    // Adiciona a classe 'active' na miniatura clicada
+    elemento.classList.add('active');
+}

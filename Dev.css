@@ -253,7 +253,7 @@ aside .card {
 }
 
 .thumb-img.active {
-    border-color: #007bff; /* Cor azul quando selecionada */
+    border-color: #000000; /* Cor azul quando selecionada */
     transform: scale(1.05);
 }
 

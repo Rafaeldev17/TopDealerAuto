@@ -1,1 +1,400 @@
-const _0x1c0153=_0x1007;(function(_0x20c5fb,_0x4e5867){const _0x1b4745=_0x1007,_0x551943=_0x20c5fb();while(!![]){try{const _0x4b7b0d=-parseInt(_0x1b4745(0x1fe))/0x1+parseInt(_0x1b4745(0x22f))/0x2*(parseInt(_0x1b4745(0x1ff))/0x3)+-parseInt(_0x1b4745(0x237))/0x4+-parseInt(_0x1b4745(0x24a))/0x5+-parseInt(_0x1b4745(0x249))/0x6*(parseInt(_0x1b4745(0x201))/0x7)+parseInt(_0x1b4745(0x23a))/0x8*(parseInt(_0x1b4745(0x211))/0x9)+parseInt(_0x1b4745(0x23c))/0xa*(parseInt(_0x1b4745(0x207))/0xb);if(_0x4b7b0d===_0x4e5867)break;else _0x551943['push'](_0x551943['shift']());}catch(_0xb31600){_0x551943['push'](_0x551943['shift']());}}}(_0x4348,0x8b975));const API_BASE_URL=_0x1c0153(0x223);document[_0x1c0153(0x1f6)](_0x1c0153(0x22d),function(){const _0x32af11=_0x1c0153;console[_0x32af11(0x202)](_0x32af11(0x227));const _0x206aec=localStorage[_0x32af11(0x255)](_0x32af11(0x1f8));_0x206aec&&atualizarNavbar(_0x206aec);const _0x22429e=document['getElementById'](_0x32af11(0x20a));_0x22429e&&_0x22429e[_0x32af11(0x1f6)]('submit',async function(_0x5e20b7){const _0xbbf8a3=_0x32af11;_0x5e20b7[_0xbbf8a3(0x1f9)]();const _0x578925=document[_0xbbf8a3(0x236)](_0xbbf8a3(0x213))['value'],_0x130dbd=document['getElementById'](_0xbbf8a3(0x1fd))[_0xbbf8a3(0x205)],_0x619512=document[_0xbbf8a3(0x236)](_0xbbf8a3(0x234))[_0xbbf8a3(0x205)];try{const _0x3fbb6b=await fetch(API_BASE_URL+_0xbbf8a3(0x210),{'method':_0xbbf8a3(0x232),'headers':{'Content-Type':_0xbbf8a3(0x253)},'body':JSON['stringify']({'nome':_0x578925,'email':_0x130dbd,'senha':_0x619512})});if(_0x3fbb6b['ok']){const _0x28772f=await _0x3fbb6b[_0xbbf8a3(0x22e)]();alert('Sucesso!\x20Usuário\x20'+_0x28772f[_0xbbf8a3(0x213)]+'\x20cadastrado.'),_0x22429e[_0xbbf8a3(0x23b)]();}else alert(_0xbbf8a3(0x21f));}catch(_0x5afcc5){alert('Erro\x20ao\x20conectar\x20com\x20o\x20servidor.');}});const _0x5e1164=document[_0x32af11(0x236)](_0x32af11(0x20e));_0x5e1164&&_0x5e1164[_0x32af11(0x1f6)]('submit',async function(_0x5956a6){const _0x5d3f5d=_0x32af11;_0x5956a6['preventDefault']();const _0x1c20aa=document['getElementById'](_0x5d3f5d(0x241)),_0x518abe=document['getElementById']('login-senha');try{const _0x3aa26e=await fetch(API_BASE_URL+'/api/usuarios/login',{'method':_0x5d3f5d(0x232),'headers':{'Content-Type':_0x5d3f5d(0x253)},'body':JSON[_0x5d3f5d(0x23e)]({'email':_0x1c20aa[_0x5d3f5d(0x205)],'senha':_0x518abe['value']})});if(_0x3aa26e['ok']){const _0x53dda8=await _0x3aa26e[_0x5d3f5d(0x22e)]();localStorage[_0x5d3f5d(0x20b)](_0x5d3f5d(0x1f8),_0x53dda8['nome']),localStorage[_0x5d3f5d(0x20b)](_0x5d3f5d(0x230),_0x53dda8['email']),localStorage[_0x5d3f5d(0x20b)](_0x5d3f5d(0x1ee),JSON[_0x5d3f5d(0x23e)](_0x53dda8)),atualizarNavbar(_0x53dda8[_0x5d3f5d(0x213)]);const _0x5e4724=bootstrap[_0x5d3f5d(0x216)][_0x5d3f5d(0x1f3)](document[_0x5d3f5d(0x236)](_0x5d3f5d(0x215)));if(_0x5e4724)_0x5e4724['hide']();}else alert(_0x5d3f5d(0x221));}catch(_0x23aefe){alert(_0x5d3f5d(0x1ed));}});const _0xb375b6=document[_0x32af11(0x236)](_0x32af11(0x1fb));_0xb375b6&&_0xb375b6['addEventListener'](_0x32af11(0x1f2),function(){const _0x58af4c=_0x32af11,_0xf4625f=JSON['parse'](localStorage[_0x58af4c(0x255)](_0x58af4c(0x1ee)));if(_0xf4625f){if(document[_0x58af4c(0x236)](_0x58af4c(0x229)))document['getElementById']('perfil-email')['value']=_0xf4625f['email']||'';if(document['getElementById']('perfil-senha'))document['getElementById'](_0x58af4c(0x21b))['value']=_0xf4625f[_0x58af4c(0x234)]||'';if(document['getElementById'](_0x58af4c(0x24c)))document[_0x58af4c(0x236)](_0x58af4c(0x24c))[_0x58af4c(0x205)]=_0xf4625f[_0x58af4c(0x257)]||'';if(document[_0x58af4c(0x236)](_0x58af4c(0x243)))document[_0x58af4c(0x236)](_0x58af4c(0x243))[_0x58af4c(0x205)]=_0xf4625f[_0x58af4c(0x20d)]||'';if(document[_0x58af4c(0x236)](_0x58af4c(0x220)))document[_0x58af4c(0x236)](_0x58af4c(0x220))[_0x58af4c(0x205)]=_0xf4625f[_0x58af4c(0x226)]||'';}}),configurarMascaras(),configurarPaginacao();});function atualizarNavbar(_0x44610d){const _0x15e6d3=_0x1c0153,_0x49a22d=document[_0x15e6d3(0x236)](_0x15e6d3(0x214));_0x49a22d&&(_0x49a22d[_0x15e6d3(0x244)]=_0x15e6d3(0x24e)+_0x44610d[_0x15e6d3(0x256)]('\x20')[0x0]+'!\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22nav-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20class=\x22nav-link\x20text-danger\x20px-3\x22\x20href=\x22#\x22\x20onclick=\x22logout()\x22>Sair</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>\x0a\x20\x20\x20\x20\x20\x20\x20\x20');}function logout(){const _0x77205d=_0x1c0153;localStorage[_0x77205d(0x1f4)](),window[_0x77205d(0x231)][_0x77205d(0x200)]();}function configurarMascaras(){const _0x14d2d6=_0x1c0153,_0x46be77=document[_0x14d2d6(0x236)](_0x14d2d6(0x24c));_0x46be77&&_0x46be77[_0x14d2d6(0x1f6)](_0x14d2d6(0x259),_0xe6d2b5=>{const _0x33f574=_0x14d2d6;let _0x519129=_0xe6d2b5[_0x33f574(0x204)]['value'][_0x33f574(0x1fa)](/\D/g,''),_0x57f076=_0x519129[_0x33f574(0x222)]>0x0?'('+_0x519129[_0x33f574(0x252)](0x0,0x2)+(_0x519129[_0x33f574(0x222)]>0x2?')\x20'+_0x519129['substring'](0x2,0x7)+(_0x519129[_0x33f574(0x222)]>0x7?'-'+_0x519129[_0x33f574(0x252)](0x7,0xb):''):''):'';_0xe6d2b5[_0x33f574(0x204)][_0x33f574(0x205)]=_0x57f076;}),document[_0x14d2d6(0x240)](_0x14d2d6(0x248))[_0x14d2d6(0x23d)](_0x25d22a=>{const _0x108e0d=_0x14d2d6;_0x25d22a[_0x108e0d(0x1f6)](_0x108e0d(0x259),_0x2ed61a=>{const _0x39e898=_0x108e0d;let _0x5a9fee=_0x2ed61a[_0x39e898(0x204)]['value']['replace'](/\D/g,'');_0x2ed61a[_0x39e898(0x204)][_0x39e898(0x205)]=_0x5a9fee?_0x39e898(0x1f7)+new Intl[(_0x39e898(0x217))](_0x39e898(0x238))[_0x39e898(0x1ef)](parseInt(_0x5a9fee)):'';});}),document[_0x14d2d6(0x240)]('.input-km')[_0x14d2d6(0x23d)](_0x2fa254=>{const _0x529861=_0x14d2d6;_0x2fa254['addEventListener'](_0x529861(0x259),_0x721709=>{const _0x249de7=_0x529861;let _0x341078=_0x721709[_0x249de7(0x204)][_0x249de7(0x205)]['replace'](/\D/g,'');_0x721709[_0x249de7(0x204)][_0x249de7(0x205)]=_0x341078?new Intl[(_0x249de7(0x217))](_0x249de7(0x238))[_0x249de7(0x1ef)](parseInt(_0x341078)):'';}),_0x2fa254[_0x529861(0x1f6)](_0x529861(0x22a),function(){const _0x1f6cfe=_0x529861;if(this['value']&&!this[_0x1f6cfe(0x205)]['includes']('km'))this[_0x1f6cfe(0x205)]+=_0x1f6cfe(0x242);}),_0x2fa254['addEventListener']('focus',function(){const _0x39e520=_0x529861;this[_0x39e520(0x205)]=this[_0x39e520(0x205)][_0x39e520(0x1fa)](_0x39e520(0x242),'')[_0x39e520(0x1fa)](/\./g,'');});}),document[_0x14d2d6(0x240)](_0x14d2d6(0x22b))[_0x14d2d6(0x23d)](_0x513e66=>{const _0x4ba4b3=_0x14d2d6;_0x513e66['addEventListener'](_0x4ba4b3(0x250),function(){const _0x29203d=_0x4ba4b3,_0x255d66=this[_0x29203d(0x209)][_0x29203d(0x225)](_0x29203d(0x259));_0x255d66['type']=_0x255d66[_0x29203d(0x21d)]===_0x29203d(0x258)?_0x29203d(0x1f0):_0x29203d(0x258),this[_0x29203d(0x218)][_0x29203d(0x21a)](_0x29203d(0x22c)),this['classList']['toggle'](_0x29203d(0x203));});});}function _0x4348(){const _0x592e47=['Dados\x20incorretos!','length','https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22page-item\x20','querySelector','endereco','O\x20site\x20da\x20TopDealerAuto\x20carregou\x20com\x20sucesso!','.card-veiculo','perfil-email','blur','.toggle-password','bi-eye','DOMContentLoaded','json','2061522zlGYuh','emailLogado','location','POST','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22page-item\x20','senha','.thumb-img','getElementById','4442712aRvzSp','pt-BR','remove','248CrnbIW','reset','1930OQiGfL','forEach','stringify',')\x22>Anterior</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','querySelectorAll','login-email','\x20km','perfil-cep','innerHTML','#thumbGallery\x20.thumb-img','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20class=\x22page-link\x22\x20href=\x22javascript:void(0)\x22\x20onclick=\x22mudarPagina(','ceil','.input-money','359616iFogco','504570QkZrLk','style','perfil-tel',')\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<li\x20class=\x22nav-item\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20class=\x22nav-link\x20text-white\x20fw-bold\x20px-3\x22\x20href=\x22#\x22\x20data-bs-toggle=\x22modal\x22\x20data-bs-target=\x22#perfilModal\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-person-circle\x20me-1\x22></i>\x20Olá,\x20','display','click',')\x22>Próxima</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','substring','application/json','src','getItem','split','telefone','password','input','Servidor\x20offline!','dadosCompletos','format','text','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<a\x20class=\x22page-link\x22\x20href=\x22javascript:void(0)\x22\x20onclick=\x22mudarPagina(','show.bs.modal','getInstance','clear','trocarImagem','addEventListener','R$\x20','usuarioLogado','preventDefault','replace','perfilModal','add','email','144370JCWUfQ','3UlCWBI','reload','84WGulyE','log','bi-eye-slash','target','value','none','56529iCkSnb','</a>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</li>','parentElement','form-cadastro','setItem','mudarPagina','cep','form-login','disabled','/api/usuarios/cadastrar','181269JjbBRF','viewMainImage','nome','user-menu-area','loginModal','Modal','NumberFormat','classList','active','toggle','perfil-senha','block','type','.pagination','Erro\x20ao\x20cadastrar.','perfil-end'];_0x4348=function(){return _0x592e47;};return _0x4348();}const itensPorPagina=0x8;let paginaAtual=0x1;function _0x1007(_0x5d96d0,_0x2c3b4c){_0x5d96d0=_0x5d96d0-0x1ed;const _0x434837=_0x4348();let _0x1007de=_0x434837[_0x5d96d0];return _0x1007de;}function configurarPaginacao(){const _0x59f002=_0x1c0153,_0x1fd9ed=document['querySelectorAll'](_0x59f002(0x228));if(_0x1fd9ed['length']===0x0)return;const _0x34a24b=Math[_0x59f002(0x247)](_0x1fd9ed[_0x59f002(0x222)]/ itensPorPagina),_0x55ecd4=document[_0x59f002(0x225)](_0x59f002(0x21e));if(!_0x55ecd4)return;function _0x3fc1d6(){const _0x43b020=_0x59f002,_0x5c6cae=(paginaAtual-0x1)*itensPorPagina,_0x578b70=paginaAtual*itensPorPagina;_0x1fd9ed[_0x43b020(0x23d)]((_0x2f0d91,_0xed1777)=>{const _0x44d30a=_0x43b020;_0xed1777>=_0x5c6cae&&_0xed1777<_0x578b70?_0x2f0d91['style'][_0x44d30a(0x24f)]=_0x44d30a(0x21c):_0x2f0d91[_0x44d30a(0x24b)][_0x44d30a(0x24f)]=_0x44d30a(0x206);}),_0x56d0ae(_0x34a24b);}function _0x56d0ae(_0x35542f){const _0x754cd5=_0x59f002;let _0xf92802=_0x754cd5(0x233)+(paginaAtual===0x1?_0x754cd5(0x20f):'')+_0x754cd5(0x246)+(paginaAtual-0x1)+_0x754cd5(0x23f);for(let _0x1120c9=0x1;_0x1120c9<=_0x35542f;_0x1120c9++){_0xf92802+=_0x754cd5(0x224)+(_0x1120c9===paginaAtual?'active':'')+_0x754cd5(0x1f1)+_0x1120c9+_0x754cd5(0x24d)+_0x1120c9+_0x754cd5(0x208);}_0xf92802+=_0x754cd5(0x233)+(paginaAtual===_0x35542f?_0x754cd5(0x20f):'')+_0x754cd5(0x246)+(paginaAtual+0x1)+_0x754cd5(0x251),_0x55ecd4[_0x754cd5(0x244)]=_0xf92802;}_0x3fc1d6();}window[_0x1c0153(0x20c)]=function(_0x6bdfe1){const _0x19b192=_0x1c0153,_0x37a6c1=document[_0x19b192(0x240)](_0x19b192(0x228)),_0x3fe9db=Math[_0x19b192(0x247)](_0x37a6c1[_0x19b192(0x222)]/ itensPorPagina);if(_0x6bdfe1<0x1||_0x6bdfe1>_0x3fe9db)return;paginaAtual=_0x6bdfe1,configurarPaginacao();},window['trocarImagem']=function(_0x4eb2a7){const _0x1168b1=_0x1c0153,_0x4bffc3=document[_0x1168b1(0x236)](_0x1168b1(0x212));_0x4bffc3[_0x1168b1(0x254)]=_0x4eb2a7[_0x1168b1(0x254)],document[_0x1168b1(0x240)](_0x1168b1(0x235))[_0x1168b1(0x23d)](_0x3f9e27=>{const _0x49f8db=_0x1168b1;_0x3f9e27[_0x49f8db(0x218)][_0x49f8db(0x239)](_0x49f8db(0x219));}),_0x4eb2a7[_0x1168b1(0x218)]['add'](_0x1168b1(0x219));},window['navegarFotos']=function(_0x2f86b2){const _0x1101e5=_0x1c0153,_0x3b08f2=document[_0x1101e5(0x240)](_0x1101e5(0x245)),_0x3d1b47=document[_0x1101e5(0x236)](_0x1101e5(0x212));let _0x5c7fe2=-0x1;_0x3b08f2[_0x1101e5(0x23d)]((_0x4ded7d,_0x10dc8e)=>{const _0x42cbea=_0x1101e5;_0x4ded7d[_0x42cbea(0x254)]===_0x3d1b47[_0x42cbea(0x254)]&&(_0x5c7fe2=_0x10dc8e);});let _0x5d4d1e=_0x5c7fe2+_0x2f86b2;if(_0x5d4d1e>=_0x3b08f2[_0x1101e5(0x222)])_0x5d4d1e=0x0;if(_0x5d4d1e<0x0)_0x5d4d1e=_0x3b08f2['length']-0x1;_0x3b08f2[_0x5d4d1e][_0x1101e5(0x250)]();},window[_0x1c0153(0x1f5)]=function(_0x4a1ef0){const _0xc59502=_0x1c0153;document[_0xc59502(0x236)](_0xc59502(0x212))['src']=_0x4a1ef0[_0xc59502(0x254)],document['querySelectorAll']('.thumb-img')[_0xc59502(0x23d)](_0x37c2d0=>_0x37c2d0[_0xc59502(0x218)][_0xc59502(0x239)](_0xc59502(0x219))),_0x4a1ef0['classList'][_0xc59502(0x1fc)](_0xc59502(0x219));};
+/**
+ * TopDealerAuto - Dev.js
+ * Lógica modular para gerenciamento de estoque, filtros e favoritos.
+ */
+
+const API_BASE_URL = "http://localhost:8080/api"; // Ajuste se necessário
+
+// 1. Dados dos Veículos (Simulação de Banco de Dados)
+const VEICULOS = [
+    {
+        id: 1,
+        marca: "Nissan",
+        modelo: "Kicks SL 1.6 16V Flexstar 5P Aut.",
+        ano: 2017,
+        km: 68000,
+        preco: 79800,
+        cambio: "Automático",
+        img: "Kicks2.jpeg",
+        galeria: ["Kicks2.jpeg", "Kicks3.jpeg", "Kicks4.jpeg", "Kicks5.jpeg", "Kicks6.jpeg", "Kicks7.jpeg", "Kicks8.jpeg", "Kicks9.jpeg"],
+        specs: { cor: "Cinza", placa: "2", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 2,
+        marca: "Toyota",
+        modelo: "Corolla XEI 2.0 Flex",
+        ano: 2021,
+        km: 35000,
+        preco: 125000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Preto", placa: "5", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 3,
+        marca: "Honda",
+        modelo: "Civic Touring 1.5 Turbo",
+        ano: 2020,
+        km: 42000,
+        preco: 138000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Branco", placa: "8", combustivel: "Gasolina", portas: "4" }
+    },
+    {
+        id: 4,
+        marca: "Volkswagen",
+        modelo: "Nivus Highline 200 TSI",
+        ano: 2022,
+        km: 15000,
+        preco: 115900,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Cinza Moon", placa: "3", combustivel: "Flex", portas: "4" }
+    }
+];
+
+// 2. Estado da Aplicação
+let filtros = {
+    busca: "",
+    marca: "",
+    precoMax: 500000,
+    anoMin: 0,
+    apenasFavoritos: false
+};
+
+let favoritos = JSON.parse(localStorage.getItem("topdealer_favs")) || [];
+
+// 3. Inicialização
+document.addEventListener("DOMContentLoaded", () => {
+    inicializarApp();
+});
+
+function inicializarApp() {
+    aplicarTemaSalvo();
+    renderizarEstoque();
+    configurarEventos();
+    checarUsuarioLogado();
+}
+
+function aplicarTemaSalvo() {
+    const temaSalvo = localStorage.getItem("topdealer_theme") || "light";
+    document.documentElement.setAttribute("data-theme", temaSalvo);
+    atualizarIconeTema(temaSalvo);
+}
+
+window.toggleDarkMode = function() {
+    const atual = document.documentElement.getAttribute("data-theme") || "light";
+    const novo = atual === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", novo);
+    localStorage.setItem("topdealer_theme", novo);
+    atualizarIconeTema(novo);
+}
+
+function atualizarIconeTema(tema) {
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    const icone = btn.querySelector("i");
+    if (tema === "dark") {
+        icone.classList.replace("bi-moon-stars", "bi-sun");
+    } else {
+        icone.classList.replace("bi-sun", "bi-moon-stars");
+    }
+}
+
+// 4. Renderização
+function renderizarEstoque() {
+    const lista = document.getElementById("lista-veiculos");
+    if (!lista) return;
+
+    const veiculosFiltrados = VEICULOS.filter(v => {
+        const matchBusca = v.modelo.toLowerCase().includes(filtros.busca.toLowerCase()) || 
+                           v.marca.toLowerCase().includes(filtros.busca.toLowerCase());
+        const matchMarca = filtros.marca === "" || v.marca === filtros.marca;
+        const matchPreco = v.preco <= filtros.precoMax;
+        const matchAno = v.ano >= filtros.anoMin;
+        const matchFavorito = !filtros.apenasFavoritos || favoritos.includes(v.id);
+
+        return matchBusca && matchMarca && matchPreco && matchAno && matchFavorito;
+    });
+
+    document.getElementById("count-veiculos").innerText = veiculosFiltrados.length;
+
+    if (veiculosFiltrados.length === 0) {
+        lista.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <i class="bi bi-search fs-1 text-muted"></i>
+                <p class="mt-3 text-muted">Nenhum veículo encontrado com esses filtros.</p>
+                <button class="btn btn-link" onclick="resetarFiltros()">Limpar Filtros</button>
+            </div>
+        `;
+        return;
+    }
+
+    lista.innerHTML = veiculosFiltrados.map(v => `
+        <div class="col-md-4 card-veiculo">
+            <div class="card h-100 border-0 shadow-sm hover-shadow">
+                <div class="img-container">
+                    <button class="btn-favorite ${favoritos.includes(v.id) ? 'active' : ''}" onclick="toggleFavorito(${v.id}, event)">
+                        <i class="bi bi-heart${favoritos.includes(v.id) ? '-fill' : ''}"></i>
+                    </button>
+                    <img src="${v.img}" class="card-img-top" alt="${v.modelo}">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">${v.marca}</span>
+                    <h5 class="card-title fw-bold mb-1">${v.modelo}</h5>
+                    <p class="card-text text-muted small mb-3">${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ ${v.preco.toLocaleString('pt-BR')}</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill" onclick="abrirDetalhes(${v.id})">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+    `).join("");
+}
+
+// 5. Lógica de Filtros e Eventos
+function configurarEventos() {
+    // Busca Global
+    const inputBusca = document.getElementById("busca-global");
+    if (inputBusca) {
+        inputBusca.addEventListener("input", (e) => {
+            filtros.busca = e.target.value;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Marca
+    const selectMarca = document.getElementById("filtro-marca");
+    if (selectMarca) {
+        selectMarca.addEventListener("change", (e) => {
+            filtros.marca = e.target.value;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Preço
+    const inputPreco = document.getElementById("filtro-preco");
+    const labelPreco = document.getElementById("preco-max-label");
+    if (inputPreco) {
+        inputPreco.addEventListener("input", (e) => {
+            filtros.precoMax = parseInt(e.target.value);
+            labelPreco.innerText = `Até R$ ${filtros.precoMax.toLocaleString('pt-BR')}`;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Ano
+    const selectAno = document.getElementById("filtro-ano");
+    if (selectAno) {
+        selectAno.addEventListener("change", (e) => {
+            filtros.anoMin = parseInt(e.target.value) || 0;
+            renderizarEstoque();
+        });
+    }
+
+    // Botão Limpar Filtros
+    document.getElementById("limpar-filtros")?.addEventListener("click", resetarFiltros);
+
+    // Botão Ver Favoritos
+    document.getElementById("ver-favoritos")?.addEventListener("click", function() {
+        filtros.apenasFavoritos = !filtros.apenasFavoritos;
+        this.classList.toggle("btn-danger");
+        this.classList.toggle("btn-outline-danger");
+        this.innerHTML = filtros.apenasFavoritos ? 
+            '<i class="bi bi-grid me-2"></i>Ver Todos' : 
+            '<i class="bi bi-heart-fill me-2"></i>Ver Favoritos';
+        renderizarEstoque();
+    });
+}
+
+function resetarFiltros() {
+    filtros = { busca: "", marca: "", precoMax: 500000, anoMin: 0, apenasFavoritos: false };
+    document.getElementById("busca-global").value = "";
+    document.getElementById("filtro-marca").value = "";
+    document.getElementById("filtro-preco").value = 500000;
+    document.getElementById("filtro-ano").value = "";
+    document.getElementById("preco-max-label").innerText = "Até R$ 500.000";
+    renderizarEstoque();
+}
+
+// 6. Sistema de Favoritos
+window.toggleFavorito = function(id, event) {
+    if (event) event.stopPropagation();
+    const index = favoritos.indexOf(id);
+    if (index === -1) {
+        favoritos.push(id);
+    } else {
+        favoritos.splice(index, 1);
+    }
+    localStorage.setItem("topdealer_favs", JSON.stringify(favoritos));
+    renderizarEstoque();
+}
+
+// 7. Visualização de Detalhes
+window.abrirDetalhes = function(id) {
+    const v = VEICULOS.find(x => x.id === id);
+    if (!v) return;
+
+    // Preencher Modal
+    document.getElementById("viewMainImage").src = v.img;
+    document.getElementById("viewModelo").innerText = v.modelo;
+    document.getElementById("viewAnoKm").innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}`;
+    document.getElementById("viewPreco").innerText = `R$ ${v.preco.toLocaleString('pt-BR')}`;
+
+    // Especificações
+    document.getElementById("spec-cor").innerText = v.specs.cor;
+    document.getElementById("spec-placa").innerText = v.specs.placa;
+    document.getElementById("spec-comb").innerText = v.specs.combustivel;
+    document.getElementById("spec-portas").innerText = v.specs.portas;
+
+    // Link WhatsApp
+    const msg = encodeURIComponent(`Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`);
+    document.getElementById("btn-whatsapp-detalhe").href = `https://wa.me/5516991475066?text=${msg}`;
+
+    // Galeria (se houver)
+    const galleryContainer = document.getElementById("thumbGallery");
+    if (v.galeria && v.galeria.length > 0) {
+        galleryContainer.innerHTML = v.galeria.map((img, index) => `
+            <div class="col-3">
+                <img src="${img}" class="img-thumbnail thumb-img ${index === 0 ? 'active' : ''}" onclick="trocarImagem(this)" style="cursor:pointer">
+            </div>
+        `).join("");
+    } else {
+        galleryContainer.innerHTML = `
+            <div class="col-3">
+                <img src="${v.img}" class="img-thumbnail thumb-img active" onclick="trocarImagem(this)" style="cursor:pointer">
+            </div>
+        `;
+    }
+
+    // Modal
+    const modal = new bootstrap.Modal(document.getElementById('detalhesVeiculoModal'));
+    modal.show();
+}
+
+window.trocarImagem = function(img) {
+    document.getElementById("viewMainImage").src = img.src;
+    document.querySelectorAll(".thumb-img").forEach(t => t.classList.remove("active"));
+    img.classList.add("active");
+}
+
+// 8. Integração Backend (Login/Auth)
+function checarUsuarioLogado() {
+    const usuario = JSON.parse(localStorage.getItem("usuario_logado"));
+    if (usuario) {
+        const perfilBtn = document.getElementById("perfil-logado");
+        if (perfilBtn) perfilBtn.style.display = "block";
+        document.querySelectorAll(".guest-item").forEach(el => el.style.display = "none");
+        const displayNome = document.getElementById("nome-usuario-display");
+        if (displayNome) displayNome.innerText = usuario.nome;
+        const displayEmail = document.getElementById("info-flutuante-email");
+        if (displayEmail) displayEmail.innerText = usuario.email;
+        
+        // Preencher modal de perfil
+        const inputEmail = document.getElementById("perfil-email");
+        if (inputEmail) inputEmail.value = usuario.email;
+    }
+}
+
+// Evento de Login
+document.getElementById("form-login")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("login-email").value;
+    const senha = document.getElementById("login-senha").value;
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, senha })
+        });
+        if (res.ok) {
+            const user = await res.json();
+            localStorage.setItem("usuario_logado", JSON.stringify(user));
+            window.location.reload();
+        } else {
+            alert("E-mail ou senha incorretos.");
+        }
+    } catch (err) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+
+// Evento de Cadastro
+document.getElementById("form-cadastro")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/cadastrar`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nome, email, senha })
+        });
+        if (res.ok) {
+            alert("Cadastro realizado com sucesso! Faça login para continuar.");
+            bootstrap.Modal.getInstance(document.getElementById('cadastroModal')).hide();
+            new bootstrap.Modal(document.getElementById('loginModal')).show();
+        } else {
+            alert("Erro ao cadastrar.");
+        }
+    } catch (err) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+
+// Evento de Atualização de Perfil
+document.getElementById("form-perfil")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const usuario = JSON.parse(localStorage.getItem("usuario_logado"));
+    const dados = {
+        telefone: document.getElementById("perfil-tel").value,
+        cep: document.getElementById("perfil-cep").value,
+        endereco: document.getElementById("perfil-end").value
+    };
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/atualizar/${usuario.email}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dados)
+        });
+        if (res.ok) {
+            alert("Perfil atualizado!");
+            const updatedUser = await res.json();
+            localStorage.setItem("usuario_logado", JSON.stringify(updatedUser));
+            window.location.reload();
+        }
+    } catch (err) {
+        alert("Erro ao atualizar perfil.");
+    }
+});
+
+document.getElementById("btn-logout")?.addEventListener("click", () => {
+    localStorage.removeItem("usuario_logado");
+    window.location.reload();
+});
+
+// Nota: A implementação de Login/Cadastro deve seguir o padrão do seu backend.
+// Exemplo simplificado de Login:
+/*
+async function login(email, senha) {
+    const res = await fetch(`${API_BASE_URL}/usuarios/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+    });
+    if (res.ok) {
+        const user = await res.json();
+        localStorage.setItem("usuario_logado", JSON.stringify(user));
+        window.location.reload();
+    } else {
+        alert("Credenciais inválidas");
+    }
+}
+*/

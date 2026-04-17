@@ -1,3 +1,75 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #212529;
+    --card-bg: #ffffff;
+    --footer-bg: #ffffff;
+    --section-light-bg: #f8f9fa;
+    --border-color: #dee2e6;
+    --modal-bg: #ffffff;
+    --input-bg: #f8f9fa;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+    --footer-bg: #1e1e1e;
+    --section-light-bg: #181818;
+    --border-color: #333333;
+    --modal-bg: #1e1e1e;
+    --input-bg: #2d2d2d;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-light {
+    background-color: var(--section-light-bg) !important;
+}
+
+.bg-white {
+    background-color: var(--footer-bg) !important;
+}
+
+.card {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.modal-content {
+    background-color: var(--modal-bg) !important;
+    color: var(--text-color) !important;
+}
+
+.form-control.bg-light, .specs-grid.bg-light {
+    background-color: var(--input-bg) !important;
+    color: var(--text-color) !important;
+}
+
+.text-muted {
+    color: #a0a0a0 !important;
+}
+
+.border-top, .border-bottom {
+    border-color: var(--border-color) !important;
+}
+
+#theme-toggle {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: color 0.3s;
+}
+
+#theme-toggle:hover {
+    color: #ffffff !important;
+}
+
+[data-theme="dark"] #theme-toggle {
+    color: #ffca28 !important; /* Cor amarela para o sol no modo escuro */
+}
+
 .hero-section {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920');
     background-size: cover;
@@ -168,7 +240,7 @@ aside .card {
     position: sticky;
     top: 90px;
 }
-#contato a:hover {
+#contato a:not(.btn-primary):hover {
     color: #000000 !important; /* Azul um pouco mais escuro ao passar o mouse */
     text-decoration: underline !important;
 }
@@ -226,13 +298,50 @@ aside .card {
     box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
 }
 
-/* Força a cor preta nos preços dos cards */
 .card-body h5, 
 .card-body .text-primary,
 [id^="preco-"] { 
-    color: #000000 !important; 
+    color: var(--text-color) !important; 
     font-weight: bold;
 }
+
+[data-theme="dark"] .badge.bg-dark {
+    background-color: #333 !important;
+    color: #fff !important;
+}
+
+[data-theme="dark"] .badge.bg-light {
+    background-color: #2d2d2d !important;
+    color: #0d6efd !important;
+}
+
+[data-theme="dark"] .text-dark {
+    color: #fff !important;
+}
+
+/* Paginação no modo escuro */
+[data-theme="dark"] .pagination .page-link {
+    background-color: #000 !important;
+    color: #fff !important;
+    border-color: #333 !important;
+}
+
+[data-theme="dark"] .pagination .page-item.active .page-link {
+    background-color: #333 !important;
+    border-color: #444 !important;
+}
+
+/* Botão Ver Detalhes no modo escuro */
+[data-theme="dark"] .btn-outline-dark {
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+[data-theme="dark"] .btn-outline-dark:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+}
+
 /* Garante que a imagem principal do modal tenha sempre a mesma altura */
 #viewMainImage {
     width: 100%;

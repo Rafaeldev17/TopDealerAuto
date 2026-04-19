@@ -1,5 +1,452 @@
-<<<<<<< HEAD
-const _0x298fc8=_0x36af;function _0x4d6b(){const _0xd32cda=['28610mVfViM','submit','filtro-marca','abrirDetalhes','\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','10431kiVaPs','btn-outline-danger',',\x20event)\x22\x20style=\x22cursor:pointer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','preventDefault','detalhesVeiculoModal','4484778RRStZu','https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800','info-flutuante-email','login-senha','Modal','inicializarApp','dark','\x22\x20class=\x22card-img-top\x22\x20alt=\x22','innerText','form-cadastro','querySelectorAll','E-mail\x20ou\x20senha\x20incorretos.','/usuarios/atualizar/','Civic\x20Touring\x201.5\x20Turbo','portas','click','viewAnoKm','marca','\x20anunciado\x20na\x20TopDealerAuto.','length','<i\x20class=\x22bi\x20bi-grid\x20me-2\x22></i>Ver\x20Todos','perfil-end','busca-global','indexOf','classList','ver-favoritos','location','placa','busca','addEventListener','viewMainImage','Kicks3.jpeg','Cinza\x20Moon','topdealer_theme','trocarImagemManual','<i\x20class=\x22bi\x20bi-heart-fill\x20me-2\x22></i>Ver\x20Favoritos',',\x20event)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-heart','Kicks2.jpeg','https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800','forEach','Toyota','senha','map','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','btn-logout','filter','setAttribute','426869jjkGlV','\x22\x20class=\x22img-thumbnail\x20thumb-img\x20','.guest-item','filtro-ano','btn-danger','loginModal','lista-veiculos','3992280PcyOXA','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-12\x20text-center\x20py-5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-search\x20fs-1\x20text-muted\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22mt-3\x20text-muted\x22>Nenhum\x20veículo\x20encontrado\x20com\x20esses\x20filtros.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-link\x22\x20onclick=\x22resetarFiltros()\x22>Limpar\x20Filtros</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','replace','style','specs','input','theme-toggle','Flex','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22card-text\x20text-muted\x20small\x20mb-3\x22>','add','data-theme','viewPreco','usuario_logado','bi-sun','/usuarios/cadastrar','Kicks\x20SL\x201.6\x2016V\x20Flexstar\x205P\x20Aut.','toggle','cor','light','apenasFavoritos','display','hide','atualizarDisplayImagem','toLowerCase','includes','find','http://localhost:8080/api','POST','stopPropagation','preco','Volkswagen','block','src','querySelector','combustivel','active','reload','Kicks7.jpeg','json','href','anoMin','topdealer_favs','cadastroModal','parse','Erro\x20ao\x20conectar\x20com\x20o\x20servidor.','login-email','join',')\x22\x20style=\x22cursor:\x20pointer;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22img-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-favorite\x20','resetarFiltros','modelo','Kicks9.jpeg','viewModelo','https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800','getElementById','nome-usuario-display','1594488qfTfHO','6129CTfIKx','Nivus\x20Highline\x20200\x20TSI','value','Honda','Até\x20R$\x20','splice','5CBuDmD','Nissan','/usuarios/login','5574002Dzjeeq','precoMax','email','\x20|\x20','preco-max-label','Erro\x20ao\x20atualizar\x20perfil.','spec-placa','Kicks8.jpeg','perfil-logado','btn-whatsapp-detalhe','stringify','toggleDarkMode','form-login','54MKpxZF','Kicks5.jpeg','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x20d-flex\x20flex-column\x20p-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-light\x20text-primary\x20mb-2\x20align-self-start\x22>','cambio','documentElement','change','perfil-email','\x22\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20onclick=\x22window.trocarImagemManual(','perfil-tel','Até\x20R$\x20500.000','pt-BR','getAttribute','innerHTML','ano','filtro-preco','.thumb-img','\x20Km\x20|\x20','show','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22fs-4\x20fw-bold\x20text-dark\x20mt-auto\x20mb-3\x22>R$\x20','galeria','bi-moon-stars','getItem','img','target','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-dark\x20w-100\x20fw-bold\x20rounded-pill\x22>Ver\x20Detalhes</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','nome','https://wa.me/5516991475066?text=','push','toLocaleString','Kicks6.jpeg','setItem','application/json','Perfil\x20atualizado!','Cadastro\x20realizado\x20com\x20sucesso!\x20Faça\x20login\x20para\x20continuar.'];_0x4d6b=function(){return _0xd32cda;};return _0x4d6b();}(function(_0x38d230,_0x2c9969){const _0x4f327a=_0x36af,_0x2771b2=_0x38d230();while(!![]){try{const _0x2a54ff=-parseInt(_0x4f327a(0x269))/0x1+-parseInt(_0x4f327a(0x20e))/0x2*(parseInt(_0x4f327a(0x235))/0x3)+-parseInt(_0x4f327a(0x1f7))/0x4+parseInt(_0x4f327a(0x1fe))/0x5*(parseInt(_0x4f327a(0x23a))/0x6)+-parseInt(_0x4f327a(0x201))/0x7+-parseInt(_0x4f327a(0x1c0))/0x8+-parseInt(_0x4f327a(0x1f8))/0x9*(-parseInt(_0x4f327a(0x230))/0xa);if(_0x2a54ff===_0x2c9969)break;else _0x2771b2['push'](_0x2771b2['shift']());}catch(_0x2335ec){_0x2771b2['push'](_0x2771b2['shift']());}}}(_0x4d6b,0x75759));const API_BASE_URL=_0x298fc8(0x1da),VEICULOS=[{'id':0x1,'marca':_0x298fc8(0x1ff),'modelo':_0x298fc8(0x1cf),'ano':0x7e1,'km':0x109a0,'preco':0x137b8,'cambio':'Automático','img':_0x298fc8(0x25f),'galeria':['Kicks2.jpeg',_0x298fc8(0x259),'Kicks4.jpeg',_0x298fc8(0x20f),_0x298fc8(0x22b),_0x298fc8(0x1e5),_0x298fc8(0x208),_0x298fc8(0x1f2)],'specs':{'cor':'Cinza','placa':'2','combustivel':'Flex','portas':'4'}},{'id':0x2,'marca':_0x298fc8(0x262),'modelo':'Corolla\x20XEI\x202.0\x20Flex','ano':0x7e5,'km':0x88b8,'preco':0x1e848,'cambio':'Automático','img':_0x298fc8(0x260),'galeria':[],'specs':{'cor':'Preto','placa':'5','combustivel':_0x298fc8(0x1c7),'portas':'4'}},{'id':0x3,'marca':_0x298fc8(0x1fb),'modelo':_0x298fc8(0x247),'ano':0x7e4,'km':0xa410,'preco':0x21b10,'cambio':'Automático','img':_0x298fc8(0x23b),'galeria':[],'specs':{'cor':'Branco','placa':'8','combustivel':'Gasolina','portas':'4'}},{'id':0x4,'marca':_0x298fc8(0x1de),'modelo':_0x298fc8(0x1f9),'ano':0x7e6,'km':0x3a98,'preco':0x1c4bc,'cambio':'Automático','img':_0x298fc8(0x1f4),'galeria':[],'specs':{'cor':_0x298fc8(0x25a),'placa':'3','combustivel':_0x298fc8(0x1c7),'portas':'4'}}];let filtros={'busca':'','marca':'','precoMax':0x7a120,'anoMin':0x0,'apenasFavoritos':![]},favoritos=JSON[_0x298fc8(0x1eb)](localStorage[_0x298fc8(0x223)](_0x298fc8(0x1e9)))||[],galeriaAtual=[],indiceImagemAtual=0x0;document['addEventListener']('DOMContentLoaded',()=>{inicializarApp();}),window[_0x298fc8(0x23f)]=function(){aplicarTemaSalvo(),renderizarEstoque(),configurarEventos(),checarUsuarioLogado();};function aplicarTemaSalvo(){const _0x501943=_0x298fc8,_0x33b718=localStorage[_0x501943(0x223)]('topdealer_theme')||'light';document[_0x501943(0x212)][_0x501943(0x268)](_0x501943(0x1ca),_0x33b718),atualizarIconeTema(_0x33b718);}function _0x36af(_0x2d3d00,_0x4116ac){_0x2d3d00=_0x2d3d00-0x1c0;const _0x4d6baf=_0x4d6b();let _0x36af67=_0x4d6baf[_0x2d3d00];return _0x36af67;}window[_0x298fc8(0x20c)]=function(){const _0x687275=_0x298fc8,_0x5955a2=document[_0x687275(0x212)][_0x687275(0x219)]('data-theme')||'light',_0x23eb67=_0x5955a2===_0x687275(0x1d2)?_0x687275(0x240):_0x687275(0x1d2);document[_0x687275(0x212)][_0x687275(0x268)](_0x687275(0x1ca),_0x23eb67),localStorage[_0x687275(0x22c)](_0x687275(0x25b),_0x23eb67),atualizarIconeTema(_0x23eb67);};function atualizarIconeTema(_0x38badc){const _0x2d4ae6=_0x298fc8,_0x2ec834=document[_0x2d4ae6(0x1f5)](_0x2d4ae6(0x1c6));if(!_0x2ec834)return;const _0x23043d=_0x2ec834[_0x2d4ae6(0x1e1)]('i');_0x38badc==='dark'?_0x23043d[_0x2d4ae6(0x252)]['replace'](_0x2d4ae6(0x222),_0x2d4ae6(0x1cd)):_0x23043d[_0x2d4ae6(0x252)][_0x2d4ae6(0x1c2)](_0x2d4ae6(0x1cd),_0x2d4ae6(0x222));}window['renderizarEstoque']=function(){const _0x51da9d=_0x298fc8,_0x431e47=document[_0x51da9d(0x1f5)](_0x51da9d(0x26f));if(!_0x431e47)return;const _0x19d236=VEICULOS[_0x51da9d(0x267)](_0xac896c=>{const _0x58beb0=_0x51da9d,_0x104010=_0xac896c[_0x58beb0(0x1f1)]['toLowerCase']()[_0x58beb0(0x1d8)](filtros[_0x58beb0(0x256)][_0x58beb0(0x1d7)]())||_0xac896c[_0x58beb0(0x24b)][_0x58beb0(0x1d7)]()['includes'](filtros[_0x58beb0(0x256)][_0x58beb0(0x1d7)]()),_0x122f08=filtros['marca']===''||_0xac896c[_0x58beb0(0x24b)]===filtros[_0x58beb0(0x24b)],_0x2e8168=_0xac896c['preco']<=filtros[_0x58beb0(0x202)],_0x110af8=_0xac896c[_0x58beb0(0x21b)]>=filtros[_0x58beb0(0x1e8)],_0x5887e4=!filtros[_0x58beb0(0x1d3)]||favoritos[_0x58beb0(0x1d8)](_0xac896c['id']);return _0x104010&&_0x122f08&&_0x2e8168&&_0x110af8&&_0x5887e4;});document[_0x51da9d(0x1f5)]('count-veiculos')[_0x51da9d(0x242)]=_0x19d236['length'];if(_0x19d236['length']===0x0){_0x431e47[_0x51da9d(0x21a)]=_0x51da9d(0x1c1);return;}_0x431e47[_0x51da9d(0x21a)]=_0x19d236[_0x51da9d(0x264)](_0x5789cf=>'\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-4\x20card-veiculo\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20h-100\x20border-0\x20shadow-sm\x20hover-shadow\x22\x20onclick=\x22abrirDetalhes('+_0x5789cf['id']+_0x51da9d(0x1ef)+(favoritos[_0x51da9d(0x1d8)](_0x5789cf['id'])?'active':'')+'\x22\x20onclick=\x22toggleFavorito('+_0x5789cf['id']+_0x51da9d(0x25e)+(favoritos[_0x51da9d(0x1d8)](_0x5789cf['id'])?'-fill':'')+_0x51da9d(0x234)+_0x5789cf[_0x51da9d(0x224)]+_0x51da9d(0x241)+_0x5789cf[_0x51da9d(0x1f1)]+_0x51da9d(0x210)+_0x5789cf[_0x51da9d(0x24b)]+'</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20fw-bold\x20mb-1\x22>'+_0x5789cf[_0x51da9d(0x1f1)]+_0x51da9d(0x1c8)+_0x5789cf[_0x51da9d(0x21b)]+_0x51da9d(0x204)+_0x5789cf['km'][_0x51da9d(0x22a)]()+_0x51da9d(0x21e)+_0x5789cf['cambio']+_0x51da9d(0x220)+_0x5789cf[_0x51da9d(0x1dd)][_0x51da9d(0x22a)](_0x51da9d(0x218))+_0x51da9d(0x226))['join']('');};function configurarEventos(){const _0x2bbbc5=_0x298fc8,_0xd944e7=document[_0x2bbbc5(0x1f5)](_0x2bbbc5(0x250));_0xd944e7&&_0xd944e7[_0x2bbbc5(0x257)](_0x2bbbc5(0x1c5),_0x184b73=>{const _0xd391e=_0x2bbbc5;filtros[_0xd391e(0x256)]=_0x184b73[_0xd391e(0x225)][_0xd391e(0x1fa)],renderizarEstoque();});const _0xbc4fed=document[_0x2bbbc5(0x1f5)](_0x2bbbc5(0x232));_0xbc4fed&&_0xbc4fed['addEventListener'](_0x2bbbc5(0x213),_0x56711b=>{const _0x15208f=_0x2bbbc5;filtros[_0x15208f(0x24b)]=_0x56711b[_0x15208f(0x225)]['value'],renderizarEstoque();});const _0x385af0=document['getElementById'](_0x2bbbc5(0x21c)),_0x96cd2c=document[_0x2bbbc5(0x1f5)](_0x2bbbc5(0x205));_0x385af0&&_0x385af0[_0x2bbbc5(0x257)](_0x2bbbc5(0x1c5),_0x46433d=>{const _0x103c4a=_0x2bbbc5;filtros[_0x103c4a(0x202)]=parseInt(_0x46433d[_0x103c4a(0x225)][_0x103c4a(0x1fa)]),_0x96cd2c['innerText']=_0x103c4a(0x1fc)+filtros[_0x103c4a(0x202)]['toLocaleString']('pt-BR'),renderizarEstoque();});const _0x33f8fe=document['getElementById']('filtro-ano');_0x33f8fe&&_0x33f8fe[_0x2bbbc5(0x257)](_0x2bbbc5(0x213),_0x96281d=>{const _0x41f0a4=_0x2bbbc5;filtros[_0x41f0a4(0x1e8)]=parseInt(_0x96281d[_0x41f0a4(0x225)][_0x41f0a4(0x1fa)])||0x0,renderizarEstoque();}),document['getElementById']('limpar-filtros')?.[_0x2bbbc5(0x257)](_0x2bbbc5(0x249),resetarFiltros),document[_0x2bbbc5(0x1f5)](_0x2bbbc5(0x253))?.[_0x2bbbc5(0x257)](_0x2bbbc5(0x249),function(){const _0x35cc37=_0x2bbbc5;filtros[_0x35cc37(0x1d3)]=!filtros[_0x35cc37(0x1d3)],this[_0x35cc37(0x252)]['toggle'](_0x35cc37(0x26d)),this[_0x35cc37(0x252)][_0x35cc37(0x1d0)](_0x35cc37(0x236)),this[_0x35cc37(0x21a)]=filtros[_0x35cc37(0x1d3)]?_0x35cc37(0x24e):_0x35cc37(0x25d),renderizarEstoque();});}window[_0x298fc8(0x1f0)]=function(){const _0x59cef5=_0x298fc8;filtros={'busca':'','marca':'','precoMax':0x7a120,'anoMin':0x0,'apenasFavoritos':![]};const _0x4904ef=document['getElementById'](_0x59cef5(0x250));if(_0x4904ef)_0x4904ef[_0x59cef5(0x1fa)]='';const _0x1d48d3=document[_0x59cef5(0x1f5)](_0x59cef5(0x232));if(_0x1d48d3)_0x1d48d3[_0x59cef5(0x1fa)]='';const _0x116a99=document[_0x59cef5(0x1f5)](_0x59cef5(0x21c));if(_0x116a99)_0x116a99['value']=0x7a120;const _0x2043fe=document[_0x59cef5(0x1f5)](_0x59cef5(0x26c));if(_0x2043fe)_0x2043fe[_0x59cef5(0x1fa)]='';const _0xaaf84c=document[_0x59cef5(0x1f5)](_0x59cef5(0x205));if(_0xaaf84c)_0xaaf84c[_0x59cef5(0x242)]=_0x59cef5(0x217);renderizarEstoque();},window['toggleFavorito']=function(_0x57920d,_0x127dc1){const _0x1a3d48=_0x298fc8;_0x127dc1&&(_0x127dc1[_0x1a3d48(0x1dc)](),_0x127dc1['preventDefault']());const _0x11c717=favoritos[_0x1a3d48(0x251)](_0x57920d);_0x11c717===-0x1?favoritos[_0x1a3d48(0x229)](_0x57920d):favoritos[_0x1a3d48(0x1fd)](_0x11c717,0x1),localStorage[_0x1a3d48(0x22c)](_0x1a3d48(0x1e9),JSON['stringify'](favoritos)),renderizarEstoque();},window[_0x298fc8(0x233)]=function(_0xfee5ec){const _0x2c81c7=_0x298fc8,_0x5a71f9=VEICULOS[_0x2c81c7(0x1d9)](_0x119a7f=>_0x119a7f['id']===_0xfee5ec);if(!_0x5a71f9)return;galeriaAtual=_0x5a71f9['galeria']&&_0x5a71f9['galeria'][_0x2c81c7(0x24d)]>0x0?_0x5a71f9[_0x2c81c7(0x221)]:[_0x5a71f9[_0x2c81c7(0x224)]],indiceImagemAtual=0x0;const _0x413fdf=document[_0x2c81c7(0x1f5)](_0x2c81c7(0x258));if(_0x413fdf)_0x413fdf[_0x2c81c7(0x1e0)]=galeriaAtual[0x0];const _0x7532d3=document[_0x2c81c7(0x1f5)](_0x2c81c7(0x1f3));if(_0x7532d3)_0x7532d3[_0x2c81c7(0x242)]=_0x5a71f9[_0x2c81c7(0x1f1)];const _0x4d4bbe=document['getElementById'](_0x2c81c7(0x24a));if(_0x4d4bbe)_0x4d4bbe['innerText']=_0x5a71f9['ano']+_0x2c81c7(0x204)+_0x5a71f9['km'][_0x2c81c7(0x22a)]()+_0x2c81c7(0x21e)+_0x5a71f9[_0x2c81c7(0x211)];const _0x3100d9=document[_0x2c81c7(0x1f5)](_0x2c81c7(0x1cb));if(_0x3100d9)_0x3100d9[_0x2c81c7(0x242)]='R$\x20'+_0x5a71f9[_0x2c81c7(0x1dd)]['toLocaleString'](_0x2c81c7(0x218));const _0x4db16c=document['getElementById']('spec-cor');if(_0x4db16c)_0x4db16c['innerText']=_0x5a71f9[_0x2c81c7(0x1c4)][_0x2c81c7(0x1d1)];const _0x28f747=document['getElementById'](_0x2c81c7(0x207));if(_0x28f747)_0x28f747[_0x2c81c7(0x242)]=_0x5a71f9[_0x2c81c7(0x1c4)][_0x2c81c7(0x255)];const _0x216235=document['getElementById']('spec-comb');if(_0x216235)_0x216235[_0x2c81c7(0x242)]=_0x5a71f9[_0x2c81c7(0x1c4)][_0x2c81c7(0x1e2)];const _0x2775f4=document[_0x2c81c7(0x1f5)]('spec-portas');if(_0x2775f4)_0x2775f4[_0x2c81c7(0x242)]=_0x5a71f9[_0x2c81c7(0x1c4)][_0x2c81c7(0x248)];const _0xee3884=encodeURIComponent('Olá!\x20Tenho\x20interesse\x20no\x20'+_0x5a71f9['marca']+'\x20'+_0x5a71f9['modelo']+_0x2c81c7(0x24c)),_0x502a92=document[_0x2c81c7(0x1f5)](_0x2c81c7(0x20a));if(_0x502a92)_0x502a92[_0x2c81c7(0x1e7)]=_0x2c81c7(0x228)+_0xee3884;const _0xd7f89=document[_0x2c81c7(0x1f5)]('thumbGallery');_0xd7f89&&(_0xd7f89[_0x2c81c7(0x21a)]=galeriaAtual[_0x2c81c7(0x264)]((_0xd1c243,_0x3cf5a9)=>_0x2c81c7(0x265)+_0xd1c243+_0x2c81c7(0x26a)+(_0x3cf5a9===0x0?_0x2c81c7(0x1e3):'')+_0x2c81c7(0x215)+_0x3cf5a9+_0x2c81c7(0x237))[_0x2c81c7(0x1ee)](''));const _0xd0e48c=document[_0x2c81c7(0x1f5)](_0x2c81c7(0x239));if(_0xd0e48c){const _0x452751=new bootstrap[(_0x2c81c7(0x23e))](_0xd0e48c);_0x452751[_0x2c81c7(0x21f)]();}},window[_0x298fc8(0x25c)]=function(_0x2de2d1,_0x216c37){if(_0x216c37)_0x216c37['stopPropagation']();indiceImagemAtual=_0x2de2d1,atualizarDisplayImagem();},window['mudarImagem']=function(_0x5e2f59){const _0x353653=_0x298fc8;if(!galeriaAtual||galeriaAtual[_0x353653(0x24d)]<=0x1)return;indiceImagemAtual+=_0x5e2f59;if(indiceImagemAtual>=galeriaAtual[_0x353653(0x24d)])indiceImagemAtual=0x0;else indiceImagemAtual<0x0&&(indiceImagemAtual=galeriaAtual['length']-0x1);atualizarDisplayImagem();},window[_0x298fc8(0x1d6)]=function(){const _0x11eef5=_0x298fc8,_0x262a03=document['getElementById'](_0x11eef5(0x258));if(_0x262a03)_0x262a03[_0x11eef5(0x1e0)]=galeriaAtual[indiceImagemAtual];document[_0x11eef5(0x244)](_0x11eef5(0x21d))[_0x11eef5(0x261)]((_0x41f2d9,_0x2f9f6d)=>{const _0x20bde8=_0x11eef5;_0x2f9f6d===indiceImagemAtual?_0x41f2d9['classList'][_0x20bde8(0x1c9)](_0x20bde8(0x1e3)):_0x41f2d9['classList']['remove'](_0x20bde8(0x1e3));});};function checarUsuarioLogado(){const _0x283393=_0x298fc8,_0x1496c9=JSON[_0x283393(0x1eb)](localStorage[_0x283393(0x223)](_0x283393(0x1cc)));if(_0x1496c9){const _0x102666=document[_0x283393(0x1f5)](_0x283393(0x209));if(_0x102666)_0x102666['style']['display']=_0x283393(0x1df);document[_0x283393(0x244)](_0x283393(0x26b))[_0x283393(0x261)](_0x3089f2=>_0x3089f2[_0x283393(0x1c3)][_0x283393(0x1d4)]='none');const _0x5e0e1f=document[_0x283393(0x1f5)](_0x283393(0x1f6));if(_0x5e0e1f)_0x5e0e1f[_0x283393(0x242)]=_0x1496c9[_0x283393(0x227)];const _0x32f2c6=document[_0x283393(0x1f5)](_0x283393(0x23c));if(_0x32f2c6)_0x32f2c6[_0x283393(0x242)]=_0x1496c9[_0x283393(0x203)];const _0x4ae11c=document[_0x283393(0x1f5)](_0x283393(0x214));if(_0x4ae11c)_0x4ae11c[_0x283393(0x1fa)]=_0x1496c9[_0x283393(0x203)];}}document[_0x298fc8(0x1f5)](_0x298fc8(0x20d))?.[_0x298fc8(0x257)](_0x298fc8(0x231),async _0x5ef661=>{const _0x3d2635=_0x298fc8;_0x5ef661[_0x3d2635(0x238)]();const _0x4fb071=document[_0x3d2635(0x1f5)](_0x3d2635(0x1ed))[_0x3d2635(0x1fa)],_0x21a38f=document[_0x3d2635(0x1f5)](_0x3d2635(0x23d))[_0x3d2635(0x1fa)];try{const _0x4a85ad=await fetch(API_BASE_URL+_0x3d2635(0x200),{'method':_0x3d2635(0x1db),'headers':{'Content-Type':_0x3d2635(0x22d)},'body':JSON['stringify']({'email':_0x4fb071,'senha':_0x21a38f})});if(_0x4a85ad['ok']){const _0xa3ab74=await _0x4a85ad[_0x3d2635(0x1e6)]();localStorage[_0x3d2635(0x22c)](_0x3d2635(0x1cc),JSON[_0x3d2635(0x20b)](_0xa3ab74)),window[_0x3d2635(0x254)]['reload']();}else alert(_0x3d2635(0x245));}catch(_0x2cdac4){alert(_0x3d2635(0x1ec));}}),document[_0x298fc8(0x1f5)](_0x298fc8(0x243))?.[_0x298fc8(0x257)](_0x298fc8(0x231),async _0x1a6d56=>{const _0x1e49c7=_0x298fc8;_0x1a6d56['preventDefault']();const _0x441e33=document['getElementById'](_0x1e49c7(0x227))['value'],_0x1742e6=document['getElementById'](_0x1e49c7(0x203))[_0x1e49c7(0x1fa)],_0x13b989=document['getElementById'](_0x1e49c7(0x263))[_0x1e49c7(0x1fa)];try{const _0x14d2f2=await fetch(API_BASE_URL+_0x1e49c7(0x1ce),{'method':'POST','headers':{'Content-Type':_0x1e49c7(0x22d)},'body':JSON[_0x1e49c7(0x20b)]({'nome':_0x441e33,'email':_0x1742e6,'senha':_0x13b989})});_0x14d2f2['ok']?(alert(_0x1e49c7(0x22f)),bootstrap[_0x1e49c7(0x23e)]['getInstance'](document[_0x1e49c7(0x1f5)](_0x1e49c7(0x1ea)))[_0x1e49c7(0x1d5)](),new bootstrap[(_0x1e49c7(0x23e))](document[_0x1e49c7(0x1f5)](_0x1e49c7(0x26e)))[_0x1e49c7(0x21f)]()):alert('Erro\x20ao\x20cadastrar.');}catch(_0x9800e){alert(_0x1e49c7(0x1ec));}}),document[_0x298fc8(0x1f5)]('form-perfil')?.[_0x298fc8(0x257)]('submit',async _0xd84095=>{const _0x283859=_0x298fc8;_0xd84095['preventDefault']();const _0x3f8c61=JSON[_0x283859(0x1eb)](localStorage[_0x283859(0x223)](_0x283859(0x1cc))),_0x47da67={'telefone':document[_0x283859(0x1f5)](_0x283859(0x216))['value'],'cep':document['getElementById']('perfil-cep')[_0x283859(0x1fa)],'endereco':document[_0x283859(0x1f5)](_0x283859(0x24f))[_0x283859(0x1fa)]};try{const _0x121c54=await fetch(API_BASE_URL+_0x283859(0x246)+_0x3f8c61[_0x283859(0x203)],{'method':'PUT','headers':{'Content-Type':_0x283859(0x22d)},'body':JSON['stringify'](_0x47da67)});if(_0x121c54['ok']){alert(_0x283859(0x22e));const _0x566ebc=await _0x121c54[_0x283859(0x1e6)]();localStorage['setItem']('usuario_logado',JSON[_0x283859(0x20b)](_0x566ebc)),window[_0x283859(0x254)][_0x283859(0x1e4)]();}}catch(_0x2f750c){alert(_0x283859(0x206));}}),document[_0x298fc8(0x1f5)](_0x298fc8(0x266))?.['addEventListener'](_0x298fc8(0x249),()=>{const _0xddc608=_0x298fc8;localStorage['removeItem'](_0xddc608(0x1cc)),window[_0xddc608(0x254)][_0xddc608(0x1e4)]();});
-=======
-const _0x2d1099=_0x172c;(function(_0x5f42b6,_0x4d0c84){const _0x5deb5c=_0x172c,_0xd0bc66=_0x5f42b6();while(!![]){try{const _0x39a64c=parseInt(_0x5deb5c(0x1d5))/0x1*(parseInt(_0x5deb5c(0x185))/0x2)+-parseInt(_0x5deb5c(0x1c5))/0x3*(-parseInt(_0x5deb5c(0x143))/0x4)+-parseInt(_0x5deb5c(0x154))/0x5*(-parseInt(_0x5deb5c(0x16d))/0x6)+parseInt(_0x5deb5c(0x193))/0x7+parseInt(_0x5deb5c(0x197))/0x8*(-parseInt(_0x5deb5c(0x199))/0x9)+-parseInt(_0x5deb5c(0x1cc))/0xa*(parseInt(_0x5deb5c(0x173))/0xb)+-parseInt(_0x5deb5c(0x175))/0xc*(parseInt(_0x5deb5c(0x1ce))/0xd);if(_0x39a64c===_0x4d0c84)break;else _0xd0bc66['push'](_0xd0bc66['shift']());}catch(_0x54ce36){_0xd0bc66['push'](_0xd0bc66['shift']());}}}(_0x47b7,0x7417b));const API_BASE_URL='http://localhost:8080/api',VEICULOS=[{'id':0x1,'marca':'Nissan','modelo':_0x2d1099(0x186),'ano':0x7e1,'km':0x109a0,'preco':0x137b8,'cambio':_0x2d1099(0x16f),'img':'Kicks2.jpeg','galeria':['Kicks2.jpeg',_0x2d1099(0x1d8),_0x2d1099(0x1bd),_0x2d1099(0x19b),_0x2d1099(0x135),'Kicks7.jpeg',_0x2d1099(0x1c3),'Kicks9.jpeg'],'specs':{'cor':_0x2d1099(0x1ab),'placa':'2','combustivel':_0x2d1099(0x1a5),'portas':'4'}},{'id':0x2,'marca':'Toyota','modelo':_0x2d1099(0x1d4),'ano':0x7e5,'km':0x88b8,'preco':0x1e848,'cambio':_0x2d1099(0x16f),'img':_0x2d1099(0x19d),'galeria':[],'specs':{'cor':_0x2d1099(0x159),'placa':'5','combustivel':_0x2d1099(0x1a5),'portas':'4'}},{'id':0x3,'marca':'Honda','modelo':_0x2d1099(0x170),'ano':0x7e4,'km':0xa410,'preco':0x21b10,'cambio':'Automático','img':_0x2d1099(0x192),'galeria':[],'specs':{'cor':_0x2d1099(0x149),'placa':'8','combustivel':_0x2d1099(0x1a8),'portas':'4'}},{'id':0x4,'marca':_0x2d1099(0x146),'modelo':_0x2d1099(0x165),'ano':0x7e6,'km':0x3a98,'preco':0x1c4bc,'cambio':_0x2d1099(0x16f),'img':_0x2d1099(0x17e),'galeria':[],'specs':{'cor':_0x2d1099(0x1a3),'placa':'3','combustivel':_0x2d1099(0x1a5),'portas':'4'}}];let filtros={'busca':'','marca':'','precoMax':0x7a120,'anoMin':0x0,'apenasFavoritos':![]},favoritos=JSON['parse'](localStorage[_0x2d1099(0x153)](_0x2d1099(0x1b8)))||[];function _0x172c(_0x470fcd,_0x541602){_0x470fcd=_0x470fcd-0x133;const _0x47b740=_0x47b7();let _0x172c45=_0x47b740[_0x470fcd];return _0x172c45;}document[_0x2d1099(0x147)](_0x2d1099(0x162),()=>{inicializarApp();});function inicializarApp(){aplicarTemaSalvo(),renderizarEstoque(),configurarEventos(),checarUsuarioLogado();}function aplicarTemaSalvo(){const _0x287178=_0x2d1099,_0x4f40af=localStorage['getItem'](_0x287178(0x134))||_0x287178(0x180);document['documentElement'][_0x287178(0x166)](_0x287178(0x1cf),_0x4f40af),atualizarIconeTema(_0x4f40af);}window[_0x2d1099(0x1dd)]=function(){const _0x300658=_0x2d1099,_0x23e6d4=document[_0x300658(0x1ba)][_0x300658(0x1da)](_0x300658(0x1cf))||_0x300658(0x180),_0x15c02c=_0x23e6d4==='light'?_0x300658(0x1af):'light';document[_0x300658(0x1ba)]['setAttribute']('data-theme',_0x15c02c),localStorage[_0x300658(0x1bc)](_0x300658(0x134),_0x15c02c),atualizarIconeTema(_0x15c02c);};function atualizarIconeTema(_0x25f146){const _0x5545ad=_0x2d1099,_0x2cc6d5=document[_0x5545ad(0x16a)]('theme-toggle');if(!_0x2cc6d5)return;const _0x1f3291=_0x2cc6d5[_0x5545ad(0x190)]('i');_0x25f146===_0x5545ad(0x1af)?_0x1f3291[_0x5545ad(0x14c)][_0x5545ad(0x136)](_0x5545ad(0x15e),_0x5545ad(0x1c0)):_0x1f3291['classList']['replace']('bi-sun','bi-moon-stars');}function renderizarEstoque(){const _0x3a8f8d=_0x2d1099,_0x3df8fc=document[_0x3a8f8d(0x16a)]('lista-veiculos');if(!_0x3df8fc)return;const _0x1fb71e=VEICULOS['filter'](_0x4323ea=>{const _0x3b0664=_0x3a8f8d,_0x47a1e5=_0x4323ea[_0x3b0664(0x177)][_0x3b0664(0x19f)]()[_0x3b0664(0x1c1)](filtros[_0x3b0664(0x18f)]['toLowerCase']())||_0x4323ea['marca']['toLowerCase']()['includes'](filtros[_0x3b0664(0x18f)][_0x3b0664(0x19f)]()),_0x1a073b=filtros[_0x3b0664(0x187)]===''||_0x4323ea[_0x3b0664(0x187)]===filtros[_0x3b0664(0x187)],_0x2262d4=_0x4323ea['preco']<=filtros[_0x3b0664(0x1a9)],_0xeb6a35=_0x4323ea['ano']>=filtros[_0x3b0664(0x1bf)],_0x1818c9=!filtros['apenasFavoritos']||favoritos[_0x3b0664(0x1c1)](_0x4323ea['id']);return _0x47a1e5&&_0x1a073b&&_0x2262d4&&_0xeb6a35&&_0x1818c9;});document['getElementById'](_0x3a8f8d(0x13c))[_0x3a8f8d(0x142)]=_0x1fb71e[_0x3a8f8d(0x141)];if(_0x1fb71e[_0x3a8f8d(0x141)]===0x0){_0x3df8fc[_0x3a8f8d(0x1ca)]=_0x3a8f8d(0x1a1);return;}_0x3df8fc[_0x3a8f8d(0x1ca)]=_0x1fb71e[_0x3a8f8d(0x145)](_0x4cce34=>_0x3a8f8d(0x13b)+(favoritos[_0x3a8f8d(0x1c1)](_0x4cce34['id'])?_0x3a8f8d(0x1c6):'')+'\x22\x20onclick=\x22toggleFavorito('+_0x4cce34['id']+_0x3a8f8d(0x133)+(favoritos[_0x3a8f8d(0x1c1)](_0x4cce34['id'])?_0x3a8f8d(0x150):'')+_0x3a8f8d(0x174)+_0x4cce34[_0x3a8f8d(0x19e)]+'\x22\x20class=\x22card-img-top\x22\x20alt=\x22'+_0x4cce34[_0x3a8f8d(0x177)]+_0x3a8f8d(0x17d)+_0x4cce34[_0x3a8f8d(0x187)]+_0x3a8f8d(0x188)+_0x4cce34['modelo']+_0x3a8f8d(0x1a0)+_0x4cce34[_0x3a8f8d(0x1dc)]+'\x20|\x20'+_0x4cce34['km'][_0x3a8f8d(0x181)]()+_0x3a8f8d(0x15c)+_0x4cce34[_0x3a8f8d(0x1b3)]+_0x3a8f8d(0x1a6)+_0x4cce34[_0x3a8f8d(0x13d)][_0x3a8f8d(0x181)](_0x3a8f8d(0x189))+_0x3a8f8d(0x1db)+_0x4cce34['id']+_0x3a8f8d(0x152))['join']('');}function configurarEventos(){const _0x2bee47=_0x2d1099,_0x9f6a67=document['getElementById']('busca-global');_0x9f6a67&&_0x9f6a67['addEventListener'](_0x2bee47(0x19c),_0x396f2d=>{const _0x2b072b=_0x2bee47;filtros[_0x2b072b(0x18f)]=_0x396f2d[_0x2b072b(0x14d)][_0x2b072b(0x148)],renderizarEstoque();});const _0x4a9bea=document[_0x2bee47(0x16a)]('filtro-marca');_0x4a9bea&&_0x4a9bea[_0x2bee47(0x147)](_0x2bee47(0x157),_0x32e8fe=>{const _0x217d5d=_0x2bee47;filtros[_0x217d5d(0x187)]=_0x32e8fe[_0x217d5d(0x14d)]['value'],renderizarEstoque();});const _0x2acc4a=document['getElementById'](_0x2bee47(0x1b6)),_0x10fb19=document[_0x2bee47(0x16a)](_0x2bee47(0x13e));_0x2acc4a&&_0x2acc4a[_0x2bee47(0x147)]('input',_0x3ebfab=>{const _0x48c26f=_0x2bee47;filtros[_0x48c26f(0x1a9)]=parseInt(_0x3ebfab[_0x48c26f(0x14d)][_0x48c26f(0x148)]),_0x10fb19[_0x48c26f(0x142)]='Até\x20R$\x20'+filtros[_0x48c26f(0x1a9)][_0x48c26f(0x181)](_0x48c26f(0x189)),renderizarEstoque();});const _0x13218f=document[_0x2bee47(0x16a)](_0x2bee47(0x1d2));_0x13218f&&_0x13218f[_0x2bee47(0x147)](_0x2bee47(0x157),_0x387051=>{const _0x175cac=_0x2bee47;filtros[_0x175cac(0x1bf)]=parseInt(_0x387051[_0x175cac(0x14d)][_0x175cac(0x148)])||0x0,renderizarEstoque();}),document[_0x2bee47(0x16a)]('limpar-filtros')?.[_0x2bee47(0x147)](_0x2bee47(0x1b0),resetarFiltros),document[_0x2bee47(0x16a)]('ver-favoritos')?.[_0x2bee47(0x147)]('click',function(){const _0x1cf5cf=_0x2bee47;filtros[_0x1cf5cf(0x176)]=!filtros[_0x1cf5cf(0x176)],this[_0x1cf5cf(0x14c)][_0x1cf5cf(0x194)]('btn-danger'),this[_0x1cf5cf(0x14c)]['toggle'](_0x1cf5cf(0x191)),this[_0x1cf5cf(0x1ca)]=filtros[_0x1cf5cf(0x176)]?_0x1cf5cf(0x1a4):'<i\x20class=\x22bi\x20bi-heart-fill\x20me-2\x22></i>Ver\x20Favoritos',renderizarEstoque();});}function resetarFiltros(){const _0x3ad468=_0x2d1099;filtros={'busca':'','marca':'','precoMax':0x7a120,'anoMin':0x0,'apenasFavoritos':![]},document[_0x3ad468(0x16a)](_0x3ad468(0x155))[_0x3ad468(0x148)]='',document[_0x3ad468(0x16a)]('filtro-marca')['value']='',document[_0x3ad468(0x16a)](_0x3ad468(0x1b6))[_0x3ad468(0x148)]=0x7a120,document['getElementById'](_0x3ad468(0x1d2))[_0x3ad468(0x148)]='',document[_0x3ad468(0x16a)](_0x3ad468(0x13e))[_0x3ad468(0x142)]=_0x3ad468(0x1b4),renderizarEstoque();}window[_0x2d1099(0x1b9)]=function(_0x2661d5,_0x562fc8){const _0x4a50ce=_0x2d1099;if(_0x562fc8)_0x562fc8[_0x4a50ce(0x156)]();const _0x566a76=favoritos[_0x4a50ce(0x1cb)](_0x2661d5);_0x566a76===-0x1?favoritos['push'](_0x2661d5):favoritos[_0x4a50ce(0x1c8)](_0x566a76,0x1),localStorage[_0x4a50ce(0x1bc)](_0x4a50ce(0x1b8),JSON[_0x4a50ce(0x19a)](favoritos)),renderizarEstoque();},window[_0x2d1099(0x1b1)]=function(_0x5d0525){const _0x2545c9=_0x2d1099,_0x1c186e=VEICULOS['find'](_0x39db4c=>_0x39db4c['id']===_0x5d0525);if(!_0x1c186e)return;document[_0x2545c9(0x16a)](_0x2545c9(0x168))[_0x2545c9(0x198)]=_0x1c186e[_0x2545c9(0x19e)],document[_0x2545c9(0x16a)](_0x2545c9(0x161))[_0x2545c9(0x142)]=_0x1c186e[_0x2545c9(0x177)],document[_0x2545c9(0x16a)](_0x2545c9(0x14e))[_0x2545c9(0x142)]=_0x1c186e[_0x2545c9(0x1dc)]+_0x2545c9(0x1ac)+_0x1c186e['km'][_0x2545c9(0x181)]()+_0x2545c9(0x15c)+_0x1c186e[_0x2545c9(0x1b3)],document[_0x2545c9(0x16a)](_0x2545c9(0x1ad))[_0x2545c9(0x142)]=_0x2545c9(0x15d)+_0x1c186e[_0x2545c9(0x13d)][_0x2545c9(0x181)](_0x2545c9(0x189)),document['getElementById'](_0x2545c9(0x18c))['innerText']=_0x1c186e['specs'][_0x2545c9(0x15a)],document[_0x2545c9(0x16a)](_0x2545c9(0x169))['innerText']=_0x1c186e[_0x2545c9(0x1d1)]['placa'],document['getElementById']('spec-comb')[_0x2545c9(0x142)]=_0x1c186e[_0x2545c9(0x1d1)][_0x2545c9(0x1c4)],document[_0x2545c9(0x16a)](_0x2545c9(0x18d))[_0x2545c9(0x142)]=_0x1c186e[_0x2545c9(0x1d1)][_0x2545c9(0x184)];const _0x5f17ec=encodeURIComponent(_0x2545c9(0x179)+_0x1c186e[_0x2545c9(0x187)]+'\x20'+_0x1c186e[_0x2545c9(0x177)]+_0x2545c9(0x1d9));document[_0x2545c9(0x16a)](_0x2545c9(0x1c7))[_0x2545c9(0x14f)]=_0x2545c9(0x144)+_0x5f17ec;const _0x1eae2b=document[_0x2545c9(0x16a)]('thumbGallery');_0x1c186e[_0x2545c9(0x18b)]&&_0x1c186e['galeria']['length']>0x0?_0x1eae2b[_0x2545c9(0x1ca)]=_0x1c186e['galeria'][_0x2545c9(0x145)]((_0xf74a5e,_0x292ad3)=>_0x2545c9(0x1d6)+_0xf74a5e+_0x2545c9(0x1a2)+(_0x292ad3===0x0?_0x2545c9(0x1c6):'')+'\x22\x20onclick=\x22trocarImagem(this)\x22\x20style=\x22cursor:pointer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20')[_0x2545c9(0x16c)](''):_0x1eae2b[_0x2545c9(0x1ca)]=_0x2545c9(0x1d6)+_0x1c186e[_0x2545c9(0x19e)]+_0x2545c9(0x167);const _0x477962=new bootstrap[(_0x2545c9(0x195))](document[_0x2545c9(0x16a)]('detalhesVeiculoModal'));_0x477962[_0x2545c9(0x17c)]();},window[_0x2d1099(0x13a)]=function(_0x3c1c56){const _0xe34e4=_0x2d1099;document[_0xe34e4(0x16a)](_0xe34e4(0x168))['src']=_0x3c1c56['src'],document[_0xe34e4(0x151)](_0xe34e4(0x137))[_0xe34e4(0x1ae)](_0x14ff74=>_0x14ff74[_0xe34e4(0x14c)][_0xe34e4(0x196)](_0xe34e4(0x1c6))),_0x3c1c56[_0xe34e4(0x14c)][_0xe34e4(0x14b)](_0xe34e4(0x1c6));};function checarUsuarioLogado(){const _0x36df47=_0x2d1099,_0x58ebc4=JSON[_0x36df47(0x164)](localStorage['getItem'](_0x36df47(0x1aa)));if(_0x58ebc4){const _0x5a7d4d=document[_0x36df47(0x16a)](_0x36df47(0x1c9));if(_0x5a7d4d)_0x5a7d4d[_0x36df47(0x139)][_0x36df47(0x1b7)]=_0x36df47(0x17f);document[_0x36df47(0x151)](_0x36df47(0x14a))[_0x36df47(0x1ae)](_0x2dc187=>_0x2dc187['style'][_0x36df47(0x1b7)]='none');const _0x51a76b=document['getElementById'](_0x36df47(0x1c2));if(_0x51a76b)_0x51a76b[_0x36df47(0x142)]=_0x58ebc4[_0x36df47(0x1d3)];const _0x5e9614=document[_0x36df47(0x16a)](_0x36df47(0x171));if(_0x5e9614)_0x5e9614[_0x36df47(0x142)]=_0x58ebc4[_0x36df47(0x16b)];const _0x3bb9bb=document[_0x36df47(0x16a)](_0x36df47(0x18e));if(_0x3bb9bb)_0x3bb9bb[_0x36df47(0x148)]=_0x58ebc4[_0x36df47(0x16b)];}}function _0x47b7(){const _0x4b3d54=['topdealer_theme','Kicks6.jpeg','replace','.thumb-img','perfil-end','style','trocarImagem','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-md-4\x20card-veiculo\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card\x20h-100\x20border-0\x20shadow-sm\x20hover-shadow\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22img-container\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn-favorite\x20','count-veiculos','preco','preco-max-label','application/json','PUT','length','innerText','71448RkNyzo','https://wa.me/5516991475066?text=','map','Volkswagen','addEventListener','value','Branco','.guest-item','add','classList','target','viewAnoKm','href','-fill','querySelectorAll',')\x22>Ver\x20Detalhes</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20','getItem','15boUPuX','busca-global','stopPropagation','change','preventDefault','Preto','cor','Erro\x20ao\x20atualizar\x20perfil.','\x20Km\x20|\x20','R$\x20','bi-moon-stars','login-senha','removeItem','viewModelo','DOMContentLoaded','Cadastro\x20realizado\x20com\x20sucesso!\x20Faça\x20login\x20para\x20continuar.','parse','Nivus\x20Highline\x20200\x20TSI','setAttribute','\x22\x20class=\x22img-thumbnail\x20thumb-img\x20active\x22\x20onclick=\x22trocarImagem(this)\x22\x20style=\x22cursor:pointer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','viewMainImage','spec-placa','getElementById','email','join','1628826RAUqBM','json','Automático','Civic\x20Touring\x201.5\x20Turbo','info-flutuante-email','btn-logout','11UawNVP','\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','12lCczek','apenasFavoritos','modelo','Perfil\x20atualizado!','Olá!\x20Tenho\x20interesse\x20no\x20','POST','login-email','show','\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22card-body\x20d-flex\x20flex-column\x20p-4\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span\x20class=\x22badge\x20bg-light\x20text-primary\x20mb-2\x20align-self-start\x22>','https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800','block','light','toLocaleString','form-perfil','reload','portas','2sgbxdg','Kicks\x20SL\x201.6\x2016V\x20Flexstar\x205P\x20Aut.','marca','</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h5\x20class=\x22card-title\x20fw-bold\x20mb-1\x22>','pt-BR','/usuarios/cadastrar','galeria','spec-cor','spec-portas','perfil-email','busca','querySelector','btn-outline-danger','https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800','1879892yqAXvQ','toggle','Modal','remove','4656nzDDyg','src','4986yJqdjB','stringify','Kicks5.jpeg','input','https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800','img','toLowerCase','</h5>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22card-text\x20text-muted\x20small\x20mb-3\x22>','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-12\x20text-center\x20py-5\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-search\x20fs-1\x20text-muted\x22></i>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22mt-3\x20text-muted\x22>Nenhum\x20veículo\x20encontrado\x20com\x20esses\x20filtros.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-link\x22\x20onclick=\x22resetarFiltros()\x22>Limpar\x20Filtros</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','\x22\x20class=\x22img-thumbnail\x20thumb-img\x20','Cinza\x20Moon','<i\x20class=\x22bi\x20bi-grid\x20me-2\x22></i>Ver\x20Todos','Flex','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22fs-4\x20fw-bold\x20text-dark\x20mt-auto\x20mb-3\x22>R$\x20','/usuarios/login','Gasolina','precoMax','usuario_logado','Cinza','\x20|\x20','viewPreco','forEach','dark','click','abrirDetalhes','submit','cambio','Até\x20R$\x20500.000','Erro\x20ao\x20conectar\x20com\x20o\x20servidor.','filtro-preco','display','topdealer_favs','toggleFavorito','documentElement','cadastroModal','setItem','Kicks4.jpeg','Erro\x20ao\x20cadastrar.','anoMin','bi-sun','includes','nome-usuario-display','Kicks8.jpeg','combustivel','96iyqnWt','active','btn-whatsapp-detalhe','splice','perfil-logado','innerHTML','indexOf','8570910tHMNJo','form-cadastro','1601483iOtiXT','data-theme','perfil-tel','specs','filtro-ano','nome','Corolla\x20XEI\x202.0\x20Flex','123672JkAxdR','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22col-3\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22','hide','Kicks3.jpeg','\x20anunciado\x20na\x20TopDealerAuto.','getAttribute','</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22btn\x20btn-outline-dark\x20w-100\x20fw-bold\x20rounded-pill\x22\x20onclick=\x22abrirDetalhes(','ano','toggleDarkMode','location',',\x20event)\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<i\x20class=\x22bi\x20bi-heart'];_0x47b7=function(){return _0x4b3d54;};return _0x47b7();}document[_0x2d1099(0x16a)]('form-login')?.['addEventListener'](_0x2d1099(0x1b2),async _0x3efa13=>{const _0x505845=_0x2d1099;_0x3efa13['preventDefault']();const _0x1e0d48=document[_0x505845(0x16a)](_0x505845(0x17b))['value'],_0xf3925b=document[_0x505845(0x16a)](_0x505845(0x15f))[_0x505845(0x148)];try{const _0x7ebb24=await fetch(API_BASE_URL+_0x505845(0x1a7),{'method':_0x505845(0x17a),'headers':{'Content-Type':'application/json'},'body':JSON['stringify']({'email':_0x1e0d48,'senha':_0xf3925b})});if(_0x7ebb24['ok']){const _0x56477c=await _0x7ebb24[_0x505845(0x16e)]();localStorage['setItem']('usuario_logado',JSON[_0x505845(0x19a)](_0x56477c)),window[_0x505845(0x1de)][_0x505845(0x183)]();}else alert('E-mail\x20ou\x20senha\x20incorretos.');}catch(_0x4ab373){alert(_0x505845(0x1b5));}}),document[_0x2d1099(0x16a)](_0x2d1099(0x1cd))?.['addEventListener'](_0x2d1099(0x1b2),async _0x957bcf=>{const _0x86eb4c=_0x2d1099;_0x957bcf[_0x86eb4c(0x158)]();const _0xbcdccc=document[_0x86eb4c(0x16a)](_0x86eb4c(0x1d3))['value'],_0x316f48=document['getElementById'](_0x86eb4c(0x16b))[_0x86eb4c(0x148)],_0x54bd82=document[_0x86eb4c(0x16a)]('senha')[_0x86eb4c(0x148)];try{const _0x2844ac=await fetch(API_BASE_URL+_0x86eb4c(0x18a),{'method':_0x86eb4c(0x17a),'headers':{'Content-Type':'application/json'},'body':JSON[_0x86eb4c(0x19a)]({'nome':_0xbcdccc,'email':_0x316f48,'senha':_0x54bd82})});_0x2844ac['ok']?(alert(_0x86eb4c(0x163)),bootstrap['Modal']['getInstance'](document['getElementById'](_0x86eb4c(0x1bb)))[_0x86eb4c(0x1d7)](),new bootstrap['Modal'](document[_0x86eb4c(0x16a)]('loginModal'))[_0x86eb4c(0x17c)]()):alert(_0x86eb4c(0x1be));}catch(_0x96e71){alert(_0x86eb4c(0x1b5));}}),document[_0x2d1099(0x16a)](_0x2d1099(0x182))?.[_0x2d1099(0x147)](_0x2d1099(0x1b2),async _0x68540a=>{const _0x43d690=_0x2d1099;_0x68540a[_0x43d690(0x158)]();const _0x4f77b8=JSON[_0x43d690(0x164)](localStorage[_0x43d690(0x153)](_0x43d690(0x1aa))),_0x2cc0e9={'telefone':document[_0x43d690(0x16a)](_0x43d690(0x1d0))['value'],'cep':document['getElementById']('perfil-cep')[_0x43d690(0x148)],'endereco':document[_0x43d690(0x16a)](_0x43d690(0x138))[_0x43d690(0x148)]};try{const _0x302948=await fetch(API_BASE_URL+'/usuarios/atualizar/'+_0x4f77b8[_0x43d690(0x16b)],{'method':_0x43d690(0x140),'headers':{'Content-Type':_0x43d690(0x13f)},'body':JSON['stringify'](_0x2cc0e9)});if(_0x302948['ok']){alert(_0x43d690(0x178));const _0x51f31b=await _0x302948[_0x43d690(0x16e)]();localStorage['setItem'](_0x43d690(0x1aa),JSON[_0x43d690(0x19a)](_0x51f31b)),window[_0x43d690(0x1de)][_0x43d690(0x183)]();}}catch(_0x24612f){alert(_0x43d690(0x15b));}}),document[_0x2d1099(0x16a)](_0x2d1099(0x172))?.[_0x2d1099(0x147)](_0x2d1099(0x1b0),()=>{const _0xba4240=_0x2d1099;localStorage[_0xba4240(0x160)](_0xba4240(0x1aa)),window[_0xba4240(0x1de)]['reload']();});
->>>>>>> 75c4417 (Criptografia)
+/**
+ * TopDealerAuto - Dev.js
+ * Lógica modular para gerenciamento de estoque, filtros e favoritos.
+ */
+
+const API_BASE_URL = "http://localhost:8080/api"; // Ajuste se necessário
+
+// 1. Dados dos Veículos (Simulação de Banco de Dados)
+const VEICULOS = [
+    {
+        id: 1,
+        marca: "Nissan",
+        modelo: "Kicks SL 1.6 16V Flexstar 5P Aut.",
+        ano: 2017,
+        km: 68000,
+        preco: 79800,
+        cambio: "Automático",
+        img: "Kicks2.jpeg",
+        galeria: ["Kicks2.jpeg", "Kicks3.jpeg", "Kicks4.jpeg", "Kicks5.jpeg", "Kicks6.jpeg", "Kicks7.jpeg", "Kicks8.jpeg", "Kicks9.jpeg"],
+        specs: { cor: "Cinza", placa: "2", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 2,
+        marca: "Toyota",
+        modelo: "Corolla XEI 2.0 Flex",
+        ano: 2021,
+        km: 35000,
+        preco: 125000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Preto", placa: "5", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 3,
+        marca: "Honda",
+        modelo: "Civic Touring 1.5 Turbo",
+        ano: 2020,
+        km: 42000,
+        preco: 138000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Branco", placa: "8", combustivel: "Gasolina", portas: "4" }
+    },
+    {
+        id: 4,
+        marca: "Volkswagen",
+        modelo: "Nivus Highline 200 TSI",
+        ano: 2022,
+        km: 15000,
+        preco: 115900,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Cinza Moon", placa: "3", combustivel: "Flex", portas: "4" }
+    }
+];
+
+// 2. Estado da Aplicação
+let filtros = {
+    busca: "",
+    marca: "",
+    precoMax: 500000,
+    anoMin: 0,
+    apenasFavoritos: false
+};
+
+let favoritos = JSON.parse(localStorage.getItem("topdealer_favs")) || [];
+let galeriaAtual = [];
+let indiceImagemAtual = 0;
+
+// 3. Inicialização
+document.addEventListener("DOMContentLoaded", () => {
+    inicializarApp();
+});
+
+window.inicializarApp = function() {
+    aplicarTemaSalvo();
+    renderizarEstoque();
+    configurarEventos();
+    checarUsuarioLogado();
+}
+
+function aplicarTemaSalvo() {
+    const temaSalvo = localStorage.getItem("topdealer_theme") || "light";
+    document.documentElement.setAttribute("data-theme", temaSalvo);
+    atualizarIconeTema(temaSalvo);
+}
+
+window.toggleDarkMode = function() {
+    const atual = document.documentElement.getAttribute("data-theme") || "light";
+    const novo = atual === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", novo);
+    localStorage.setItem("topdealer_theme", novo);
+    atualizarIconeTema(novo);
+}
+
+function atualizarIconeTema(tema) {
+    const btn = document.getElementById("theme-toggle");
+    if (!btn) return;
+    const icone = btn.querySelector("i");
+    if (tema === "dark") {
+        icone.classList.replace("bi-moon-stars", "bi-sun");
+    } else {
+        icone.classList.replace("bi-sun", "bi-moon-stars");
+    }
+}
+
+// 4. Renderização
+window.renderizarEstoque = function() {
+    const lista = document.getElementById("lista-veiculos");
+    if (!lista) return;
+
+    const veiculosFiltrados = VEICULOS.filter(v => {
+        const matchBusca = v.modelo.toLowerCase().includes(filtros.busca.toLowerCase()) || 
+                           v.marca.toLowerCase().includes(filtros.busca.toLowerCase());
+        const matchMarca = filtros.marca === "" || v.marca === filtros.marca;
+        const matchPreco = v.preco <= filtros.precoMax;
+        const matchAno = v.ano >= filtros.anoMin;
+        const matchFavorito = !filtros.apenasFavoritos || favoritos.includes(v.id);
+
+        return matchBusca && matchMarca && matchPreco && matchAno && matchFavorito;
+    });
+
+    document.getElementById("count-veiculos").innerText = veiculosFiltrados.length;
+
+    if (veiculosFiltrados.length === 0) {
+        lista.innerHTML = `
+            <div class="col-12 text-center py-5">
+                <i class="bi bi-search fs-1 text-muted"></i>
+                <p class="mt-3 text-muted">Nenhum veículo encontrado com esses filtros.</p>
+                <button class="btn btn-link" onclick="resetarFiltros()">Limpar Filtros</button>
+            </div>
+        `;
+        return;
+    }
+
+    lista.innerHTML = veiculosFiltrados.map(v => `
+        <div class="col-md-4 card-veiculo">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="abrirDetalhes(${v.id})" style="cursor: pointer;">
+                <div class="img-container">
+                    <button class="btn-favorite ${favoritos.includes(v.id) ? 'active' : ''}" onclick="toggleFavorito(${v.id}, event)">
+                        <i class="bi bi-heart${favoritos.includes(v.id) ? '-fill' : ''}"></i>
+                    </button>
+                    <img src="${v.img}" class="card-img-top" alt="${v.modelo}">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">${v.marca}</span>
+                    <h5 class="card-title fw-bold mb-1">${v.modelo}</h5>
+                    <p class="card-text text-muted small mb-3">${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ ${v.preco.toLocaleString('pt-BR')}</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+    `).join("");
+}
+
+// 5. Lógica de Filtros e Eventos
+function configurarEventos() {
+    // Busca Global
+    const inputBusca = document.getElementById("busca-global");
+    if (inputBusca) {
+        inputBusca.addEventListener("input", (e) => {
+            filtros.busca = e.target.value;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Marca
+    const selectMarca = document.getElementById("filtro-marca");
+    if (selectMarca) {
+        selectMarca.addEventListener("change", (e) => {
+            filtros.marca = e.target.value;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Preço
+    const inputPreco = document.getElementById("filtro-preco");
+    const labelPreco = document.getElementById("preco-max-label");
+    if (inputPreco) {
+        inputPreco.addEventListener("input", (e) => {
+            filtros.precoMax = parseInt(e.target.value);
+            labelPreco.innerText = `Até R$ ${filtros.precoMax.toLocaleString('pt-BR')}`;
+            renderizarEstoque();
+        });
+    }
+
+    // Filtro Ano
+    const selectAno = document.getElementById("filtro-ano");
+    if (selectAno) {
+        selectAno.addEventListener("change", (e) => {
+            filtros.anoMin = parseInt(e.target.value) || 0;
+            renderizarEstoque();
+        });
+    }
+
+    // Botão Limpar Filtros
+    document.getElementById("limpar-filtros")?.addEventListener("click", resetarFiltros);
+
+    // Botão Ver Favoritos
+    document.getElementById("ver-favoritos")?.addEventListener("click", function() {
+        filtros.apenasFavoritos = !filtros.apenasFavoritos;
+        this.classList.toggle("btn-danger");
+        this.classList.toggle("btn-outline-danger");
+        this.innerHTML = filtros.apenasFavoritos ? 
+            '<i class="bi bi-grid me-2"></i>Ver Todos' : 
+            '<i class="bi bi-heart-fill me-2"></i>Ver Favoritos';
+        renderizarEstoque();
+    });
+}
+
+window.resetarFiltros = function() {
+    filtros = { busca: "", marca: "", precoMax: 500000, anoMin: 0, apenasFavoritos: false };
+    const buscaGlobal = document.getElementById("busca-global");
+    if (buscaGlobal) buscaGlobal.value = "";
+    const filtroMarca = document.getElementById("filtro-marca");
+    if (filtroMarca) filtroMarca.value = "";
+    const filtroPreco = document.getElementById("filtro-preco");
+    if (filtroPreco) filtroPreco.value = 500000;
+    const filtroAno = document.getElementById("filtro-ano");
+    if (filtroAno) filtroAno.value = "";
+    const precoLabel = document.getElementById("preco-max-label");
+    if (precoLabel) precoLabel.innerText = "Até R$ 500.000";
+    renderizarEstoque();
+}
+
+// 6. Sistema de Favoritos
+window.toggleFavorito = function(id, event) {
+    if (event) {
+        event.stopPropagation();
+        event.preventDefault();
+    }
+    const index = favoritos.indexOf(id);
+    if (index === -1) {
+        favoritos.push(id);
+    } else {
+        favoritos.splice(index, 1);
+    }
+    localStorage.setItem("topdealer_favs", JSON.stringify(favoritos));
+    renderizarEstoque();
+}
+
+// 7. Visualização de Detalhes
+window.abrirDetalhes = function(id) {
+    const v = VEICULOS.find(x => x.id === id);
+    if (!v) return;
+
+    // Configurar Galeria
+    galeriaAtual = v.galeria && v.galeria.length > 0 ? v.galeria : [v.img];
+    indiceImagemAtual = 0;
+
+    // Preencher Modal
+    const mainImg = document.getElementById("viewMainImage");
+    if (mainImg) mainImg.src = galeriaAtual[0];
+    
+    const viewModelo = document.getElementById("viewModelo");
+    if (viewModelo) viewModelo.innerText = v.modelo;
+    
+    const viewAnoKm = document.getElementById("viewAnoKm");
+    if (viewAnoKm) viewAnoKm.innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}`;
+    
+    const viewPreco = document.getElementById("viewPreco");
+    if (viewPreco) viewPreco.innerText = `R$ ${v.preco.toLocaleString('pt-BR')}`;
+
+    // Especificações
+    const specCor = document.getElementById("spec-cor");
+    if (specCor) specCor.innerText = v.specs.cor;
+    const specPlaca = document.getElementById("spec-placa");
+    if (specPlaca) specPlaca.innerText = v.specs.placa;
+    const specComb = document.getElementById("spec-comb");
+    if (specComb) specComb.innerText = v.specs.combustivel;
+    const specPortas = document.getElementById("spec-portas");
+    if (specPortas) specPortas.innerText = v.specs.portas;
+
+    // Link WhatsApp
+    const msg = encodeURIComponent(`Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`);
+    const btnWhats = document.getElementById("btn-whatsapp-detalhe");
+    if (btnWhats) btnWhats.href = `https://wa.me/5516991475066?text=${msg}`;
+
+    // Renderizar Miniaturas
+    const galleryContainer = document.getElementById("thumbGallery");
+    if (galleryContainer) {
+        galleryContainer.innerHTML = galeriaAtual.map((img, index) => `
+            <div class="col-3">
+                <img src="${img}" class="img-thumbnail thumb-img ${index === 0 ? 'active' : ''}" 
+                     onclick="window.trocarImagemManual(${index}, event)" style="cursor:pointer">
+            </div>
+        `).join("");
+    }
+
+    // Modal
+    const modalElement = document.getElementById('detalhesVeiculoModal');
+    if (modalElement) {
+        const modal = new bootstrap.Modal(modalElement);
+        modal.show();
+    }
+}
+
+window.trocarImagemManual = function(index, event) {
+    if (event) event.stopPropagation();
+    indiceImagemAtual = index;
+    atualizarDisplayImagem();
+}
+
+window.mudarImagem = function(direcao) {
+    if (!galeriaAtual || galeriaAtual.length <= 1) return;
+    
+    indiceImagemAtual += direcao;
+    
+    if (indiceImagemAtual >= galeriaAtual.length) {
+        indiceImagemAtual = 0;
+    } else if (indiceImagemAtual < 0) {
+        indiceImagemAtual = galeriaAtual.length - 1;
+    }
+    
+    atualizarDisplayImagem();
+}
+
+window.atualizarDisplayImagem = function() {
+    const mainImg = document.getElementById("viewMainImage");
+    if (mainImg) mainImg.src = galeriaAtual[indiceImagemAtual];
+    
+    // Atualizar miniaturas ativas
+    document.querySelectorAll(".thumb-img").forEach((t, i) => {
+        if (i === indiceImagemAtual) {
+            t.classList.add("active");
+        } else {
+            t.classList.remove("active");
+        }
+    });
+}
+
+// 8. Integração Backend (Login/Auth)
+function checarUsuarioLogado() {
+    const usuario = JSON.parse(localStorage.getItem("usuario_logado"));
+    if (usuario) {
+        const perfilBtn = document.getElementById("perfil-logado");
+        if (perfilBtn) perfilBtn.style.display = "block";
+        document.querySelectorAll(".guest-item").forEach(el => el.style.display = "none");
+        const displayNome = document.getElementById("nome-usuario-display");
+        if (displayNome) displayNome.innerText = usuario.nome;
+        const displayEmail = document.getElementById("info-flutuante-email");
+        if (displayEmail) displayEmail.innerText = usuario.email;
+        
+        // Preencher modal de perfil
+        const inputEmail = document.getElementById("perfil-email");
+        if (inputEmail) inputEmail.value = usuario.email;
+    }
+}
+
+// Evento de Login
+document.getElementById("form-login")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = document.getElementById("login-email").value;
+    const senha = document.getElementById("login-senha").value;
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/login`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ email, senha })
+        });
+        if (res.ok) {
+            const user = await res.json();
+            localStorage.setItem("usuario_logado", JSON.stringify(user));
+            window.location.reload();
+        } else {
+            alert("E-mail ou senha incorretos.");
+        }
+    } catch (err) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+
+// Evento de Cadastro
+document.getElementById("form-cadastro")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const senha = document.getElementById("senha").value;
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/cadastrar`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nome, email, senha })
+        });
+        if (res.ok) {
+            alert("Cadastro realizado com sucesso! Faça login para continuar.");
+            bootstrap.Modal.getInstance(document.getElementById('cadastroModal')).hide();
+            new bootstrap.Modal(document.getElementById('loginModal')).show();
+        } else {
+            alert("Erro ao cadastrar.");
+        }
+    } catch (err) {
+        alert("Erro ao conectar com o servidor.");
+    }
+});
+
+// Evento de Atualização de Perfil
+document.getElementById("form-perfil")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const usuario = JSON.parse(localStorage.getItem("usuario_logado"));
+    const dados = {
+        telefone: document.getElementById("perfil-tel").value,
+        cep: document.getElementById("perfil-cep").value,
+        endereco: document.getElementById("perfil-end").value
+    };
+
+    try {
+        const res = await fetch(`${API_BASE_URL}/usuarios/atualizar/${usuario.email}`, {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(dados)
+        });
+        if (res.ok) {
+            alert("Perfil atualizado!");
+            const updatedUser = await res.json();
+            localStorage.setItem("usuario_logado", JSON.stringify(updatedUser));
+            window.location.reload();
+        }
+    } catch (err) {
+        alert("Erro ao atualizar perfil.");
+    }
+});
+
+document.getElementById("btn-logout")?.addEventListener("click", () => {
+    localStorage.removeItem("usuario_logado");
+    window.location.reload();
+});
+
+// Nota: A implementação de Login/Cadastro deve seguir o padrão do seu backend.
+// Exemplo simplificado de Login:
+/*
+async function login(email, senha) {
+    const res = await fetch(`${API_BASE_URL}/usuarios/login`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, senha })
+    });
+    if (res.ok) {
+        const user = await res.json();
+        localStorage.setItem("usuario_logado", JSON.stringify(user));
+        window.location.reload();
+    } else {
+        alert("Credenciais inválidas");
+    }
+}
+*/

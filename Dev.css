@@ -347,12 +347,53 @@ aside .card {
 }
 
 /* Garante que a imagem principal do modal tenha sempre a mesma altura */
+.main-img-container {
+    position: relative;
+    width: 100%;
+}
+
 #viewMainImage {
     width: 100%;
     height: 400px; /* Altura fixa para manter a coerência */
     object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
     object-position: center;
     border-radius: 12px;
+}
+
+/* Setas de Navegação */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.nav-arrow-left {
+    left: 15px;
+}
+
+.nav-arrow-right {
+    right: 15px;
+}
+
+.nav-arrow i {
+    font-size: 1.5rem;
 }
 
 /* Padroniza o tamanho das miniaturas (thumbnails) */

@@ -208,11 +208,7 @@ aside .card {
 .custom-hr {
     width: 50px;
     height: 3px;
-
-     background-color: var(--text-color) !important
-
     background-color: var(--text-color) !important;
-
     border: none;
     opacity: 1;
 }

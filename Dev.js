@@ -54,6 +54,78 @@ const VEICULOS = [
         img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
         galeria: [],
         specs: { cor: "Cinza Moon", placa: "3", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 5,
+        marca: "Jeep",
+        modelo: "Compass Limited TD350 4x4",
+        ano: 2023,
+        km: 12000,
+        preco: 220000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Azul", placa: "0", combustivel: "Diesel", portas: "4" }
+    },
+    {
+        id: 6,
+        marca: "Ford",
+        modelo: "Bronco Sport Wildtrak",
+        ano: 2022,
+        km: 25000,
+        preco: 210000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Laranja", placa: "4", combustivel: "Gasolina", portas: "4" }
+    },
+    {
+        id: 7,
+        marca: "BMW",
+        modelo: "320i M Sport",
+        ano: 2021,
+        km: 30000,
+        preco: 285000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Branco", placa: "7", combustivel: "Flex", portas: "4" }
+    },
+    {
+        id: 8,
+        marca: "Mercedes-Benz",
+        modelo: "C 300 AMG Line",
+        ano: 2022,
+        km: 18000,
+        preco: 340000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Preto", placa: "1", combustivel: "Gasolina", portas: "4" }
+    },
+    {
+        id: 9,
+        marca: "Audi",
+        modelo: "Q3 Performance Black",
+        ano: 2023,
+        km: 8000,
+        preco: 295000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Cinza", placa: "6", combustivel: "Gasolina", portas: "4" }
+    },
+    {
+        id: 10,
+        marca: "Hyundai",
+        modelo: "HB20 Platinum Plus",
+        ano: 2023,
+        km: 10000,
+        preco: 105000,
+        cambio: "Automático",
+        img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
+        specs: { cor: "Prata", placa: "9", combustivel: "Flex", portas: "4" }
     }
 ];
 
@@ -65,6 +137,9 @@ let filtros = {
     anoMin: 0,
     apenasFavoritos: false
 };
+
+let paginaAtual = 1;
+const itensPorPagina = 8;
 
 let favoritos = JSON.parse(localStorage.getItem("topdealer_favs")) || [];
 let galeriaAtual = [];
@@ -109,52 +184,107 @@ function atualizarIconeTema(tema) {
 
 // 4. Renderização
 window.renderizarEstoque = function() {
-    const lista = document.getElementById("lista-veiculos");
-    if (!lista) return;
+    const cards = Array.from(document.querySelectorAll(".card-veiculo"));
+    
+    // 1. Filtragem dos elementos do DOM
+    const cardsFiltrados = cards.filter(card => {
+        const marca = card.getAttribute("data-marca").toLowerCase();
+        const modelo = card.getAttribute("data-modelo").toLowerCase();
+        const preco = parseInt(card.getAttribute("data-preco"));
+        const ano = parseInt(card.getAttribute("data-ano"));
+        const id = parseInt(card.getAttribute("data-id"));
 
-    const veiculosFiltrados = VEICULOS.filter(v => {
-        const matchBusca = v.modelo.toLowerCase().includes(filtros.busca.toLowerCase()) || 
-                           v.marca.toLowerCase().includes(filtros.busca.toLowerCase());
-        const matchMarca = filtros.marca === "" || v.marca === filtros.marca;
-        const matchPreco = v.preco <= filtros.precoMax;
-        const matchAno = v.ano >= filtros.anoMin;
-        const matchFavorito = !filtros.apenasFavoritos || favoritos.includes(v.id);
+        const matchBusca = modelo.includes(filtros.busca.toLowerCase()) || 
+                           marca.includes(filtros.busca.toLowerCase());
+        const matchMarca = filtros.marca === "" || marca === filtros.marca.toLowerCase();
+        const matchPreco = preco <= filtros.precoMax;
+        const matchAno = ano >= filtros.anoMin;
+        const matchFavorito = !filtros.apenasFavoritos || favoritos.includes(id);
 
         return matchBusca && matchMarca && matchPreco && matchAno && matchFavorito;
     });
 
-    document.getElementById("count-veiculos").innerText = veiculosFiltrados.length;
+    const totalVeiculos = cardsFiltrados.length;
+    const totalPaginas = Math.ceil(totalVeiculos / itensPorPagina);
 
-    if (veiculosFiltrados.length === 0) {
-        lista.innerHTML = `
-            <div class="col-12 text-center py-5">
+    // Garantir que a página atual seja válida
+    if (paginaAtual > totalPaginas && totalPaginas > 0) {
+        paginaAtual = totalPaginas;
+    }
+    if (paginaAtual < 1) paginaAtual = 1;
+
+    // 2. Determinar quais cards mostrar (Paginação)
+    const inicio = (paginaAtual - 1) * itensPorPagina;
+    const fim = inicio + itensPorPagina;
+    
+    // Esconder TODOS os cards primeiro
+    cards.forEach(card => card.classList.add("d-none"));
+
+    // Mostrar apenas os filtrados que pertencem à página atual
+    cardsFiltrados.slice(inicio, fim).forEach(card => {
+        card.classList.remove("d-none");
+    });
+
+    // 3. Renderizar controles de paginação
+    renderizarPaginacao(totalPaginas);
+
+    // Mensagem de "Nenhum resultado"
+    const lista = document.getElementById("lista-veiculos");
+    const noResultId = "no-results-msg";
+    let noResultEl = document.getElementById(noResultId);
+
+    if (totalVeiculos === 0) {
+        if (!noResultEl) {
+            noResultEl = document.createElement("div");
+            noResultEl.id = noResultId;
+            noResultEl.className = "col-12 text-center py-5";
+            noResultEl.innerHTML = `
                 <i class="bi bi-search fs-1 text-muted"></i>
                 <p class="mt-3 text-muted">Nenhum veículo encontrado com esses filtros.</p>
                 <button class="btn btn-link" onclick="resetarFiltros()">Limpar Filtros</button>
-            </div>
-        `;
+            `;
+            lista.appendChild(noResultEl);
+        }
+    } else if (noResultEl) {
+        noResultEl.remove();
+    }
+}
+
+window.renderizarPaginacao = function(totalPaginas) {
+    const paginacaoContainer = document.querySelector(".pagination");
+    if (!paginacaoContainer) return;
+
+    if (totalPaginas <= 1) {
+        paginacaoContainer.innerHTML = "";
         return;
     }
 
-    lista.innerHTML = veiculosFiltrados.map(v => `
-        <div class="col-md-4 card-veiculo">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="abrirDetalhes(${v.id})" style="cursor: pointer;">
-                <div class="img-container">
-                    <button class="btn-favorite ${favoritos.includes(v.id) ? 'active' : ''}" onclick="toggleFavorito(${v.id}, event)">
-                        <i class="bi bi-heart${favoritos.includes(v.id) ? '-fill' : ''}"></i>
-                    </button>
-                    <img src="${v.img}" class="card-img-top" alt="${v.modelo}">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">${v.marca}</span>
-                    <h5 class="card-title fw-bold mb-1">${v.modelo}</h5>
-                    <p class="card-text text-muted small mb-3">${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}</p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ ${v.preco.toLocaleString('pt-BR')}</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-    `).join("");
+    let html = `
+        <li class="page-item ${paginaAtual === 1 ? 'disabled' : ''}">
+            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual - 1})">Anterior</a>
+        </li>
+    `;
+
+    for (let i = 1; i <= totalPaginas; i++) {
+        html += `
+            <li class="page-item ${paginaAtual === i ? 'active' : ''}">
+                <a class="page-link" href="#estoque" onclick="mudarPagina(${i})">${i}</a>
+            </li>
+        `;
+    }
+
+    html += `
+        <li class="page-item ${paginaAtual === totalPaginas ? 'disabled' : ''}">
+            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual + 1})">Próxima</a>
+        </li>
+    `;
+
+    paginacaoContainer.innerHTML = html;
+}
+
+window.mudarPagina = function(novaPagina) {
+    paginaAtual = novaPagina;
+    renderizarEstoque();
 }
 
 // 5. Lógica de Filtros e Eventos

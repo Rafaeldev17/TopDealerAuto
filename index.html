@@ -98,134 +98,172 @@
             </div>                
 <div class="col-lg-12">
     <div class="row g-4" id="lista-veiculos">
-        <div class="col-md-3 card-veiculo" data-marca="Nissan" data-modelo="Kicks" data-ano="2017" data-km="Km" data-preco="7980000">
+        <!-- Carro 1 -->
+        <div class="col-md-3 card-veiculo" data-id="1" data-marca="Nissan" data-modelo="Kicks SL" data-ano="2017" data-preco="79800">
             <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(1)" style="cursor: pointer;">
                 <div class="img-container">
-                    <img src="Kicks2.jpeg" class="card-img-top" alt="Nissan-kicks">
+                    <img src="Kicks2.jpeg" class="card-img-top" alt="Nissan Kicks">
                 </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">Nissan</span>
-                    <h5 class="card-title fw-bold">Nissan Kicks</h5>
-                    <p class="card-text text-muted mb-2 small">2017 | 68.000 Km | Automático</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 79.800</p>
-                    <button class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="col-md-3 card-veiculo" data-marca="Marca" data-modelo="Modelo" data-ano="Ano" data-km="KM" data-preco="Preço">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">Marca</span>
-                    <h5 class="card-title fw-bold">Modelo</h5>
-                    <p class="card-text text-muted mb-2 small">Ano | km | Cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-marca="Marca" data-modelo="Modelo" data-ano="ano" data-km="Km" data-preco="preço">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">marca</span>
-                    <h5 class="card-title fw-bold">marca-modelo</h5>
-                    <p class="card-text text-muted mb-2 small">Ano | km | cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-marca="marca" data-modelo="modelo" data-ano="ano" data-km="km" data-preco="0">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">marca</span>
-                    <h5 class="card-title fw-bold">marca-modelo</h5>
-                    <p class="card-text text-muted mb-2 small">ano | km | cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-marca="marca" data-modelo="modelo" data-ano="ano" data-km="km" data-preco="0">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">marca</span>
-                    <h5 class="card-title fw-bold">marca-modelo</h5>
-                    <p class="card-text text-muted mb-2 small">ano | km | cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Nissan</span>
+                    <h5 class="card-title fw-bold mb-1">Nissan Kicks SL</h5>
+                    <p class="card-text text-muted small mb-3">2017 | 68.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 79.800</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
                 </div>
             </div>
         </div>
 
-        <div class="col-md-3 card-veiculo" data-marca="marca" data-modelo="modelo" data-ano="ano" data-km="km" data-preco="0">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
+        <!-- Carro 2 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="2" data-marca="Toyota" data-modelo="Corolla" data-ano="2021" data-preco="125000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(2)" style="cursor: pointer;">
                 <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
+                    <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Toyota Corolla">
                 </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">marca</span>
-                    <h5 class="card-title fw-bold">marrca-modelo</h5>
-                    <p class="card-text text text-muted mb-2 small">ano | km | cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Toyota</span>
+                    <h5 class="card-title fw-bold mb-1">Toyota Corolla XEI</h5>
+                    <p class="card-text text-muted small mb-3">2021 | 35.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 125.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 3 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="3" data-marca="Honda" data-modelo="Civic" data-ano="2020" data-preco="138000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(3)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Honda Civic">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Honda</span>
+                    <h5 class="card-title fw-bold mb-1">Honda Civic Touring</h5>
+                    <p class="card-text text-muted small mb-3">2020 | 42.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 138.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 4 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="4" data-marca="Volkswagen" data-modelo="Nivus" data-ano="2022" data-preco="115900">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(4)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="VW Nivus">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Volkswagen</span>
+                    <h5 class="card-title fw-bold mb-1">VW Nivus Highline</h5>
+                    <p class="card-text text-muted small mb-3">2022 | 15.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 115.900</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 5 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="5" data-marca="Jeep" data-modelo="Compass" data-ano="2023" data-preco="220000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(5)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Jeep Compass">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Jeep</span>
+                    <h5 class="card-title fw-bold mb-1">Jeep Compass Limited</h5>
+                    <p class="card-text text-muted small mb-3">2023 | 12.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 220.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 6 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="6" data-marca="Ford" data-modelo="Bronco" data-ano="2022" data-preco="210000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(6)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Ford Bronco">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Ford</span>
+                    <h5 class="card-title fw-bold mb-1">Ford Bronco Sport</h5>
+                    <p class="card-text text-muted small mb-3">2022 | 25.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 210.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 7 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="7" data-marca="BMW" data-modelo="320i" data-ano="2021" data-preco="285000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(7)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="BMW 320i">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">BMW</span>
+                    <h5 class="card-title fw-bold mb-1">BMW 320i M Sport</h5>
+                    <p class="card-text text-muted small mb-3">2021 | 30.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 285.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 8 -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="8" data-marca="Mercedes" data-modelo="Classe C" data-ano="2022" data-preco="340000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(8)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Mercedes C300">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Mercedes</span>
+                    <h5 class="card-title fw-bold mb-1">Mercedes C 300</h5>
+                    <p class="card-text text-muted small mb-3">2022 | 18.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 340.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 9 (Página 2) -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="9" data-marca="Audi" data-modelo="Q3" data-ano="2023" data-preco="295000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(9)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Audi Q3">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Audi</span>
+                    <h5 class="card-title fw-bold mb-1">Audi Q3 Performance</h5>
+                    <p class="card-text text-muted small mb-3">2023 | 8.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 295.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Carro 10 (Página 2) -->
+        <!-- <div class="col-md-3 card-veiculo" data-id="10" data-marca="Hyundai" data-modelo="HB20" data-ano="2023" data-preco="105000">
+            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(10)" style="cursor: pointer;">
+                <div class="img-container">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Hyundai HB20">
+                </div>
+                <div class="card-body d-flex flex-column p-4">
+                    <span class="badge bg-light text-primary mb-2 align-self-start">Hyundai</span>
+                    <h5 class="card-title fw-bold mb-1">Hyundai HB20 Platinum</h5>
+                    <p class="card-text text-muted small mb-3">2023 | 10.000 Km | Automático</p>
+                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 105.000</p>
+                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
                 </div>
             </div>
         </div>
-        <div class="col-md-3 card-veiculo" data-marca="Marca" data-modelo="Modelo" data-ano="Ano" data-km="KM" data-preco="Preço">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">Marca</span>
-                    <h5 class="card-title fw-bold">Modelo</h5>
-                    <p class="card-text text-muted mb-2 small">Ano | km | Cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
-                      </div>
-                   </div>
-                 </div>
-                 <div class="col-md-3 card-veiculo" data-marca="Marca" data-modelo="Modelo" data-ano="Ano" data-km="KM" data-preco="Preço">
-            <div class="card h-100 border-0 shadow-sm hover-shadow">
-                <div class="img-container">
-                    <img src="img" class="card-img-top" alt="marca-modelo">
-                </div>
-                <div class="card-body d-flex flex-column">
-                    <span class="badge bg-dark mb-2 align-self-start">Marca</span>
-                    <h5 class="card-title fw-bold">Modelo</h5>
-                    <p class="card-text text-muted mb-2 small">Ano | km | Cambio</p>
-                    <p class="fs-5 fw-bold text-primary mt-auto mb-3">R$ 0</p>
-                    <a href="#" class="btn btn-outline-dark btn-sm w-100">Ver Detalhes</a>
-                    </div>
-                </div>
-             </div>
-         </div>
     </div> -->
     <nav aria-label="Navegação de páginas" class="mt-5">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Anterior</a>
-    </li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Próxima</a>
-    </li>
-  </ul>
-</nav>
+        <ul class="pagination justify-content-center">
+            <!-- Paginação será renderizada dinamicamente pelo Dev.js -->
+        </ul>
+    </nav>
+</div>
     </section>
     <!-- <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

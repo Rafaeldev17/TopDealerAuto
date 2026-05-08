@@ -57,6 +57,44 @@ body {
     border-color: var(--border-color) !important;
 }
 
+#languageSelector {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: transform 0.2s;
+}
+
+#languageSelector:hover {
+    transform: scale(1.1);
+}
+
+.dropdown-item {
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f3f5 !important;
+}
+
+.dropdown-menu {
+    border: 1px solid #eee !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
+}
+
+[data-theme="dark"] .dropdown-menu {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+}
+
+[data-theme="dark"] .dropdown-item {
+    color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--input-bg) !important;
+}
+
 #theme-toggle {
     color: rgba(255, 255, 255, 0.7) !important;
     transition: color 0.3s;
@@ -67,7 +105,7 @@ body {
 }
 
 [data-theme="dark"] #theme-toggle {
-    color: #ffca28 !important; /* Cor amarela para o sol no modo escuro */
+    color: #f1f1f1 !important; /* Cor amarela para o sol no modo escuro */
 }
 
 .hero-section {

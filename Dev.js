@@ -150,11 +150,158 @@ document.addEventListener("DOMContentLoaded", () => {
     inicializarApp();
 });
 
+const TRANSLATIONS = {
+    "pt-br": {
+        heroTitle: "Encontre seu próximo carro aqui",
+        heroSubtitle: "A melhor curadoria de veículos com a confiança TopDealerAuto.",
+        inventoryTitle: "Nosso Estoque",
+        emptyInventoryTitle: "Aguarde atualizações do estoque!",
+        emptyInventoryDesc: "Estamos preparando novidades incríveis para você. Volte em breve!",
+        contactTitle: "Fale Conosco",
+        contactDesc: "Dúvidas ou quer vender seu carro? Entre em contato.",
+        contactEmail: "E-mail",
+        contactWhatsapp: "WhatsApp",
+        copyright: "© 2026 TopDealerAuto. Todos os direitos reservados.",
+        profileInfo: "Informações da Conta",
+        labelEmail: "E-mail",
+        labelAddress: "Endereço",
+        labelZip: "CEP",
+        labelPass: "Senha",
+        btnEditProfile: "Editar Perfil",
+        btnLogout: "Sair",
+        btnDetails: "Ver Detalhes"
+    },
+    "en-us": {
+        heroTitle: "Find your next car here",
+        heroSubtitle: "The best vehicle curation with TopDealerAuto's trust.",
+        inventoryTitle: "Our Inventory",
+        emptyInventoryTitle: "Wait for stock updates!",
+        emptyInventoryDesc: "We are preparing incredible news for you. Come back soon!",
+        contactTitle: "Contact Us",
+        contactDesc: "Questions or want to sell your car? Get in touch.",
+        contactEmail: "Email",
+        contactWhatsapp: "WhatsApp",
+        copyright: "© 2026 TopDealerAuto. All rights reserved.",
+        profileInfo: "Account Information",
+        labelEmail: "Email",
+        labelAddress: "Address",
+        labelZip: "Zip Code",
+        labelPass: "Password",
+        btnEditProfile: "Edit Profile",
+        btnLogout: "Logout",
+        btnDetails: "View Details"
+    },
+    "es-es": {
+        heroTitle: "Encuentra tu próximo coche aquí",
+        heroSubtitle: "La melhor selección de veículos con la confianza de TopDealerAuto.",
+        inventoryTitle: "Nuestro Stock",
+        emptyInventoryTitle: "¡Espere actualizaciones de stock!",
+        emptyInventoryDesc: "Estamos preparando novedades increíbles para usted. ¡Vuelva pronto!",
+        contactTitle: "Contáctenos",
+        contactDesc: "¿Dudas o quieres vender tu coche? Ponte en contacto.",
+        contactEmail: "Correo electrónico",
+        contactWhatsapp: "WhatsApp",
+        copyright: "© 2026 TopDealerAuto. Todos los derechos reservados.",
+        profileInfo: "Información de la Cuenta",
+        labelEmail: "Correo",
+        labelAddress: "Dirección",
+        labelZip: "Código Postal",
+        labelPass: "Contraseña",
+        btnEditProfile: "Editar Perfil",
+        btnLogout: "Cerrar Sesión",
+        btnDetails: "Ver Detalles"
+    }
+};
+
 window.inicializarApp = function() {
     aplicarTemaSalvo();
+    aplicarIdiomaSalvo();
     renderizarEstoque();
     configurarEventos();
     checarUsuarioLogado();
+}
+
+function aplicarIdiomaSalvo() {
+    const lang = localStorage.getItem("topdealer_lang") || "pt-br";
+    const flag = localStorage.getItem("topdealer_lang_flag") || "https://flagcdn.com/w40/br.png";
+    
+    const flagEl = document.getElementById("current-lang-flag");
+    if (flagEl) flagEl.src = flag;
+    
+    document.documentElement.lang = lang;
+    translatePage(lang);
+}
+
+window.changeLanguage = function(lang, flag, name) {
+    localStorage.setItem("topdealer_lang", lang);
+    localStorage.setItem("topdealer_lang_flag", flag);
+    
+    const flagEl = document.getElementById("current-lang-flag");
+    if (flagEl) flagEl.src = flag;
+    
+    document.documentElement.lang = lang;
+    translatePage(lang);
+    console.log(`Idioma alterado para: ${name}`);
+}
+
+function translatePage(lang) {
+    const t = TRANSLATIONS[lang];
+    if (!t) return;
+
+    // Herói
+    const h1 = document.querySelector(".hero-section h1");
+    if (h1) h1.innerText = t.heroTitle;
+    const p = document.querySelector(".hero-section p");
+    if (p) p.innerText = t.heroSubtitle;
+
+    // Título do Estoque
+    const estoqueH2 = document.querySelector("#estoque h2");
+    if (estoqueH2) estoqueH2.innerText = t.inventoryTitle;
+
+    // Estado vazio do estoque
+    const emptyTitle = document.querySelector("#lista-veiculos h3");
+    if (emptyTitle) emptyTitle.innerText = t.emptyInventoryTitle;
+    const emptyDesc = document.querySelector("#lista-veiculos p");
+    if (emptyDesc) emptyDesc.innerText = t.emptyInventoryDesc;
+
+    // Contato
+    const contatoH2 = document.querySelector("#contato h2");
+    if (contatoH2) contatoH2.innerText = t.contactTitle;
+    const contatoP = document.querySelector("#contato p");
+    if (contatoP) contatoP.innerText = t.contactDesc;
+    
+    const emailBtn = document.querySelector("#contato a.btn-primary");
+    if (emailBtn) emailBtn.innerHTML = `<i class="bi bi-envelope me-2"></i>${t.contactEmail}`;
+    
+    const whatsBtn = document.querySelector("#contato a.btn-success");
+    if (whatsBtn) whatsBtn.innerHTML = `<i class="bi bi-whatsapp me-2"></i>${t.contactWhatsapp}`;
+
+    // Rodapé
+    const copyright = document.querySelector(".bg-dark.text-white small");
+    if (copyright) copyright.innerText = t.copyright;
+
+    // Menu de Perfil (Dropdown)
+    const profileInfo = document.querySelector("#perfil-logado h6");
+    if (profileInfo) profileInfo.innerText = t.profileInfo;
+
+    const labels = document.querySelectorAll("#perfil-logado .small-label");
+    if (labels.length >= 4) {
+        labels[0].innerText = t.labelEmail;
+        labels[1].innerText = t.labelAddress;
+        labels[2].innerText = t.labelZip;
+        labels[3].innerText = t.labelPass;
+    }
+
+    const editBtn = document.querySelector('a[data-bs-target="#perfilModal"]');
+    if (editBtn) editBtn.innerHTML = `<i class="bi bi-gear me-2"></i> ${t.btnEditProfile}`;
+
+    const logoutBtn = document.querySelector('#perfil-logado a[onclick*="window.location.reload()"]');
+    if (logoutBtn) logoutBtn.innerHTML = `<i class="bi bi-box-arrow-right me-2"></i> ${t.btnLogout}`;
+
+    // Botões de "Ver Detalhes" nos cards
+    document.querySelectorAll(".btn-outline-dark").forEach(btn => {
+        btn.innerText = t.btnDetails;
+    });
 }
 
 function aplicarTemaSalvo() {

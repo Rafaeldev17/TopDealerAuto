@@ -227,27 +227,6 @@ window.renderizarEstoque = function() {
 
     // 3. Renderizar controles de paginação
     renderizarPaginacao(totalPaginas);
-
-    // Mensagem de "Nenhum resultado"
-    const lista = document.getElementById("lista-veiculos");
-    const noResultId = "no-results-msg";
-    let noResultEl = document.getElementById(noResultId);
-
-    if (totalVeiculos === 0) {
-        if (!noResultEl) {
-            noResultEl = document.createElement("div");
-            noResultEl.id = noResultId;
-            noResultEl.className = "col-12 text-center py-5";
-            noResultEl.innerHTML = `
-                <i class="bi bi-search fs-1 text-muted"></i>
-                <p class="mt-3 text-muted">Nenhum veículo encontrado com esses filtros.</p>
-                <button class="btn btn-link" onclick="resetarFiltros()">Limpar Filtros</button>
-            `;
-            lista.appendChild(noResultEl);
-        }
-    } else if (noResultEl) {
-        noResultEl.remove();
-    }
 }
 
 window.renderizarPaginacao = function(totalPaginas) {

@@ -3,7 +3,7 @@
  * Lógica modular para gerenciamento de estoque, filtros e favoritos.
  */
 
-const API_BASE_URL = "http://localhost:8080/api"; // Ajuste se necessário
+const API_BASE_URL = "https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api";
 
 // 1. Dados dos Veículos (Simulação de Banco de Dados)
 const VEICULOS = [

@@ -295,7 +295,7 @@ function translatePage(lang) {
     const editBtn = document.querySelector('a[data-bs-target="#perfilModal"]');
     if (editBtn) editBtn.innerHTML = `<i class="bi bi-gear me-2"></i> ${t.btnEditProfile}`;
 
-    const logoutBtn = document.querySelector('#perfil-logado a[onclick*="window.location.reload()"]');
+    const logoutBtn = document.getElementById("btn-logout");
     if (logoutBtn) logoutBtn.innerHTML = `<i class="bi bi-box-arrow-right me-2"></i> ${t.btnLogout}`;
 
     // Botões de "Ver Detalhes" nos cards
@@ -683,7 +683,8 @@ document.getElementById("form-perfil")?.addEventListener("submit", async (e) => 
     }
 });
 
-document.getElementById("btn-logout")?.addEventListener("click", () => {
+document.getElementById("btn-logout")?.addEventListener("click", (e) => {
+    e.preventDefault();
     localStorage.removeItem("usuario_logado");
     window.location.reload();
 });

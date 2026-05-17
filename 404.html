@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TopDealerAuto</title>
+    <script type="text/javascript">
+      // Esse script transforma a URL de erro 404 em um parâmetro de busca
+      // para que o index.html possa ler e restaurar a rota correta.
+      var pathSegmentsToKeep = 0; // Mude para 1 se seu site estiver em subpasta (ex: seu-usuario.github.io/repositorio/)
+
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?p=/' +
+        l.pathname.split('/').slice(1 + pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

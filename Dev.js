@@ -148,7 +148,58 @@ let indiceImagemAtual = 0;
 // 3. Inicialização
 document.addEventListener("DOMContentLoaded", () => {
     inicializarApp();
+    configurarRoteamento();
 });
+
+function configurarRoteamento() {
+    const loginModalEl = document.getElementById('loginModal');
+    const cadastroModalEl = document.getElementById('cadastroModal');
+
+    if (!loginModalEl || !cadastroModalEl) return;
+
+    // Sincronizar URL quando os modais abrem
+    loginModalEl.addEventListener('show.bs.modal', () => {
+        window.history.pushState({ modal: 'login' }, '', '/login');
+    });
+
+    cadastroModalEl.addEventListener('show.bs.modal', () => {
+        window.history.pushState({ modal: 'cadastro' }, '', '/cadastrar-se');
+    });
+
+    // Sincronizar URL quando os modais fecham
+    const resetUrl = () => {
+        if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+            window.history.pushState({}, '', '/');
+        }
+    };
+
+    loginModalEl.addEventListener('hidden.bs.modal', resetUrl);
+    cadastroModalEl.addEventListener('hidden.bs.modal', resetUrl);
+
+    // Lógica para carregar o modal correto se a URL for acessada diretamente
+    const checarUrl = () => {
+        // --- HACK PARA GITHUB PAGES ---
+        // Verifica se fomos redirecionados pelo 404.html
+        const query = new URLSearchParams(window.location.search);
+        const redirectPath = query.get('p');
+        if (redirectPath) {
+            window.history.replaceState(null, null, redirectPath + window.location.hash);
+        }
+        // ------------------------------
+
+        const path = window.location.pathname;
+        if (path === '/login') {
+            const modal = new bootstrap.Modal(loginModalEl);
+            modal.show();
+        } else if (path === '/cadastrar-se') {
+            const modal = new bootstrap.Modal(cadastroModalEl);
+            modal.show();
+        }
+    };
+
+    window.addEventListener('popstate', checarUrl);
+    checarUrl();
+}
 
 const TRANSLATIONS = {
     "pt-br": {

@@ -1,8 +1,11 @@
 :root {
+    /* Identidade Visual Baseada nas Imagens */
+    --primary-color: #0c1a26; /* Azul escuro do cabeçalho */
+    --accent-color: #0c1a26;
     --bg-color: #ffffff;
     --text-color: #212529;
     --card-bg: #ffffff;
-    --footer-bg: #ffffff;
+    --footer-bg: #f8f9fa;
     --section-light-bg: #f8f9fa;
     --border-color: #dee2e6;
     --modal-bg: #ffffff;
@@ -24,15 +27,20 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
 }
 
-.bg-light {
-    background-color: var(--section-light-bg) !important;
-}
+/* Aplicando a identidade nas cores principais */
+.bg-primary { background-color: var(--primary-color) !important; }
+.text-primary { color: var(--primary-color) !important; }
+.btn-primary { background-color: var(--primary-color) !important; border-color: var(--primary-color) !important; }
 
-.bg-white {
-    background-color: var(--footer-bg) !important;
-}
+.bg-light { background-color: var(--section-light-bg) !important; }
+.bg-white { background-color: var(--footer-bg) !important; }
 
 .card {
     background-color: var(--card-bg) !important;
@@ -49,13 +57,8 @@ body {
     color: var(--text-color) !important;
 }
 
-.text-muted {
-    color: #a0a0a0 !important;
-}
-
-.border-top, .border-bottom {
-    border-color: var(--border-color) !important;
-}
+.text-muted { color: #a0a0a0 !important; }
+.border-top, .border-bottom { border-color: var(--border-color) !important; }
 
 #languageSelector {
     background: transparent !important;
@@ -64,341 +67,68 @@ body {
     transition: transform 0.2s;
 }
 
-#languageSelector:hover {
-    transform: scale(1.1);
-}
+#languageSelector:hover { transform: scale(1.1); }
 
-.dropdown-item {
-    transition: background-color 0.2s;
-}
-
-.dropdown-item:hover {
-    background-color: #f1f3f5 !important;
-}
-
-.dropdown-menu {
-    border: 1px solid #eee !important;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important;
-}
+.dropdown-item { transition: background-color 0.2s; }
+.dropdown-item:hover { background-color: #f1f3f5 !important; }
+.dropdown-menu { border: 1px solid #eee !important; box-shadow: 0 10px 25px rgba(0,0,0,0.1) !important; }
 
 [data-theme="dark"] .dropdown-menu {
     background-color: var(--card-bg) !important;
     border: 1px solid var(--border-color) !important;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
 }
-
-[data-theme="dark"] .dropdown-item {
-    color: var(--text-color) !important;
-}
-
-[data-theme="dark"] .dropdown-item:hover {
-    background-color: var(--input-bg) !important;
-}
+[data-theme="dark"] .dropdown-item { color: var(--text-color) !important; }
+[data-theme="dark"] .dropdown-item:hover { background-color: var(--input-bg) !important; }
 
 #theme-toggle {
     color: rgba(255, 255, 255, 0.7) !important;
     transition: color 0.3s;
 }
-
-#theme-toggle:hover {
-    color: #ffffff !important;
-}
-
-[data-theme="dark"] #theme-toggle {
-    color: #f1f1f1 !important; /* Cor amarela para o sol no modo escuro */
-}
+#theme-toggle:hover { color: #ffffff !important; }
+[data-theme="dark"] #theme-toggle { color: #f1f1f1 !important; }
 
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920');
+    background: linear-gradient(rgba(12, 26, 38, 0.7), rgba(12, 26, 38, 0.7)), url('Captura de tela 2026-06-25 220007.png');
     background-size: cover;
-    color: rgb(255, 250, 250);
+    background-position: center;
+    color: white;
     padding: 100px 0;
     text-align: center;
 }
 
-.navbar-brand { 
-    font-weight: bold; 
-}
-
-
-.btn-primary {
-    background-color: #000000;
-    border-color: #000000;
-}
-
-.btn-primary:hover {
-    background-color: #000000;
-    border-color: #000000;
-}
-/* Garante que o site ocupe toda a altura da tela */
-html, body {
-    height: 100%;
-    margin: 0;
-}
-
-/* Transforma o corpo do site em um flexbox vertical */
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Empurra o rodapé para o final da página, levando a seção de contato junto */
-footer {
-    margin-top: auto;
-}
-
-/* Opcional: Adicione um pouco de espaço na seção de contato */
-#contato {
-    padding: 60px 0;
-}
-
-/* Configurações Gerais */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Banner Hero */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 120px 0;
-}
-
-/* Linha decorativa abaixo do título */
 .custom-hr {
-    width: 50px; 
-    height: 3px; 
-    background-color: var(--text-color) !important; 
+    width: 60px; 
+    height: 4px; 
+    background-color: var(--primary-color) !important; 
     border: none; 
     opacity: 1;
+    margin: 1rem auto;
 }
 
-/* Imagens dos Carros */
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
+[data-theme="dark"] .custom-hr {
+    background-color: #ffffff !important;
 }
 
-/* Efeito de Elevação nos Cards */
-.hover-shadow {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+.card-img-top { height: 220px; object-fit: cover; }
 
-.hover-shadow:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
-}
+.hover-shadow { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.hover-shadow:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important; }
 
-/* Ajustes de Formulário */
-.form-range::-webkit-slider-thumb {
-    background: #0d6efd;
-}
+aside .card { position: sticky; top: 90px; }
+footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); color: var(--text-color); }
 
-aside .card {
-    position: sticky;
-    top: 90px; /* Faz o filtro "rolar" junto com a página no desktop */
-}
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 100px 0;
-}
+#contato a:not(.btn-primary):hover { color: #ffffff !important; text-decoration: underline !important; }
 
-.custom-hr {
-    width: 50px;
-    height: 3px;
-    background-color: var(--text-color) !important;
-    border: none;
-    opacity: 1;
-}
-
-.card-img-top {
-    height: 220px;
-    object-fit: cover;
-}
-
-.hover-shadow {
-    transition: transform 0.3s ease;
-}
-
-.hover-shadow:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-aside .card {
-    position: sticky;
-    top: 90px;
-}
-/* Banner Hero */
-.hero-section {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=80');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 80px 0;
-}
-
-.custom-hr {
-    width: 50px;
-    height: 3px;
-    background-color: var(--text-color) !important;
-    border: none;
-    opacity: 1;
-}
-
-/* CONTAINER DA IMAGEM: Garante que o espaço da foto seja sempre igual */
-.img-container {
-    width: 100%;
-    height: 220px; /* Altura fixa para as fotos */
-    overflow: hidden;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
-}
-
-/* Estilo dos Cards */
-.hover-shadow {
-    transition: transform 0.3s ease;
-}
-
-.hover-shadow:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-aside .card {
-    position: sticky;
-    top: 90px;
-}
-#contato a:not(.btn-primary):hover {
-    color: #000000 !important; /* Azul um pouco mais escuro ao passar o mouse */
-    text-decoration: underline !important;
-}
-/* Garante que o ícone pareça clicável e tenha uma cor suave */
-.toggle-password {
-    cursor: pointer;
-    transition: color 0.2s ease-in-out;
-}
-
-.toggle-password:hover {
-    color: #000000 !important; /* Cor azul do Bootstrap no hover */
-}
-
-/* Ajuste fino da posição para alinhar com o fundo escuro que você definiu */
-.position-relative i.toggle-password {
-    padding: 10px;
-    font-size: 1.1rem;
-}
-.toggle-password {
-    cursor: pointer;
-    /* Aplica a grossura do traço (o padrão é em torno de 1) */
-    -webkit-text-stroke: 1px #6c757d; 
-    /* Para navegadores que suportam a propriedade padrão */
-    font-weight: bold !important; 
-    transition: color 0.2s, -webkit-text-stroke 0.2s;
-}
-
-.toggle-password:hover {
-    color: #0d6efd !important;
-    -webkit-text-stroke: 1px #0d6efd;
-}
-#form-perfil .btn-dark {
-    background-color: #000 !important;
-    border-color: #000 !important;
-    color: #fff !important;
-}
-/* Customizando as cores da paginação */
-.pagination .page-link {
-    color: #000; /* Texto preto */
-    border-color: #dee2e6;
-}
-
-.pagination .page-item.active .page-link {
-    background-color: #000; /* Fundo preto para página ativa */
-    border-color: #000;
-    color: #fff; /* Texto branco para página ativa */
-}
-
-.pagination .page-link:hover {
-    background-color: #f8f9fa;
-    color: #000;
-}
-
-.pagination .page-link:focus {
-    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.1);
-}
-
-.card-body h5, 
-.card-body .text-primary,
-[id^="preco-"] { 
-    color: var(--text-color) !important; 
-    font-weight: bold;
-}
-
-[data-theme="dark"] .badge.bg-dark {
-    background-color: #333 !important;
-    color: #fff !important;
-}
-
-[data-theme="dark"] .badge.bg-light {
-    background-color: #2d2d2d !important;
-    color: #0d6efd !important;
-}
-
-[data-theme="dark"] .text-dark {
-    color: #fff !important;
-}
-
-/* Paginação no modo escuro */
-[data-theme="dark"] .pagination .page-link {
-    background-color: #000 !important;
-    color: #fff !important;
-    border-color: #333 !important;
-}
-
-[data-theme="dark"] .pagination .page-item.active .page-link {
-    background-color: #333 !important;
-    border-color: #444 !important;
-}
-
-/* Botão Ver Detalhes no modo escuro */
-[data-theme="dark"] .btn-outline-dark {
-    color: #fff !important;
-    border-color: #fff !important;
-}
-
-[data-theme="dark"] .btn-outline-dark:hover {
-    background-color: #fff !important;
-    color: #000 !important;
-}
-
-[data-theme="dark"] .btn-close {
-    filter: invert(1) grayscale(100%) brightness(200%);
-}
-
-/* Garante que a imagem principal do modal tenha sempre a mesma altura */
-.main-img-container {
-    position: relative;
-    width: 100%;
-}
-
+.main-img-container { position: relative; width: 100%; }
 #viewMainImage {
     width: 100%;
-    height: 400px; /* Altura fixa para manter a coerência */
-    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    height: 400px;
+    object-fit: cover;
     object-position: center;
     border-radius: 12px;
 }
 
-/* Setas de Navegação */
 .nav-arrow {
     position: absolute;
     top: 50%;
@@ -416,40 +146,25 @@ aside .card {
     transition: background-color 0.3s, transform 0.2s;
     z-index: 10;
 }
+.nav-arrow:hover { background-color: rgba(0, 0, 0, 0.8); transform: translateY(-50%) scale(1.1); }
+.nav-arrow-left { left: 15px; }
+.nav-arrow-right { right: 15px; }
+.nav-arrow i { font-size: 1.5rem; }
 
-.nav-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    transform: translateY(-50%) scale(1.1);
-}
-
-.nav-arrow-left {
-    left: 15px;
-}
-
-.nav-arrow-right {
-    right: 15px;
-}
-
-.nav-arrow i {
-    font-size: 1.5rem;
-}
-
-/* Padroniza o tamanho das miniaturas (thumbnails) */
 .thumb-img {
     width: 100%;
-    height: 80px; /* Altura fixa para as fotos menores */
-    object-fit: cover; /* Corta as bordas excedentes em vez de esmagar a foto */
+    height: 80px;
+    object-fit: cover;
     cursor: pointer;
     transition: transform 0.2s, border 0.2s;
     border: 2px solid transparent;
 }
+.thumb-img.active { border-color: var(--primary-color); transform: scale(1.05); }
+.thumb-img:hover { opacity: 0.8; }
 
-.thumb-img.active {
-    border-color: #000000; /* Cor azul quando selecionada */
-    transform: scale(1.05);
-}
+.pagination .page-link { color: var(--primary-color); border-color: var(--border-color); }
+.pagination .page-item.active .page-link { background-color: var(--primary-color); border-color: var(--primary-color); color: #fff; }
+.pagination .page-link:hover { background-color: #f8f9fa; color: var(--primary-color); }
 
-.thumb-img:hover {
-    opacity: 0.8;
-}
-
+[data-theme="dark"] .pagination .page-link { background-color: #000 !important; color: #fff !important; border-color: #333 !important; }
+[data-theme="dark"] .pagination .page-item.active .page-link { background-color: #333 !important; border-color: #444 !important; }

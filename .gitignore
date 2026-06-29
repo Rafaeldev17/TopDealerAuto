@@ -12,7 +12,6 @@ backend/target/classes/com/topdealerauto/backend/config/SecurityConfig.class
 backend/target/classes/com/topdealerauto/backend/BackendApplication.class
 backend/target/classes/application.properties
 backend/src/main/resources/application.properties
-Dev.js
 backend/target/classes/com/topdealerauto/backend/BackendApplication.class
 backend/target/classes/com/topdealerauto/backend/config/SecurityConfig.class
 backend/target/classes/com/topdealerauto/backend/controller/UsuarioController.class

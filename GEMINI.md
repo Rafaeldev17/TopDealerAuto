@@ -12,7 +12,7 @@
     - `index.html`: Página principal e estrutura da UI.
     - `Dev.js`: Lógica de interação, chamadas de API e manipulação do DOM.
     - `Dev.css`: Estilização customizada.
-    - `Favicon.jpg`, `Kicks*.jpeg`: Assets de imagem.
+    - `Logotipo2.png`, `Kicks*.jpeg`, `Cabeçalho.png`: Assets de imagem.
 
 ### Backend (`/backend`)
 - **Tech Stack:** Java 21, Spring Boot 4.0.3 (Project Parent).
@@ -52,6 +52,6 @@
 - Siga as orientações do `global_context` sobre proteção de segredos.
 
 ## Development Lifecycle
-1. **Research:** Sempre verifique o `Dev.js` para entender como o front consome a API antes de alterar o `UsuarioController`.
-2. **Execution:** Ao adicionar novos campos no `model/Usuario.java`, lembre-se de atualizar o frontend correspondente.
+1. **Research:** Sempre verifique o `Dev.js` para entender como o front consome a API antes de alterar o Controller.
+2. **Execution:** Ao adicionar novos campos no model, lembre-se de atualizar o frontend correspondente.
 3. **Validation:** Testes unitários do backend estão em `backend/src/test/java`.

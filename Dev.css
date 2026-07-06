@@ -13,14 +13,14 @@
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
+    --bg-color: #fefdfd;
     --text-color: #e0e0e0;
     --card-bg: #1e1e1e;
     --footer-bg: #1e1e1e;
     --section-light-bg: #181818;
     --border-color: #333333;
     --modal-bg: #1e1e1e;
-    --input-bg: #2d2d2d;
+    --input-bg: #fdeded;
 }
 
 body {
@@ -167,4 +167,4 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 .pagination .page-link:hover { background-color: #f8f9fa; color: var(--primary-color); }
 
 [data-theme="dark"] .pagination .page-link { background-color: #000 !important; color: #fff !important; border-color: #333 !important; }
-[data-theme="dark"] .pagination .page-item.active .page-link { background-color: #333 !important; border-color: #444 !important; }
+[data-theme="dark"] .pagination .page-item.active .page-link { background-color: #f9f8f8 !important; border-color: #444 !important; }

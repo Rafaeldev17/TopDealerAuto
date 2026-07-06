@@ -9,15 +9,15 @@ const API_BASE_URL = "http://localhost:8080/api"
 const VEICULOS = [
     {
         id: 1,
-        marca: "Nissan",
-        modelo: "Kicks SL 1.6 16V Flexstar 5P Aut.",
-        ano: 2017,
-        km: 68000,
-        preco: 79800,
+        marca: "Fiat",
+        modelo: "Fiat Cronos Drive 1.3",
+        ano: 2024,
+        km: 29000,
+        preco: 90000,
         cambio: "Automático",
-        img: "Kicks2.jpeg",
-        galeria: ["Kicks2.jpeg", "Kicks3.jpeg", "Kicks4.jpeg", "Kicks5.jpeg", "Kicks6.jpeg", "Kicks7.jpeg", "Kicks8.jpeg", "Kicks9.jpeg"],
-        specs: { cor: "Cinza", placa: "2", combustivel: "Flex", portas: "4" }
+        img: "Fiat Cronos principal.jpeg",
+        galeria: ["Fiat Cronos principal.jpeg", "Cronos, detalhes1.jpeg", "cronos, detalhes2.jpeg","cronos, detalhes3.jpeg","cronos, detalhes4.jpeg","cronos, detalhes5.jpeg","cronos, detalhes6.jpeg","cronos, detalhes7.jpeg"],
+        specs: { cor: "Branco", placa: "2", combustivel: "Flex", portas: "4" }
     },
     {
         id: 2,
@@ -237,9 +237,9 @@ function translatePage(lang) {
     if (estoqueH2) estoqueH2.innerText = t.inventoryTitle;
 
     // Estado vazio do estoque
-    const emptyTitle = document.querySelector("#lista-veiculos h3");
+    const emptyTitle = document.querySelector("#lista-veiculos .empty-inventory-title");
     if (emptyTitle) emptyTitle.innerText = t.emptyInventoryTitle;
-    const emptyDesc = document.querySelector("#lista-veiculos p");
+    const emptyDesc = document.querySelector("#lista-veiculos .empty-inventory-desc");
     if (emptyDesc) emptyDesc.innerText = t.emptyInventoryDesc;
 
     // Contato

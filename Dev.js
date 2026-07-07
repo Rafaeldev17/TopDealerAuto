@@ -17,7 +17,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "Fiat Cronos principal.jpeg",
         galeria: ["Fiat Cronos principal.jpeg", "Cronos, detalhes1.jpeg", "cronos, detalhes2.jpeg","cronos, detalhes3.jpeg","cronos, detalhes4.jpeg","cronos, detalhes5.jpeg","cronos, detalhes6.jpeg","cronos, detalhes7.jpeg"],
-        specs: { cor: "Branco", placa: "2", combustivel: "Flex", portas: "4" }
+        specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
     },
     {
         id: 2,
@@ -29,7 +29,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Preto", placa: "5", combustivel: "Flex", portas: "4" }
+        specs: { cor: "Preto", combustivel: "Flex", portas: "4" }
     },
     {
         id: 3,
@@ -41,7 +41,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Branco", placa: "8", combustivel: "Gasolina", portas: "4" }
+        specs: { cor: "Branco", combustivel: "Gasolina", portas: "4" }
     },
     {
         id: 4,
@@ -53,7 +53,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Cinza Moon", placa: "3", combustivel: "Flex", portas: "4" }
+        specs: { cor: "Cinza Moon", combustivel: "Flex", portas: "4" }
     },
     {
         id: 5,
@@ -65,7 +65,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Azul", placa: "0", combustivel: "Diesel", portas: "4" }
+        specs: { cor: "Azul", combustivel: "Diesel", portas: "4" }
     },
     {
         id: 6,
@@ -77,7 +77,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Laranja", placa: "4", combustivel: "Gasolina", portas: "4" }
+        specs: { cor: "Laranja", combustivel: "Gasolina", portas: "4" }
     },
     {
         id: 7,
@@ -89,7 +89,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Branco", placa: "7", combustivel: "Flex", portas: "4" }
+        specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
     },
     {
         id: 8,
@@ -101,7 +101,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Preto", placa: "1", combustivel: "Gasolina", portas: "4" }
+        specs: { cor: "Preto", combustivel: "Gasolina", portas: "4" }
     },
     {
         id: 9,
@@ -113,7 +113,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Cinza", placa: "6", combustivel: "Gasolina", portas: "4" }
+        specs: { cor: "Cinza", combustivel: "Gasolina", portas: "4" }
     },
     {
         id: 10,
@@ -125,7 +125,7 @@ const VEICULOS = [
         cambio: "Automático",
         img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
         galeria: [],
-        specs: { cor: "Prata", placa: "9", combustivel: "Flex", portas: "4" }
+        specs: { cor: "Prata", combustivel: "Flex", portas: "4" }
     }
 ];
 

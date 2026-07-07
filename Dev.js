@@ -13,7 +13,7 @@ const VEICULOS = [
         modelo: "Fiat Cronos Drive 1.3",
         ano: 2024,
         km: 29000,
-        preco: 90000,
+        preco: 91900,
         cambio: "Automático",
         img: "Fiat Cronos principal.jpeg",
         galeria: ["Fiat Cronos principal.jpeg", "Cronos, detalhes1.jpeg", "cronos, detalhes2.jpeg","cronos, detalhes3.jpeg","cronos, detalhes4.jpeg","cronos, detalhes5.jpeg","cronos, detalhes6.jpeg","cronos, detalhes7.jpeg"],

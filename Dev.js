@@ -16,7 +16,7 @@ const VEICULOS = [
         preco: 91900,
         cambio: "Automático",
         img: "Fiat Cronos principal.jpeg",
-        galeria: ["Fiat Cronos principal.jpeg", "Cronos, detalhes1.jpeg", "cronos, detalhes2.jpeg","cronos, detalhes3.jpeg","cronos, detalhes4.jpeg","cronos, detalhes5.jpeg","cronos, detalhes6.jpeg","cronos, detalhes7.jpeg"],
+        galeria: ["fiat-cronos-principal.jpeg", "cronos-detalhes-1.jpeg", "cronos-detalhes-2.jpeg","cronos-detalhes-3.jpeg","cronos-detalhes-4.jpeg","cronos-detalhes-5.jpeg","cronos-detalhes-6.jpeg","cronos-detalhes-7.jpeg"],
         specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
     },
     {

@@ -168,3 +168,42 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 
 [data-theme="dark"] .pagination .page-link { background-color: #000 !important; color: #fff !important; border-color: #333 !important; }
 [data-theme="dark"] .pagination .page-item.active .page-link { background-color: #f9f8f8 !important; border-color: #444 !important; }
+[data-theme="dark"] .card-body .card-title,
+[data-theme="dark"] .card-body .text-dark,
+[data-theme="dark"] .card-body p {
+    color: var(--text-color) !important;
+}
+
+/* Ajuste específico para o botão no modo escuro */
+[data-theme="dark"] .card-body .btn-outline-dark {
+    color: var(--text-color) !important;
+    border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .card-body .btn-outline-dark:hover {
+    background-color: var(--text-color) !important;
+    color: var(--card-bg) !important;
+}
+
+/* Ajustes específicos para o Modal no modo escuro */
+[data-theme="dark"] .modal-content {
+    color: var(--text-color) !important;
+}
+
+/* Corrigindo o título "Especificações Técnicas" e o preço no modal */
+[data-theme="dark"] .modal-content h5,
+[data-theme="dark"] .modal-content .fs-4,
+[data-theme="dark"] .modal-content .fw-bold {
+    color: #ffffff !important;
+}
+
+/* Corrigindo os rótulos de texto claro (cinza escuro) dentro do modal */
+[data-theme="dark"] .modal-content .text-muted,
+[data-theme="dark"] .modal-content span {
+    color: #cccccc !important; 
+}
+
+/* Ajuste caso o fundo do campo de especificações esteja muito escuro ou claro */
+[data-theme="dark"] .specs-grid {
+    background-color: #2a2a2a !important;
+}

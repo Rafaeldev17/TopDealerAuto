@@ -207,3 +207,8 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 [data-theme="dark"] .specs-grid {
     background-color: #2a2a2a !important;
 }
+/* Alterar cor do badge FIAT */
+.card-veiculo .badge {
+    color: #ffffff !important;      /* Cor do texto (ex: branco) */
+    background-color: #0c1a26 !important; /* Cor de fundo (ex: azul escuro) */
+}

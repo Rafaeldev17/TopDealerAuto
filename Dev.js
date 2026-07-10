@@ -210,6 +210,12 @@ const TRANSLATIONS = {
     }
 };
 
+const CAMBIO_TRADUCAO = {
+    "pt-br": { "Automático": "Automático", "Manual": "Manual" },
+    "en-us": { "Automático": "Automatic", "Manual": "Manual" },
+    "es-es": { "Automático": "Automático", "Manual": "Manual" }
+};
+
 const CORES_TRADUCAO = {
     "pt-br": { "Branco": "Branco", "Preto": "Preto", "Prata": "Prata", "Cinza": "Cinza" },
     "en-us": { "Branco": "White", "Preto": "Black", "Prata": "Silver", "Cinza": "Gray" },
@@ -249,6 +255,8 @@ window.changeLanguage = function(lang, flag, name) {
 function translatePage(lang) {
     const t = TRANSLATIONS[lang];
     if (!t) return;
+
+    // --- Tradução de Elementos do Modal ---
     const badge = document.getElementById("modal-destaque-label");
     if (badge) badge.innerText = t.destaque;
 
@@ -258,30 +266,32 @@ function translatePage(lang) {
     const labelCor = document.getElementById("label-cor");
     if (labelCor) labelCor.innerText = t.cor + ":";
 
+    const labelCambio = document.getElementById("label-cambio");
+    if (labelCambio) labelCambio.innerText = t.cambio + ":";
+
     const labelComb = document.getElementById("label-comb");
     if (labelComb) labelComb.innerText = t.combustivel + ":";
 
     const labelPortas = document.getElementById("label-portas");
     if (labelPortas) labelPortas.innerText = t.portas + ":";
+    
     const btnWhatsText = document.getElementById("btn-whatsapp-text");
     if (btnWhatsText) btnWhatsText.innerText = t.btnWhats;
-    // Herói
+
+    // --- Tradução de Estrutura da Página ---
     const h1 = document.querySelector(".hero-section h1");
     if (h1) h1.innerText = t.heroTitle;
     const p = document.querySelector(".hero-section p");
     if (p) p.innerText = t.heroSubtitle;
 
-    // Título do Estoque
     const estoqueH2 = document.querySelector("#estoque h2");
     if (estoqueH2) estoqueH2.innerText = t.inventoryTitle;
 
-    // Estado vazio do estoque
     const emptyTitle = document.querySelector("#lista-veiculos .empty-inventory-title");
     if (emptyTitle) emptyTitle.innerText = t.emptyInventoryTitle;
     const emptyDesc = document.querySelector("#lista-veiculos .empty-inventory-desc");
     if (emptyDesc) emptyDesc.innerText = t.emptyInventoryDesc;
 
-    // Contato
     const contatoH2 = document.querySelector("#contato h2");
     if (contatoH2) contatoH2.innerText = t.contactTitle;
     const contatoP = document.querySelector("#contato p");
@@ -293,24 +303,34 @@ function translatePage(lang) {
     const whatsBtn = document.querySelector("#contato a.btn-success");
     if (whatsBtn) whatsBtn.innerHTML = `<i class="bi bi-whatsapp me-2"></i>${t.contactWhatsapp}`;
 
-    // Rodapé
     const copyright = document.querySelector(".bg-dark.text-white small");
     if (copyright) copyright.innerText = t.copyright;
 
-    // Botões de "Ver Detalhes" nos cards
+    // --- Tradução de Itens Dinâmicos (Cards e Detalhes) ---
     document.querySelectorAll(".btn-outline-dark").forEach(btn => {
         btn.innerText = t.btnDetails;
     });
-    const modeloAtual = document.getElementById("viewModelo").innerText;
-    const veiculo = VEICULOS.find(v => v.modelo === modeloAtual);
 
-    if (veiculo) {
-        const corTraduzida = CORES_TRADUCAO[lang][veiculo.cor] || veiculo.cor;
-        document.getElementById("spec-cor").innerText = corTraduzida;
+    // Tradução do Câmbio nos Cards (Assume que o card tem um atributo data-cambio)
+    document.querySelectorAll(".card-veiculo").forEach(card => {
+        const cOriginal = card.getAttribute("data-cambio");
+        const spanCambio = card.querySelector(".cambio-texto");
+        if (spanCambio && cOriginal) {
+            spanCambio.innerText = CAMBIO_TRADUCAO[lang][cOriginal] || cOriginal;
+        }
+    });
+
+    // Atualização do Modal se estiver aberto
+    const modeloAtualEl = document.getElementById("viewModelo");
+    if (modeloAtualEl) {
+        const modeloAtual = modeloAtualEl.innerText;
+        const veiculo = VEICULOS.find(v => v.modelo === modeloAtual);
+        if (veiculo) {
+            document.getElementById("spec-cor").innerText = CORES_TRADUCAO[lang][veiculo.specs.cor] || veiculo.specs.cor;
+            document.getElementById("spec-cambio").innerText = CAMBIO_TRADUCAO[lang][veiculo.cambio] || veiculo.cambio;
+        }
     }
 }
-
-
 function aplicarTemaSalvo() {
     const temaSalvo = localStorage.getItem("topdealer_theme") || "light";
     document.documentElement.setAttribute("data-theme", temaSalvo);
@@ -513,8 +533,9 @@ window.abrirDetalhes = function(id) {
     
     const lang = localStorage.getItem("topdealer_lang") || "pt-br";
     
-    // Tradução da cor
-    const corTraduzida = CORES_TRADUCAO[lang][v.specs.cor] || v.specs.cor;
+    // Tradução da cor e câmbio (Com verificação de segurança para não quebrar)
+    const corTraduzida = (CORES_TRADUCAO[lang] && CORES_TRADUCAO[lang][v.specs.cor]) ? CORES_TRADUCAO[lang][v.specs.cor] : v.specs.cor;
+    const cambioTraduzido = (CAMBIO_TRADUCAO[lang] && CAMBIO_TRADUCAO[lang][v.cambio]) ? CAMBIO_TRADUCAO[lang][v.cambio] : v.cambio;
     
     // Configurar Galeria
     galeriaAtual = v.galeria && v.galeria.length > 0 ? v.galeria : [v.img];
@@ -527,8 +548,9 @@ window.abrirDetalhes = function(id) {
     const viewModelo = document.getElementById("viewModelo");
     if (viewModelo) viewModelo.innerText = v.modelo;
     
+    // Aplicando a tradução no viewAnoKm
     const viewAnoKm = document.getElementById("viewAnoKm");
-    if (viewAnoKm) viewAnoKm.innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}`;
+    if (viewAnoKm) viewAnoKm.innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${cambioTraduzido}`;
     
     const viewPreco = document.getElementById("viewPreco");
     if (viewPreco) viewPreco.innerText = `R$ ${v.preco.toLocaleString('pt-BR')}`;
@@ -572,7 +594,6 @@ window.abrirDetalhes = function(id) {
         modal.show();
     }
 }
-
 window.trocarImagemManual = function(index, event) {
     if (event) event.stopPropagation();
     indiceImagemAtual = index;

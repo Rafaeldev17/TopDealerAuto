@@ -210,6 +210,12 @@ const TRANSLATIONS = {
     }
 };
 
+const CORES_TRADUCAO = {
+    "pt-br": { "Branco": "Branco", "Preto": "Preto", "Prata": "Prata", "Cinza": "Cinza" },
+    "en-us": { "Branco": "White", "Preto": "Black", "Prata": "Silver", "Cinza": "Gray" },
+    "es-es": { "Branco": "Blanco", "Preto": "Negro", "Prata": "Plata", "Cinza": "Gris" }
+};
+
 window.inicializarApp = function() {
     aplicarTemaSalvo();
     aplicarIdiomaSalvo();
@@ -295,7 +301,15 @@ function translatePage(lang) {
     document.querySelectorAll(".btn-outline-dark").forEach(btn => {
         btn.innerText = t.btnDetails;
     });
+    const modeloAtual = document.getElementById("viewModelo").innerText;
+    const veiculo = VEICULOS.find(v => v.modelo === modeloAtual);
+
+    if (veiculo) {
+        const corTraduzida = CORES_TRADUCAO[lang][veiculo.cor] || veiculo.cor;
+        document.getElementById("spec-cor").innerText = corTraduzida;
+    }
 }
+
 
 function aplicarTemaSalvo() {
     const temaSalvo = localStorage.getItem("topdealer_theme") || "light";
@@ -496,7 +510,12 @@ window.toggleFavorito = function(id, event) {
 window.abrirDetalhes = function(id) {
     const v = VEICULOS.find(x => x.id === id);
     if (!v) return;
-
+    
+    const lang = localStorage.getItem("topdealer_lang") || "pt-br";
+    
+    // Tradução da cor
+    const corTraduzida = CORES_TRADUCAO[lang][v.specs.cor] || v.specs.cor;
+    
     // Configurar Galeria
     galeriaAtual = v.galeria && v.galeria.length > 0 ? v.galeria : [v.img];
     indiceImagemAtual = 0;
@@ -516,16 +535,22 @@ window.abrirDetalhes = function(id) {
 
     // Especificações
     const specCor = document.getElementById("spec-cor");
-    if (specCor) specCor.innerText = v.specs.cor;
-    const specPlaca = document.getElementById("spec-placa");
-    if (specPlaca) specPlaca.innerText = v.specs.placa;
+    if (specCor) specCor.innerText = corTraduzida;
+    
     const specComb = document.getElementById("spec-comb");
     if (specComb) specComb.innerText = v.specs.combustivel;
+    
     const specPortas = document.getElementById("spec-portas");
     if (specPortas) specPortas.innerText = v.specs.portas;
 
-    // Link WhatsApp
-    const msg = encodeURIComponent(`Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`);
+    // Link WhatsApp Traduzido
+    const textosWhats = {
+        "pt-br": `Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`,
+        "en-us": `Hello! I'm interested in the ${v.marca} ${v.modelo} advertised on TopDealerAuto.`,
+        "es-es": `¡Hola! Tengo interés en el ${v.marca} ${v.modelo} anunciado en TopDealerAuto.`
+    };
+    
+    const msg = encodeURIComponent(textosWhats[lang] || textosWhats["pt-br"]);
     const btnWhats = document.getElementById("btn-whatsapp-detalhe");
     if (btnWhats) btnWhats.href = `https://wa.me/5516991475066?text=${msg}`;
 

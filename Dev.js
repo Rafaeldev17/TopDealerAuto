@@ -162,7 +162,13 @@ const TRANSLATIONS = {
         contactEmail: "E-mail",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. Todos os direitos reservados.",
-        btnDetails: "Ver Detalhes"
+        btnDetails: "Ver Detalhes",
+        destaque: "Destaque",
+        especificacoes: "Especificações Técnicas",
+        cor: "Cor",
+        combustivel: "Combustível",
+        portas: "Portas",
+        btnWhats: "Tenho Interesse"
     },
     "en-us": {
         heroTitle: "Find your next car here",
@@ -175,7 +181,13 @@ const TRANSLATIONS = {
         contactEmail: "Email",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. All rights reserved.",
-        btnDetails: "View Details"
+        btnDetails: "View Details",
+        destaque: "Featured",
+        especificacoes: "Technical Specifications",
+        cor: "Color",
+        combustivel: "Fuel",
+        portas: "Doors",
+        btnWhats: "I am interested"
     },
     "es-es": {
         heroTitle: "Encuentra tu próximo coche aquí",
@@ -188,7 +200,13 @@ const TRANSLATIONS = {
         contactEmail: "Correo electrónico",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. Todos los derechos reservados.",
-        btnDetails: "Ver Detalles"
+        btnDetails: "Ver Detalles",
+        destaque: "Destacado",
+        especificacoes: "Especificaciones Técnicas",
+        cor: "Color",
+        combustivel: "Combustible",
+        portas: "Puertas",
+        btnWhats: "Tengo interés"
     }
 };
 
@@ -225,7 +243,22 @@ window.changeLanguage = function(lang, flag, name) {
 function translatePage(lang) {
     const t = TRANSLATIONS[lang];
     if (!t) return;
+    const badge = document.getElementById("modal-destaque-label");
+    if (badge) badge.innerText = t.destaque;
 
+    const specsTitle = document.getElementById("modal-specs-title");
+    if (specsTitle) specsTitle.innerText = t.especificacoes;
+
+    const labelCor = document.getElementById("label-cor");
+    if (labelCor) labelCor.innerText = t.cor + ":";
+
+    const labelComb = document.getElementById("label-comb");
+    if (labelComb) labelComb.innerText = t.combustivel + ":";
+
+    const labelPortas = document.getElementById("label-portas");
+    if (labelPortas) labelPortas.innerText = t.portas + ":";
+    const btnWhatsText = document.getElementById("btn-whatsapp-text");
+    if (btnWhatsText) btnWhatsText.innerText = t.btnWhats;
     // Herói
     const h1 = document.querySelector(".hero-section h1");
     if (h1) h1.innerText = t.heroTitle;

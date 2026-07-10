@@ -27,8 +27,8 @@ const VEICULOS = [
         km: 35000,
         preco: 125000,
         cambio: "Automático",
-        img: "branch-img-toyota.jpeg",
-        galeria: ["branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg","branch-img-toyota.jpeg",],
+        img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Preto", combustivel: "Flex", portas: "4" }
     },
     {
@@ -39,8 +39,8 @@ const VEICULOS = [
         km: 42000,
         preco: 138000,
         cambio: "Automático",
-        img: "branch-img-civic.jpeg",
-        galeria: ["branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg","branch-img-civic.jpeg",],
+        img: "https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Branco", combustivel: "Gasolina", portas: "4" }
     },
     {
@@ -51,8 +51,8 @@ const VEICULOS = [
         km: 15000,
         preco: 115900,
         cambio: "Automático",
-        img: "branch-img-nivus.jpeg",
-        galeria: ["branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg","branch-img-nivus.jpeg",],
+        img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Cinza Moon", combustivel: "Flex", portas: "4" }
     },
     {
@@ -63,8 +63,8 @@ const VEICULOS = [
         km: 12000,
         preco: 220000,
         cambio: "Automático",
-        img: "branch-img-jeep.jpeg",
-        galeria: ["branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg","branch-img-jeep.jpeg",],
+        img: "https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Azul", combustivel: "Diesel", portas: "4" }
     },
     {
@@ -75,8 +75,8 @@ const VEICULOS = [
         km: 25000,
         preco: 210000,
         cambio: "Automático",
-        img: "branch-img-sport.jpeg",
-        galeria: ["branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg","branch-img-sport.jpeg",],
+        img: "https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Laranja", combustivel: "Gasolina", portas: "4" }
     },
     {
@@ -87,8 +87,8 @@ const VEICULOS = [
         km: 30000,
         preco: 285000,
         cambio: "Automático",
-        img: "branch-img-320i.jpeg",
-        galeria: ["branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg","branch-img-320i.jpeg",],
+        img: "https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
     },
     {
@@ -99,8 +99,8 @@ const VEICULOS = [
         km: 18000,
         preco: 340000,
         cambio: "Automático",
-        img: "branch-img-c300.jpeg",
-        galeria: ["branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg","branch-img-c300.jpeg",],
+        img: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Preto", combustivel: "Gasolina", portas: "4" }
     },
     {
@@ -111,8 +111,8 @@ const VEICULOS = [
         km: 8000,
         preco: 295000,
         cambio: "Automático",
-        img: "branch-img-q3.jpeg",
-        galeria: ["branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg","branch-img-q3.jpeg",],
+        img: "https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Cinza", combustivel: "Gasolina", portas: "4" }
     },
     {
@@ -123,8 +123,8 @@ const VEICULOS = [
         km: 10000,
         preco: 105000,
         cambio: "Automático",
-        img: "branch-img-hb20.jpeg",
-        galeria: ["branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg","branch-img-hb20.jpeg",],
+        img: "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800",
+        galeria: [],
         specs: { cor: "Prata", combustivel: "Flex", portas: "4" }
     }
 ];
@@ -162,15 +162,7 @@ const TRANSLATIONS = {
         contactEmail: "E-mail",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. Todos os direitos reservados.",
-        btnDetails: "Ver Detalhes",
-        btnPrevious: "Anterior",
-        btnNext: "Próxima",
-        viewSpecs: "Especificações Técnicas",
-        viewCor: "Cor",
-        viewCombustivel: "Combustível",
-        viewPortas: "Portas",
-        viewBtnWhats: "Tenho Interesse",
-        cambio: { "Automático": "Automático", "Manual": "Manual" }
+        btnDetails: "Ver Detalhes"
     },
     "en-us": {
         heroTitle: "Find your next car here",
@@ -183,15 +175,7 @@ const TRANSLATIONS = {
         contactEmail: "Email",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. All rights reserved.",
-        btnDetails: "View Details",
-        btnPrevious: "Previousr",
-        btnNext: "Next",
-        viewSpecs: "Technical specifications",
-        viewCor: "Color",
-        viewCombustivel: "Fuel",
-        viewPortas: "Doors",
-        viewBtnWhats: "I am interested",
-        cambio: { "Automático": "Automatic", "Manual": "Manual" }
+        btnDetails: "View Details"
     },
     "es-es": {
         heroTitle: "Encuentra tu próximo coche aquí",
@@ -204,16 +188,8 @@ const TRANSLATIONS = {
         contactEmail: "Correo electrónico",
         contactWhatsapp: "WhatsApp",
         copyright: "© 2026 TopDealerAuto. Todos los derechos reservados.",
-        btnDetails: "Ver Detalles",
-        btnPrevious: "Anterior",
-        btnNext: "Próxima",
-        viewSpecs: "Especificaciones técnicas",
-        viewCor: "Color",
-        viewCombustivel: "Combustible",
-        viewPortas: "Puertas",
-        viewBtnWhats: "Estoy interesado",
-        cambio: { "Automático": "Automático", "Manual": "Manual" }
-    },
+        btnDetails: "Ver Detalles"
+    }
 };
 
 window.inicializarApp = function() {
@@ -286,7 +262,6 @@ function translatePage(lang) {
     document.querySelectorAll(".btn-outline-dark").forEach(btn => {
         btn.innerText = t.btnDetails;
     });
-    renderizarEstoque();
 }
 
 function aplicarTemaSalvo() {
@@ -370,9 +345,9 @@ window.renderizarPaginacao = function(totalPaginas) {
         return;
     }
 
-   let html = `
+    let html = `
         <li class="page-item ${paginaAtual === 1 ? 'disabled' : ''}">
-            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual - 1})">${TRANSLATIONS[document.documentElement.lang || "pt-br"].btnPrevious}</a>
+            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual - 1})">Anterior</a>
         </li>
     `;
 
@@ -386,7 +361,7 @@ window.renderizarPaginacao = function(totalPaginas) {
 
     html += `
         <li class="page-item ${paginaAtual === totalPaginas ? 'disabled' : ''}">
-            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual + 1})">${TRANSLATIONS[document.documentElement.lang || "pt-br"].btnNext}</a>
+            <a class="page-link" href="#estoque" onclick="mudarPagina(${paginaAtual + 1})">Próxima</a>
         </li>
     `;
 
@@ -489,18 +464,9 @@ window.abrirDetalhes = function(id) {
     const v = VEICULOS.find(x => x.id === id);
     if (!v) return;
 
-    const lang = document.documentElement.lang || "pt-br";
-    const t = TRANSLATIONS[lang];
-
     // Configurar Galeria
     galeriaAtual = v.galeria && v.galeria.length > 0 ? v.galeria : [v.img];
     indiceImagemAtual = 0;
-
-    document.querySelector(".modal-body h6").innerText = t.viewSpecs;
-
-    document.getElementById("label-cor").innerText = t.viewCor + ":";
-    document.getElementById("label-comb").innerText = t.viewCombustivel + ":";
-    document.getElementById("label-portas").innerText = t.viewPortas + ":";
 
     // Preencher Modal
     const mainImg = document.getElementById("viewMainImage");
@@ -510,7 +476,7 @@ window.abrirDetalhes = function(id) {
     if (viewModelo) viewModelo.innerText = v.modelo;
     
     const viewAnoKm = document.getElementById("viewAnoKm");
-    if (viewAnoKm) viewAnoKm.innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${t.cambio[v.cambio]}`;
+    if (viewAnoKm) viewAnoKm.innerText = `${v.ano} | ${v.km.toLocaleString()} Km | ${v.cambio}`;
     
     const viewPreco = document.getElementById("viewPreco");
     if (viewPreco) viewPreco.innerText = `R$ ${v.preco.toLocaleString('pt-BR')}`;
@@ -529,7 +495,6 @@ window.abrirDetalhes = function(id) {
     const msg = encodeURIComponent(`Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`);
     const btnWhats = document.getElementById("btn-whatsapp-detalhe");
     if (btnWhats) btnWhats.href = `https://wa.me/5516991475066?text=${msg}`;
-    btnWhats.innerText = t.viewBtnWhats;
 
     // Renderizar Miniaturas
     const galleryContainer = document.getElementById("thumbGallery");

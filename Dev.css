@@ -212,3 +212,8 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
     color: #ffffff !important;      /* Cor do texto (ex: branco) */
     background-color: #0c1a26 !important; /* Cor de fundo (ex: azul escuro) */
 }
+
+/* Inverte o botão de fechar no modo escuro */
+[data-theme="dark"] .btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+}

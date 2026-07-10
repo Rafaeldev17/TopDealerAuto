@@ -217,3 +217,8 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 [data-theme="dark"] .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
+[data-theme="dark"] .pagination .page-item.active .page-link {
+    border: 1px solid #ffffff !important;
+    background-color: #ffffff !important; /* Fundo branco para a página ativa */
+    color: #000000 !important; /* Texto preto na página ativa para contraste */
+}

@@ -492,9 +492,9 @@ window.abrirDetalhes = function(id) {
 
     // Link WhatsApp Traduzido
     const textosWhats = {
-        "pt-br": `Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealerAuto.`,
-        "en-us": `Hello! I'm interested in the ${v.marca} ${v.modelo} advertised on TopDealerAuto.`,
-        "es-es": `¡Hola! Tengo interés en el ${v.marca} ${v.modelo} anunciado en TopDealerAuto.`
+        "pt-br": `Olá! Tenho interesse no ${v.marca} ${v.modelo} anunciado na TopDealer.`,
+        "en-us": `Hello! I'm interested in the ${v.marca} ${v.modelo} advertised on TopDealer.`,
+        "es-es": `¡Hola! Tengo interés en el ${v.marca} ${v.modelo} anunciado en TopDealer.`
     };
     
     const msg = encodeURIComponent(textosWhats[lang] || textosWhats["pt-br"]);

@@ -306,28 +306,29 @@ function translatePage(lang) {
     const copyright = document.querySelector(".bg-dark.text-white small");
     if (copyright) copyright.innerText = t.copyright;
 
-    // --- Tradução de Itens Dinâmicos (Cards e Detalhes) ---
+    // --- Tradução de Itens Dinâmicos ---
     document.querySelectorAll(".btn-outline-dark").forEach(btn => {
         btn.innerText = t.btnDetails;
     });
 
-    // Tradução do Câmbio nos Cards (Assume que o card tem um atributo data-cambio)
-    document.querySelectorAll(".card-veiculo").forEach(card => {
-        const cOriginal = card.getAttribute("data-cambio");
-        const spanCambio = card.querySelector(".cambio-texto");
-        if (spanCambio && cOriginal) {
-            spanCambio.innerText = CAMBIO_TRADUCAO[lang][cOriginal] || cOriginal;
+    // CORREÇÃO: Tradução usando atributo data-original
+    // Agora o script ignora o texto visível e busca a tradução a partir da fonte fixa
+    document.querySelectorAll(".trans-cambio").forEach(el => {
+        const valorOriginal = el.getAttribute("data-original");
+        if (valorOriginal && CAMBIO_TRADUCAO[lang] && CAMBIO_TRADUCAO[lang][valorOriginal]) {
+            el.textContent = CAMBIO_TRADUCAO[lang][valorOriginal];
         }
     });
 
-    // Atualização do Modal se estiver aberto
+    // Atualização do Modal
     const modeloAtualEl = document.getElementById("viewModelo");
     if (modeloAtualEl) {
         const modeloAtual = modeloAtualEl.innerText;
         const veiculo = VEICULOS.find(v => v.modelo === modeloAtual);
         if (veiculo) {
             document.getElementById("spec-cor").innerText = CORES_TRADUCAO[lang][veiculo.specs.cor] || veiculo.specs.cor;
-            document.getElementById("spec-cambio").innerText = CAMBIO_TRADUCAO[lang][veiculo.cambio] || veiculo.cambio;
+            const specCambio = document.getElementById("spec-cambio");
+            if (specCambio) specCambio.innerText = CAMBIO_TRADUCAO[lang][veiculo.cambio] || veiculo.cambio;
         }
     }
 }

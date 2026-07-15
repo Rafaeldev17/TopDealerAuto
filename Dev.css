@@ -215,3 +215,9 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
     background-color: #ffffff !important;
     color: #000000 !important;
 }
+
+.btn-success, 
+#btn-whatsapp-text,
+.modal-footer .btn-success {
+    color: #ffffff !important;
+}

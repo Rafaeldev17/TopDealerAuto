@@ -1,6 +1,6 @@
 :root {
-    /* Identidade Visual Baseada nas Imagens */
-    --primary-color: #0c1a26; /* Azul escuro do cabeçalho */
+    
+    --primary-color: #0c1a26; 
     --accent-color: #0c1a26;
     --bg-color: #ffffff;
     --text-color: #212529;
@@ -34,7 +34,6 @@ body {
     margin: 0;
 }
 
-/* Aplicando a identidade nas cores principais */
 .bg-primary { background-color: var(--primary-color) !important; }
 .text-primary { color: var(--primary-color) !important; }
 .btn-primary { background-color: var(--primary-color) !important; border-color: var(--primary-color) !important; }
@@ -174,7 +173,6 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
     color: var(--text-color) !important;
 }
 
-/* Ajuste específico para o botão no modo escuro */
 [data-theme="dark"] .card-body .btn-outline-dark {
     color: var(--text-color) !important;
     border-color: var(--border-color) !important;
@@ -185,40 +183,35 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
     color: var(--card-bg) !important;
 }
 
-/* Ajustes específicos para o Modal no modo escuro */
 [data-theme="dark"] .modal-content {
     color: var(--text-color) !important;
 }
 
-/* Corrigindo o título "Especificações Técnicas" e o preço no modal */
 [data-theme="dark"] .modal-content h5,
 [data-theme="dark"] .modal-content .fs-4,
 [data-theme="dark"] .modal-content .fw-bold {
     color: #ffffff !important;
 }
 
-/* Corrigindo os rótulos de texto claro (cinza escuro) dentro do modal */
 [data-theme="dark"] .modal-content .text-muted,
 [data-theme="dark"] .modal-content span {
     color: #cccccc !important; 
 }
 
-/* Ajuste caso o fundo do campo de especificações esteja muito escuro ou claro */
 [data-theme="dark"] .specs-grid {
     background-color: #2a2a2a !important;
 }
-/* Alterar cor do badge FIAT */
+
 .card-veiculo .badge {
-    color: #ffffff !important;      /* Cor do texto (ex: branco) */
-    background-color: #0c1a26 !important; /* Cor de fundo (ex: azul escuro) */
+    color: #ffffff !important;
+    background-color: #0c1a26 !important;
 }
 
-/* Inverte o botão de fechar no modo escuro */
 [data-theme="dark"] .btn-close {
     filter: invert(1) grayscale(100%) brightness(200%);
 }
 [data-theme="dark"] .pagination .page-item.active .page-link {
     border: 1px solid #ffffff !important;
-    background-color: #ffffff !important; /* Fundo branco para a página ativa */
-    color: #000000 !important; /* Texto preto na página ativa para contraste */
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }

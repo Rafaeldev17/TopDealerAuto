@@ -5,7 +5,7 @@
 
 // const API_BASE_URL = "https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api";
 const API_BASE_URL = "http://localhost:8080/api"
-// 1. Dados dos Veículos (Simulação de Banco de Dados)
+// 1. Dados dos Veículos (Banco de Dados)
 const VEICULOS = [
     {
         id: 1,
@@ -311,8 +311,8 @@ function translatePage(lang) {
         btn.innerText = t.btnDetails;
     });
 
-    // CORREÇÃO: Tradução usando atributo data-original
-    // Agora o script ignora o texto visível e busca a tradução a partir da fonte fixa
+    // Tradução usando atributo data-original
+   // Agora o script ignora o texto visível e busca a tradução a partir da fonte fixa
     document.querySelectorAll(".trans-cambio").forEach(el => {
         const valorOriginal = el.getAttribute("data-original");
         if (valorOriginal && CAMBIO_TRADUCAO[lang] && CAMBIO_TRADUCAO[lang][valorOriginal]) {

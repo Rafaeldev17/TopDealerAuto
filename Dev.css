@@ -221,3 +221,7 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 .modal-footer .btn-success {
     color: #ffffff !important;
 }
+[data-theme="dark"] .dropdown-item:hover {
+    background-color: var(--input-bg) !important;
+    color: #000000 !important; /* Adicione esta linha */
+}

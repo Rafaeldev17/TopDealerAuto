@@ -223,5 +223,17 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
 }
 [data-theme="dark"] .dropdown-item:hover {
     background-color: var(--input-bg) !important;
-    color: #000000 !important; /* Adicione esta linha */
+    color: #000000 !important; 
+}
+
+[data-theme="dark"] .card-veiculo .badge {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+[data-theme="dark"] .modal-content .badge,
+[data-theme="dark"] .modal-content span.badge,
+[data-theme="dark"] .modal-content .destaque-text {
+    background-color: #ffffff !important;
+    color: #000000 !important;
 }

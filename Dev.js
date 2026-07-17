@@ -1,6 +1,6 @@
 /**
  * TopDealerAuto - Dev.js
- * Lógica modular para gerenciamento de estoque, filtros e favoritos.
+ * Lógica modular para gerenciamento de estoque.
  */
 
 // const API_BASE_URL = "https://topdealer-api-acendkbfbwdpcuh6.brazilsouth-01.azurewebsites.net/api";

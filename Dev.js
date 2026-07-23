@@ -312,7 +312,6 @@ function translatePage(lang) {
     });
 
     // Tradução usando atributo data-original
-   // Agora o script ignora o texto visível e busca a tradução a partir da fonte fixa
     document.querySelectorAll(".trans-cambio").forEach(el => {
         const valorOriginal = el.getAttribute("data-original");
         if (valorOriginal && CAMBIO_TRADUCAO[lang] && CAMBIO_TRADUCAO[lang][valorOriginal]) {
@@ -459,7 +458,7 @@ window.abrirDetalhes = function(id) {
     
     const lang = localStorage.getItem("topdealer_lang") || "pt-br";
     
-    // Tradução da cor e câmbio (Com verificação de segurança para não quebrar)
+    // Tradução da cor e câmbio
     const corTraduzida = (CORES_TRADUCAO[lang] && CORES_TRADUCAO[lang][v.specs.cor]) ? CORES_TRADUCAO[lang][v.specs.cor] : v.specs.cor;
     const cambioTraduzido = (CAMBIO_TRADUCAO[lang] && CAMBIO_TRADUCAO[lang][v.cambio]) ? CAMBIO_TRADUCAO[lang][v.cambio] : v.cambio;
     

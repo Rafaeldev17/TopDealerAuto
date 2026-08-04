@@ -33,15 +33,15 @@ const VEICULOS = [
     },
     {
         id: 3,
-        marca: "Honda",
-        modelo: "Civic Touring 1.5 Turbo",
+        marca: "JEEP",
+        modelo: "JEEP COMPASS LONGITUDE 2.0 FLEX",
         ano: 2020,
-        km: 42000,
-        preco: 138000,
+        km: 90000,
+        preco: 92900,
         cambio: "Automático",
-        img: "https://images.unsplash.com/photo-1594976612710-664f24302672?auto=format&fit=crop&q=80&w=800",
-        galeria: [],
-        specs: { cor: "Branco", combustivel: "Gasolina", portas: "4" }
+        img: "compass_1.jpeg",
+        galeria: ["compass_1.jpeg", "compass_2.jpeg", "compass_3.jpeg", "compass_4.jpeg", "compass_5.jpeg", "compass_6.jpeg", "compass_7.jpeg", "compass_8.jpeg"],
+        specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
     },
     {
         id: 4,

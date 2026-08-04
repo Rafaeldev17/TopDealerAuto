@@ -21,15 +21,15 @@ const VEICULOS = [
     },
     {
         id: 2,
-        marca: "Toyota",
-        modelo: "Corolla XEI 2.0 Flex",
-        ano: 2021,
-        km: 35000,
-        preco: 125000,
+        marca: "bmw",
+        modelo: "BMW X1 XDRIVE 25i 2.0 TURBO",
+        ano: 2016,
+        km: 118000,
+        preco: 105900,
         cambio: "Automático",
-        img: "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?auto=format&fit=crop&q=80&w=800",
-        galeria: [],
-        specs: { cor: "Preto", combustivel: "Flex", portas: "4" }
+        img: "X1 img1.jpeg",
+        galeria: ["X1 img1.jpeg", "X1 img2.jpeg", "X1 img4.jpeg", "X1 img y.jpeg", "X1 img3.jpeg", "X1 img5.jpeg", "X1 img6.jpeg", "X1 img x.jpeg"], 
+        specs: { cor: "Branco", combustivel: "Gasolina", portas: "4" }
     },
     {
         id: 3,

@@ -168,7 +168,9 @@ const TRANSLATIONS = {
         cor: "Cor",
         combustivel: "Combustível",
         portas: "Portas",
-        btnWhats: "Tenho Interesse"
+        btnWhats: "Tenho Interesse",
+        btnEmail: "Enviar E-mail"
+        
     },
     "en-us": {
         heroTitle: "Find your next car here",
@@ -187,7 +189,8 @@ const TRANSLATIONS = {
         cor: "Color",
         combustivel: "Fuel",
         portas: "Doors",
-        btnWhats: "I am interested"
+        btnWhats: "I am interested",
+        btnEmail: "Send Email"
     },
     "es-es": {
         heroTitle: "Encuentra tu próximo coche aquí",
@@ -206,7 +209,8 @@ const TRANSLATIONS = {
         cor: "Color",
         combustivel: "Combustible",
         portas: "Puertas",
-        btnWhats: "Tengo interés"
+        btnWhats: "Tengo interés",
+        btnEmail: "Enviar correo"
     }
 };
 
@@ -277,6 +281,11 @@ function translatePage(lang) {
     
     const btnWhatsText = document.getElementById("btn-whatsapp-text");
     if (btnWhatsText) btnWhatsText.innerText = t.btnWhats;
+
+    const btnEmailText = document.getElementById("btn-email-text");
+    if (btnEmailText) btnEmailText.innerText = t.btnEmail;
+
+
 
     // --- Tradução de Estrutura da Página ---
     const h1 = document.querySelector(".hero-section h1");

@@ -237,3 +237,10 @@ footer { margin-top: auto; padding: 60px 0; background-color: var(--footer-bg); 
     background-color: #ffffff !important;
     color: #000000 !important;
 }
+
+#btn-E-mail-detalhe,
+#btn-E-mail-detalhe i,
+#btn-email-text {
+    color: #fff !important;
+    font-weight: 700 !important;
+}

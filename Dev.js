@@ -33,27 +33,27 @@ const VEICULOS = [
     },
     {
         id: 3,
-        marca: "JEEP",
-        modelo: "JEEP COMPASS LONGITUDE 2.0 FLEX",
+        marca: "SUZUKI",
+        modelo: "SUZUKI VITARA 4STYLE ALLGRIP 1.4 TURBO FLEX",
         ano: 2020,
-        km: 90000,
+        km: 98000,
         preco: 92900,
         cambio: "Automático",
-        img: "compass_1.jpeg",
-        galeria: ["compass_1.jpeg", "compass_2.jpeg", "compass_3.jpeg", "compass_4.jpeg", "compass_5.jpeg", "compass_6.jpeg", "compass_7.jpeg", "compass_8.jpeg"],
-        specs: { cor: "Branco", combustivel: "Flex", portas: "4" }
+        img: "suzuki_1.jpeg",
+        galeria: ["suzuki_1.jpeg", "suzuki_2.jpeg", "suzuki_3.jpeg", "suzuki_4.jpeg", "suzuki_5.jpeg", "suzuki_6.jpeg", "suzuki_7.jpeg", "suzuki_8.jpeg"],
+        specs: { cor: "Cinza", combustivel: "Flex", portas: "4" }
     },
     {
         id: 4,
-        marca: "Volkswagen",
-        modelo: "Nivus Highline 200 TSI",
-        ano: 2022,
-        km: 15000,
-        preco: 115900,
+        marca: "Civic",
+        modelo: "HONDA CIVIC EX 2.0 FLEX AUT",
+        ano: 2020,
+        km: 86000,
+        preco: 111900,
         cambio: "Automático",
-        img: "https://images.unsplash.com/photo-1631006509650-619f563d6b05?auto=format&fit=crop&q=80&w=800",
-        galeria: [],
-        specs: { cor: "Cinza Moon", combustivel: "Flex", portas: "4" }
+        img: "civic_1.jpeg",
+        galeria: ["civic_1.jpeg", "civic_2.jpeg", "civic_3.jpeg", "civic_4.jpeg", "civic_8.jpeg", "civic_7.jpeg", "civic_5.jpeg", "civic_6.jpeg"],
+        specs: { cor: "Preto", combustivel: "Flex", portas: "4" }
     },
     {
         id: 5,

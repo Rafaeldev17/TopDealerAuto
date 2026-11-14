@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TopDealerAuto</title>
+    <title>Furlan Motors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="Dev.css">
@@ -12,20 +15,28 @@
     <script src="Dev.js"></script>
 </head>
 <body>
-    <header class="py-2" style="background-color: #0c1a26;">
+    <header class="py-3 site-header sticky-top">
         <div class="container d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center">
-                <a class="navbar-brand d-flex align-items-center" href="#">
-                    <img src="logo-tipo.png" alt="Logo TopDealerAuto" style="height: 40px; width: auto;" class="me-3">
-                    <span class="text-white fw-bold fs-4">TopDealerAuto</span>
+                <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+                    <!-- Emblema SVG da Furlan Motors (adapta automaticamente ao modo claro/escuro) -->
+                    <svg class="brand-emblem" width="44" height="34" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <polygon points="36,4 116,4 104,25 24,25" class="emblem-bar"/>
+                        <polygon points="22,33 82,33 70,54 10,54" class="emblem-bar"/>
+                        <polygon points="8,62 48,62 36,83 -4,83" class="emblem-bar"/>
+                    </svg>
+                    <div class="d-flex flex-column lh-1">
+                        <span class="brand-title">F U R L A N</span>
+                        <span class="brand-subtitle mt-1">M O T O R S</span>
+                    </div>
                 </a>
             </div>
             <div class="d-flex align-items-center">
-                <button id="theme-toggle" class="btn p-0 d-flex align-items-center justify-content-center border-0 me-3" title="Alternar modo claro/escuro" onclick="toggleDarkMode()" style="width: 45px; height: 45px; background: transparent !important; color: white;">
+                <button id="theme-toggle" class="btn p-0 d-flex align-items-center justify-content-center border-0 me-3" title="Alternar modo claro/escuro" onclick="toggleDarkMode()" style="width: 45px; height: 45px;">
                     <i class="bi bi-moon-stars fs-5"></i>
                 </button>
                 <div class="dropdown">
-                    <button class="btn p-0 d-flex align-items-center justify-content-center border-0" id="languageSelector" data-bs-toggle="dropdown" aria-expanded="false" style="width: 45px; height: 45px; background: transparent !important;">
+                    <button class="btn p-0 d-flex align-items-center justify-content-center border-0" id="languageSelector" data-bs-toggle="dropdown" aria-expanded="false" style="width: 45px; height: 45px;">
                         <img id="current-lang-flag" src="https://flagcdn.com/w40/br.png" width="26" alt="Brasil" style="border-radius: 2px;">
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow border-0 py-0 overflow-hidden" aria-labelledby="languageSelector" style="border-radius: 8px; min-width: 180px;">
@@ -53,190 +64,260 @@
         </div>
     </header>
     
-    <div class="container-fluid p-0">
-        <img src="img-cabecalho.jpeg" alt="Banner TopDealerAuto" class="img-fluid w-100" style="height: 320px; object-fit: cover; object-position: center; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; filter: contrast(1.05) brightness(1.00) saturate(1.4);">
-    </div>
+    <!-- Banner / Hero institucional Furlan Motors -->
+    <section class="hero-banner py-5">
+        <div class="container py-4 text-center">
+            <svg class="brand-emblem mx-auto mb-3" width="76" height="58" viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="36,4 116,4 104,25 24,25" class="emblem-bar"/>
+                <polygon points="22,33 82,33 70,54 10,54" class="emblem-bar"/>
+                <polygon points="8,62 48,62 36,83 -4,83" class="emblem-bar"/>
+            </svg>
+            <h1 class="hero-brand-name mb-2">F U R L A N</h1>
+            <p class="hero-brand-sub mb-4">M O T O R S</p>
+            <p class="hero-tagline mx-auto mb-0" id="hero-subtitle">Curadoria automotiva de excelência e procedência garantida.</p>
+        </div>
+    </section>
 
-    <section id="estoque" class="py-5 bg-light">
+    <section id="estoque" class="py-5 section-estoque">
         <div class="container">
-            <div class="row mb-5 text-center">
+            <div class="row mb-4 text-center">
                 <div class="col-12">
-                    <h2 class="fw-bold">Nosso Estoque</h2>
+                    <h2 class="fw-bold section-title">Nosso Estoque</h2>
                     <hr class="mx-auto custom-hr">
                 </div>
-            </div>                
-<div class="col-lg-12">
-    <div class="row g-4" id="lista-veiculos">
-        
-        <!-- <div class="col-md-3 card-veiculo" data-id="1" data-marca="Fiat" data-modelo="Cronos" data-ano="2024" data-preco="91900">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(1)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="cronos-principal.jpeg" class="card-img-top" alt="Fiat Cronos">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">FIAT</span>
-                    <h5 class="card-title fw-bold mb-1">FIAT CRONOS</h5>
-                    <p class="card-text text-muted small mb-3">2024 / 2025 | 29.000Km |
-                    <span class="trans-cambio" data-original="Automático">Automático</span></p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 91.900</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
             </div>
-        </div>    -->
-        <!-- <div class="col-12 text-center py-5">
-            <div class="bg-white p-5 rounded-4 shadow-sm border">
-                <i class="bi bi-clock-history display-1 text-muted mb-4"></i>
-                <h3 class="fw-bold empty-inventory-title">Aguarde atualizações do estoque!</h3>
-                <p class="text-muted empty-inventory-desc">Estamos preparando novidades incríveis para você. Volte em breve!</p>
-            </div>
-        </div> -->
 
-        <div class="col-md-3 card-veiculo" data-id="3" data-marca="Suzuki" data-modelo="Vitara" data-ano="2020" data-preco="92900">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(3)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="suzuki_1.jpeg" class="card-img-top" alt="Suzuki Vitara">
+            <!-- Barra de Pesquisa e Filtros -->
+            <div class="filter-bar p-4 rounded-4 shadow-sm mb-5">
+                <div class="row g-3 align-items-end">
+                    <div class="col-lg-4 col-md-6">
+                        <label for="busca-global" class="form-label small fw-semibold text-uppercase tracking-wide" id="label-filtro-busca">Pesquisar veículo</label>
+                        <div class="input-group">
+                            <span class="input-group-text filter-input-icon"><i class="bi bi-search"></i></span>
+                            <input type="text" id="busca-global" class="form-control filter-input" placeholder="Marca, modelo ou versão...">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6">
+                        <label for="filtro-marca" class="form-label small fw-semibold text-uppercase tracking-wide" id="label-filtro-marca">Marca</label>
+                        <select id="filtro-marca" class="form-select filter-input">
+                            <option value="">Todas as marcas</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <label for="filtro-preco" class="form-label small fw-semibold text-uppercase tracking-wide" id="label-filtro-preco">Preço máximo</label>
+                        <select id="filtro-preco" class="form-select filter-input">
+                            <option value="500000">Qualquer valor</option>
+                            <option value="100000">Até R$ 100.000</option>
+                            <option value="150000">Até R$ 150.000</option>
+                            <option value="250000">Até R$ 250.000</option>
+                            <option value="350000">Até R$ 350.000</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4">
+                        <label for="filtro-ano" class="form-label small fw-semibold text-uppercase tracking-wide" id="label-filtro-ano">Ano mínimo</label>
+                        <select id="filtro-ano" class="form-select filter-input">
+                            <option value="0">Todos os anos</option>
+                            <option value="2023">2023 ou mais novo</option>
+                            <option value="2021">2021 ou mais novo</option>
+                            <option value="2020">2020 ou mais novo</option>
+                            <option value="2016">2016 ou mais novo</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-2 col-md-4 d-grid">
+                        <button type="button" id="btn-limpar-filtros" class="btn btn-outline-furlan fw-semibold py-2" onclick="limparFiltros()">
+                            <i class="bi bi-arrow-counterclockwise me-1"></i><span id="txt-limpar-filtros">Limpar</span>
+                        </button>
+                    </div>
                 </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">SUZUKI</span>
-                    <h5 class="card-title fw-bold mb-1">SUZUKI VITARA 4STYLE ALLGRIP 1.4 TURBO FLEX</h5>
-                    <p class="card-text text-muted small mb-3">2019 | 2020 | 98.000 Km | 
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 92.900</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="row g-4" id="lista-veiculos">
+                    
+                    <!-- <div class="col-md-3 card-veiculo" data-id="1" data-marca="Fiat" data-modelo="Cronos" data-ano="2024" data-preco="91900">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(1)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="cronos-principal.jpeg" class="card-img-top" alt="Fiat Cronos">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">FIAT</span>
+                                <h5 class="card-title fw-bold mb-1">FIAT CRONOS</h5>
+                                <p class="card-text text-muted small mb-3">2024 / 2025 | 29.000Km |
+                                <span class="trans-cambio" data-original="Automático">Automático</span></p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 91.900</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>    -->
+                    <!-- <div class="col-12 text-center py-5">
+                        <div class="empty-box p-5 rounded-4 shadow-sm border">
+                            <i class="bi bi-clock-history display-1 text-muted mb-4"></i>
+                            <h3 class="fw-bold empty-inventory-title">Aguarde atualizações do estoque!</h3>
+                            <p class="text-muted empty-inventory-desc">Estamos preparando novidades incríveis para você. Volte em breve!</p>
+                        </div>
+                    </div> -->
+
+                    <div class="col-md-3 card-veiculo" data-id="3" data-marca="Suzuki" data-modelo="Vitara" data-ano="2020" data-preco="92900">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(3)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="suzuki_1.jpeg" class="card-img-top" alt="Suzuki Vitara">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">SUZUKI</span>
+                                <h5 class="card-title fw-bold mb-1">SUZUKI VITARA 4STYLE ALLGRIP 1.4 TURBO FLEX</h5>
+                                <p class="card-text text-muted small mb-3">2019 | 2020 | 98.000 Km | 
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 92.900</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="4" data-marca="Honda" data-modelo="Civic" data-ano="2020" data-preco="111900">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(4)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="civic_1.jpeg" class="card-img-top" alt="Honda Civic">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">HONDA</span>
+                                <h5 class="card-title fw-bold mb-1">HONDA CIVIC EX 2.0 FLEX AUT</h5>
+                                <p class="card-text text-muted small mb-3">2020 | 86.000 Km |
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 111.900</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-3 card-veiculo" data-id="5" data-marca="Jeep" data-modelo="Compass" data-ano="2023" data-preco="220000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(5)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Jeep Compass">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">Jeep</span>
+                                <h5 class="card-title fw-bold mb-1">Jeep Compass Limited</h5>
+                                <p class="card-text text-muted small mb-3">2023 | 12.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 220.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="6" data-marca="Ford" data-modelo="Bronco" data-ano="2022" data-preco="210000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(6)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Ford Bronco">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">Ford</span>
+                                <h5 class="card-title fw-bold mb-1">Ford Bronco Sport</h5>
+                                <p class="card-text text-muted small mb-3">2022 | 25.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 210.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="7" data-marca="BMW" data-modelo="320i" data-ano="2021" data-preco="285000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(7)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="BMW 320i">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">BMW</span>
+                                <h5 class="card-title fw-bold mb-1">BMW 320i M Sport</h5>
+                                <p class="card-text text-muted small mb-3">2021 | 30.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 285.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="8" data-marca="Mercedes" data-modelo="Classe C" data-ano="2022" data-preco="340000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(8)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Mercedes C300">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">Mercedes</span>
+                                <h5 class="card-title fw-bold mb-1">Mercedes C 300</h5>
+                                <p class="card-text text-muted small mb-3">2022 | 18.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 340.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="9" data-marca="Audi" data-modelo="Q3" data-ano="2023" data-preco="295000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(9)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Audi Q3">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">Audi</span>
+                                <h5 class="card-title fw-bold mb-1">Audi Q3 Performance</h5>
+                                <p class="card-text text-muted small mb-3">2023 | 8.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 295.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 card-veiculo" data-id="10" data-marca="Hyundai" data-modelo="HB20" data-ano="2023" data-preco="105000">
+                        <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(10)" style="cursor: pointer;">
+                            <div class="img-container">
+                                <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Hyundai HB20">
+                            </div>
+                            <div class="card-body d-flex flex-column p-4">
+                                <span class="badge brand-badge mb-2 align-self-start">Hyundai</span>
+                                <h5 class="card-title fw-bold mb-1">Hyundai HB20 Platinum</h5>
+                                <p class="card-text text-muted small mb-3">2023 | 10.000 Km | </p>
+                                <span class="trans-cambio" data-original="Automático">Automático</span> </p>
+                                <p class="fs-4 fw-bold price-tag mt-auto mb-3">R$ 105.000</p>
+                                <button class="btn btn-outline-furlan w-100 fw-bold rounded-pill">Ver Detalhes</button>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
+
+                <!-- Mensagem quando nenhum veículo corresponde aos filtros -->
+                <div id="sem-resultados" class="text-center py-5 d-none">
+                    <div class="filter-bar p-5 rounded-4 shadow-sm">
+                        <i class="bi bi-search display-4 text-muted mb-3"></i>
+                        <h4 class="fw-bold" id="no-results-title">Nenhum veículo encontrado</h4>
+                        <p class="text-muted mb-3" id="no-results-desc">Tente ajustar os filtros ou limpar a pesquisa para ver todo o estoque.</p>
+                        <button class="btn btn-furlan rounded-pill px-4 fw-semibold" onclick="limparFiltros()" id="no-results-btn">Limpar Filtros</button>
+                    </div>
+                </div>
+
+                <nav aria-label="Navegação de páginas" class="mt-5">
+                    <ul class="pagination justify-content-center">
+                    </ul>
+                </nav>
             </div>
         </div>
-       <div class="col-md-3 card-veiculo" data-id="4" data-marca="Honda" data-modelo="Civic" data-ano="2020" data-preco="111900">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(4)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="civic_1.jpeg" class="card-img-top" alt="Honda Civic">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">CIVIC</span>
-                    <h5 class="card-title fw-bold mb-1">HONDA CIVIC EX 2.0 FLEX AUT</h5>
-                    <p class="card-text text-muted small mb-3">2020 | 86.000 Km |
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 111.900</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="col-md-3 card-veiculo" data-id="5" data-marca="Jeep" data-modelo="Compass" data-ano="2023" data-preco="220000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(5)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1590362891991-f776e747a588?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Jeep Compass">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">Jeep</span>
-                    <h5 class="card-title fw-bold mb-1">Jeep Compass Limited</h5>
-                    <p class="card-text text-muted small mb-3">2023 | 12.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 220.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-id="6" data-marca="Ford" data-modelo="Bronco" data-ano="2022" data-preco="210000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(6)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1610647752706-3bb12232b3ab?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Ford Bronco">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">Ford</span>
-                    <h5 class="card-title fw-bold mb-1">Ford Bronco Sport</h5>
-                    <p class="card-text text-muted small mb-3">2022 | 25.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 210.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-id="7" data-marca="BMW" data-modelo="320i" data-ano="2021" data-preco="285000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(7)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="BMW 320i">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">BMW</span>
-                    <h5 class="card-title fw-bold mb-1">BMW 320i M Sport</h5>
-                    <p class="card-text text-muted small mb-3">2021 | 30.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 285.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-3 card-veiculo" data-id="8" data-marca="Mercedes" data-modelo="Classe C" data-ano="2022" data-preco="340000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(8)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Mercedes C300">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">Mercedes</span>
-                    <h5 class="card-title fw-bold mb-1">Mercedes C 300</h5>
-                    <p class="card-text text-muted small mb-3">2022 | 18.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 340.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-         <div class="col-md-3 card-veiculo" data-id="9" data-marca="Audi" data-modelo="Q3" data-ano="2023" data-preco="295000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(9)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1541348263662-e0c8643c21ee?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Audi Q3">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">Audi</span>
-                    <h5 class="card-title fw-bold mb-1">Audi Q3 Performance</h5>
-                    <p class="card-text text-muted small mb-3">2023 | 8.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 295.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div>
-     <div class="col-md-3 card-veiculo" data-id="10" data-marca="Hyundai" data-modelo="HB20" data-ano="2023" data-preco="105000">
-            <div class="card h-100 border-0 shadow-sm hover-shadow" onclick="window.abrirDetalhes(10)" style="cursor: pointer;">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=800" class="card-img-top" alt="Hyundai HB20">
-                </div>
-                <div class="card-body d-flex flex-column p-4">
-                    <span class="badge bg-light text-primary mb-2 align-self-start">Hyundai</span>
-                    <h5 class="card-title fw-bold mb-1">Hyundai HB20 Platinum</h5>
-                    <p class="card-text text-muted small mb-3">2023 | 10.000 Km | </p>
-                    <span class="trans-cambio" data-original="Automático">Automático</span> </p>
-                    <p class="fs-4 fw-bold text-dark mt-auto mb-3">R$ 105.000</p>
-                    <button class="btn btn-outline-dark w-100 fw-bold rounded-pill">Ver Detalhes</button>
-                </div>
-            </div>
-        </div> -->
-    </div>
-    <nav aria-label="Navegação de páginas" class="mt-5">
-        <ul class="pagination justify-content-center">
-        </ul>
-    </nav>
-</div>
     </section>
-    <footer id="contato" class="py-5 bg-white text-center border-top">
+
+    <footer id="contato" class="py-5 site-footer text-center border-top">
         <div class="container py-4">
             <h2 class="fw-bold mb-3">Fale Conosco</h2>
             <p class="mb-4">Dúvidas ou quer vender seu carro? Entre em contato.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="mailto:guilherme@topdealerauto.com" class="btn btn-primary rounded-pill px-4 fw-bold">
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:guilherme@topdealerauto.com" class="btn btn-furlan rounded-pill px-4 py-2 fw-bold">
                     <i class="bi bi-envelope me-2"></i>E-mail
                 </a>
-                <a href="https://wa.me/5516991475066" target="_blank" class="btn btn-success rounded-pill px-4 fw-bold">
+                <a href="https://wa.me/5516991475066" target="_blank" class="btn btn-success rounded-pill px-4 py-2 fw-bold">
                     <i class="bi bi-whatsapp me-2"></i>WhatsApp
                 </a>
             </div>
         </div>
     </footer>
-    <div class="bg-dark text-white py-4 text-center">
-        <small>&copy; 2026 TopDealerAuto. Todos os direitos reservados.</small>
+
+    <div class="footer-bottom py-4 text-center">
+        <small>&copy; 2026 Furlan Motors. Todos os direitos reservados.</small>
     </div>
     
-      <div class="modal fade" id="detalhesVeiculoModal" tabindex="-1" aria-hidden="true">
+    <!-- Modal Detalhes do Veículo -->
+    <div class="modal fade" id="detalhesVeiculoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content border-0 shadow-lg" style="border-radius: 20px;">
                 <div class="modal-header border-0 pb-0">
@@ -266,34 +347,34 @@
                         </div>
 
                         <div class="col-lg-5">
-                            <span class="badge bg-dark mb-2" id="modal-destaque-label">Destaque</span>
+                            <span class="badge brand-badge mb-2" id="modal-destaque-label">Destaque</span>
                             <h2 class="fw-bold mb-1" id="viewModelo">Fiat Cronos</h2>
                             <p class="text-muted mb-3" id="viewAnoKm">2024 | 29.000 Km | Automático</p>
-                            <h3 class="text-dark fw-bold mb-4" id="viewPreco">R$ 90.000</h3>
+                            <h3 class="price-tag fw-bold mb-4" id="viewPreco">R$ 90.000</h3>
                             
-                            <div class="specs-grid bg-light p-3 rounded-3 mb-4">
+                            <div class="specs-grid p-3 rounded-3 mb-4">
                                 <h6 class="fw-bold mb-3 border-bottom pb-2" id="modal-specs-title">Especificações Técnicas</h6>
                                 <div class="row g-2">
                                     <div class="col-6 small"><strong id="label-cor">Cor:</strong> <span id="spec-cor">Branco</span></div>
                                     <div class="col-6 small"><strong id="label-comb">Combustível:</strong> <span id="spec-comb">Flex</span></div>
-                                <div class="col-6 small"><strong id="label-portas">Portas:</strong> <span id="spec-portas">4</span></div>
+                                    <div class="col-6 small"><strong id="label-portas">Portas:</strong> <span id="spec-portas">4</span></div>
                                 </div>
                             </div>
                             <div class="d-grid gap-2">
-                            <a id="btn-whatsapp-detalhe" 
-                               href="https://wa.me/5516991475066?text=Olá!%20Tenho%20interesse%20no%20Fiat%20Cronos%20anunciado%20na%20TopDealer." 
-                               target="_blank" 
-                               class="btn btn-success py-3 fw-bold rounded-pill">
-                            <i class="bi bi-whatsapp me-2"></i>
-                            <span id="btn-whatsapp-text">Tenho Interesse</span>
-                            </a>
-                            <a id="btn-E-mail-detalhe"
-                                href="mailto:guilherme@topdealerauto.com"
-                                target="_blank"
-                                class="btn btn-primary py-3 fw-bold rounded-pill">
-                            <i class="bi bi-envelope me-2"></i>
-                            <span id="btn-email-text">Enviar E-mail</span>
-                            </a>
+                                <a id="btn-whatsapp-detalhe" 
+                                   href="https://wa.me/5516991475066?text=Olá!%20Tenho%20interesse%20no%20veículo%20anunciado%20na%20Furlan%20Motors." 
+                                   target="_blank" 
+                                   class="btn btn-success py-3 fw-bold rounded-pill">
+                                    <i class="bi bi-whatsapp me-2"></i>
+                                    <span id="btn-whatsapp-text">Tenho Interesse</span>
+                                </a>
+                                <a id="btn-E-mail-detalhe"
+                                   href="mailto:guilherme@topdealerauto.com"
+                                   target="_blank"
+                                   class="btn btn-furlan py-3 fw-bold rounded-pill">
+                                    <i class="bi bi-envelope me-2"></i>
+                                    <span id="btn-email-text">Enviar E-mail</span>
+                                </a>
                             </div>
                         </div>
                     </div>

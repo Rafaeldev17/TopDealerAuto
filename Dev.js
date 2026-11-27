@@ -94,14 +94,14 @@ const VEICULOS = [
     },
     {
         id: 8,
-        marca: "Mercedes-Benz",
-        modelo: "C 300 AMG Line",
-        ano: 2022,
-        km: 18000,
-        preco: 340000,
+        marca: "Honda",
+        modelo: "Honda city LX 1.4 flex aut",
+        ano: 2014,
+        km: 124000,
+        preco: 56900,
         cambio: "Automático",
-        img: "https://images.unsplash.com/photo-1617531653332-bd46c24f2068?auto=format&fit=crop&q=80&w=800",
-        galeria: [],
+        img: "city_1.png",
+        galeria: ["city_1.png", "city_2.png", "city_3.png", "city_4.png", "city_5.png", "city_6.png", "city_7.png", "city_8.png"],
         specs: { cor: "Preto", combustivel: "Gasolina", portas: "4" }
     },
     {

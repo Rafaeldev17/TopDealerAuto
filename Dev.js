@@ -263,9 +263,9 @@ const CAMBIO_TRADUCAO = {
 };
 
 const CORES_TRADUCAO = {
-    "pt-br": { "Branco": "Branco", "Preto": "Preto", "Prata": "Prata", "Cinza": "Cinza" },
-    "en-us": { "Branco": "White", "Preto": "Black", "Prata": "Silver", "Cinza": "Gray" },
-    "es-es": { "Branco": "Blanco", "Preto": "Negro", "Prata": "Plata", "Cinza": "Gris" }
+    "pt-br": { "Branco": "Branco", "Preto": "Preto", "Prata": "Prata", "Cinza": "Cinza", "Azul": "Azul" },
+    "en-us": { "Branco": "White", "Preto": "Black", "Prata": "Silver", "Cinza": "Gray", "Azul": "Blue" },
+    "es-es": { "Branco": "Blanco", "Preto": "Negro", "Prata": "Plata", "Cinza": "Gris" , "Azul": "Azul" }
 };
 
 window.inicializarApp = function() {
